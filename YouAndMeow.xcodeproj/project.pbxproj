@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7BF556D249D1E4400DB57B6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF556C249D1E4400DB57B6 /* FileManager.swift */; };
 		E7E6DB28249D18ED00F09B36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6DB27249D18ED00F09B36 /* AppDelegate.swift */; };
 		E7E6DB2A249D18ED00F09B36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6DB29249D18ED00F09B36 /* SceneDelegate.swift */; };
 		E7E6DB2C249D18ED00F09B36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6DB2B249D18ED00F09B36 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7BF556C249D1E4400DB57B6 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		E7E6DB24249D18ED00F09B36 /* YouAndMeow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouAndMeow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E6DB27249D18ED00F09B36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7E6DB29249D18ED00F09B36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7BF556A249D1E2F00DB57B6 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				E7BF556B249D1E3700DB57B6 /* FileSystem */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		E7BF556B249D1E3700DB57B6 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				E7BF556C249D1E4400DB57B6 /* FileManager.swift */,
+			);
+			path = FileSystem;
+			sourceTree = "<group>";
+		};
 		E7E6DB1B249D18ED00F09B36 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +74,7 @@
 		E7E6DB26249D18ED00F09B36 /* YouAndMeow */ = {
 			isa = PBXGroup;
 			children = (
+				E7BF556A249D1E2F00DB57B6 /* Platform */,
 				E7E6DB2F249D18EE00F09B36 /* Preview Content */,
 				E7E6DB27249D18ED00F09B36 /* AppDelegate.swift */,
 				E7E6DB2B249D18ED00F09B36 /* ContentView.swift */,
@@ -149,6 +168,7 @@
 				E7E6DB28249D18ED00F09B36 /* AppDelegate.swift in Sources */,
 				E7E6DB2A249D18ED00F09B36 /* SceneDelegate.swift in Sources */,
 				E7E6DB2C249D18ED00F09B36 /* ContentView.swift in Sources */,
+				E7BF556D249D1E4400DB57B6 /* FileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
