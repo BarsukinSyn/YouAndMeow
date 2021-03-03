@@ -13,7 +13,7 @@ final class MeowingSoundPlayer: CatSoundPlayer {
 
   private let audioPlayer: AudioByteBufferPlayer
 
-  init(withSource source: Source) throws {
+  init(withSource source: SoundSource) throws {
     let audioPlayer = try AudioByteBufferPlayer(withInput: source.readIntoByteBuffer())
 
     self.audioPlayer = audioPlayer

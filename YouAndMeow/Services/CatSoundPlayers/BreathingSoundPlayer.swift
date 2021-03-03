@@ -22,7 +22,7 @@ final class BreathingSoundPlayer: CatSoundPlayer {
   private let exhalationSoundPlayer: BreathingPhaseSoundPlayer
   private var players: [BreathingPhaseSoundPlayer] { [inhalationSoundPlayer, exhalationSoundPlayer] }
 
-  init(breathingPhaseSoundSources: [BreathingPhase: Source], equalizer: AVAudioUnitEQ? = nil) throws {
+  init(breathingPhaseSoundSources: [BreathingPhase: SoundSource], equalizer: AVAudioUnitEQ? = nil) throws {
     guard let inhalationSoundSource = breathingPhaseSoundSources[.inhalation],
       let exhalationSoundSource = breathingPhaseSoundSources[.exhalation]
       else { throw BreathingSoundPlayer.Exception.incompleteData }

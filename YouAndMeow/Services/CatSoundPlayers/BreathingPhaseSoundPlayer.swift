@@ -13,7 +13,7 @@ final class BreathingPhaseSoundPlayer: CatSoundPlayer {
 
   private let audioPlayer: AudioPCMBufferPlayer
 
-  init(withSource source: Source, equalizer: AVAudioUnitEQ? = nil) throws {
+  init(withSource source: SoundSource, equalizer: AVAudioUnitEQ? = nil) throws {
     let audioPlayer = try AudioPCMBufferPlayer(withInput: source.readIntoPCMBuffer())
 
     if let equalizer = equalizer { audioPlayer.attach(equalizer) }

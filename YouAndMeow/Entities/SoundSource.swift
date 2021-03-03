@@ -1,5 +1,5 @@
 //
-//  Source.swift
+//  SoundSource.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 22.06.2020.
@@ -8,7 +8,7 @@
 
 import AVFoundation
 
-struct Source {
+struct SoundSource {
   let file: File
 
   func readIntoByteBuffer() throws -> Data {
