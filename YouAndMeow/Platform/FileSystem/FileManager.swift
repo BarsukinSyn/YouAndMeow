@@ -9,11 +9,9 @@
 import AVFoundation
 
 class FileManager {
-  typealias Exception = FileManagerException
-
   static func getURL(forResource name: String, withExtension ext: String) throws -> URL {
     guard let url = Bundle.main.url(forResource: name, withExtension: ext)
-      else { throw FileManager.Exception.resourceError }
+      else { throw FileManager.Exception.fileNotFound }
 
     return url
   }
@@ -26,7 +24,7 @@ class FileManager {
 
       return data
     } catch {
-      throw FileManager.Exception.fileReadingError
+      throw FileManager.Exception.fileСanNotBeRead
     }
   }
 
@@ -37,19 +35,21 @@ class FileManager {
       let data = try AVAudioFile(forReading: url)
 
       guard let buffer = AVAudioPCMBuffer(pcmFormat: data.processingFormat, frameCapacity: UInt32(data.length))
-        else { throw FileManager.Exception.fileReadingError }
+        else { throw FileManager.Exception.fileСanNotBeRead }
 
       try data.read(into: buffer)
 
       return buffer
     } catch {
-      throw FileManager.Exception.fileReadingError
+      throw FileManager.Exception.fileСanNotBeRead
     }
   }
 }
 
-enum FileManagerException: Error {
-  case resourceError
-  case fileReadingError
+extension FileManager {
+  enum Exception: Error {
+    case fileNotFound
+    case fileСanNotBeRead
+  }
 }
 

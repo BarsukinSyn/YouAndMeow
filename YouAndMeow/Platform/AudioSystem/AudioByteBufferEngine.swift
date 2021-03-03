@@ -21,7 +21,7 @@ final class AudioByteBufferEngine: AudioBufferEngine {
 
       self.output = output
     } catch {
-      throw AudioBufferEngine.Exception.fileReadingError
+      throw AudioBufferEngine.Exception.unexpectedInput
     }
   }
 

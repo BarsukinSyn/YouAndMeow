@@ -25,6 +25,6 @@ protocol AudioBufferEngine {
 }
 
 enum AudioBufferEngineException: Error {
-  case fileReadingError
+  case unexpectedInput
   case deviceError
 }

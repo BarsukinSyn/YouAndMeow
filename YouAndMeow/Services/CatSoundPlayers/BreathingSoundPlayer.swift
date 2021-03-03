@@ -9,13 +9,6 @@
 import AVFoundation
 
 final class BreathingSoundPlayer: CatSoundPlayer {
-  typealias Exception = BreathingSoundPlayerException
-
-  enum BreathingPhase {
-    case inhalation
-    case exhalation
-  }
-
   var delegate: CatSoundPlayerDelegate?
 
   private let inhalationSoundPlayer: BreathingPhaseSoundPlayer
@@ -45,6 +38,13 @@ final class BreathingSoundPlayer: CatSoundPlayer {
   }
 }
 
-enum BreathingSoundPlayerException: Error {
-  case incompleteData
+extension BreathingSoundPlayer {
+  enum BreathingPhase {
+    case inhalation
+    case exhalation
+  }
+  
+  enum Exception: Error {
+    case incompleteData
+  }
 }
