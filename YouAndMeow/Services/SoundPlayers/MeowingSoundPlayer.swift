@@ -8,8 +8,8 @@
 
 import Foundation
 
-final class MeowingSoundPlayer: CatSoundPlayer {
-  var delegate: CatSoundPlayerDelegate?
+final class MeowingSoundPlayer: SoundPlayer {
+  weak var delegate: SoundPlayerDelegate?
 
   private let audioPlayer: AudioByteBufferPlayer
 

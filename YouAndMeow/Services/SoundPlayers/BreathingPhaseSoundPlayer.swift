@@ -8,17 +8,19 @@
 
 import AVFoundation
 
-final class BreathingPhaseSoundPlayer: CatSoundPlayer {
-  var delegate: CatSoundPlayerDelegate?
+final class BreathingPhaseSoundPlayer: SoundPlayer {
+  weak var delegate: SoundPlayerDelegate?
 
   private let audioPlayer: AudioPCMBufferPlayer
 
-  init(withSource source: SoundSource, equalizer: AVAudioUnitEQ? = nil) throws {
+  init(withSource source: SoundSource) throws {
     let audioPlayer = try AudioPCMBufferPlayer(withInput: source.readIntoPCMBuffer())
 
-    if let equalizer = equalizer { audioPlayer.attach(equalizer) }
-
     self.audioPlayer = audioPlayer
+  }
+
+  func attach(equalizer: AVAudioUnitEQ) {
+    self.audioPlayer.attach(equalizer)
   }
 
   func prepareToPlay() throws {

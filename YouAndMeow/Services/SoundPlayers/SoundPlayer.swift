@@ -1,5 +1,5 @@
 //
-//  CatSoundPlayer.swift
+//  SoundPlayer.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 22.06.2020.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol CatSoundPlayer {
-  var delegate: CatSoundPlayerDelegate? { get set }
+protocol SoundPlayer {
+  var delegate: SoundPlayerDelegate? { get set }
 
   func prepareToPlay() throws
   func play(fragment: SoundFragment)
   func stop()
 }
 
-protocol CatSoundPlayerDelegate {
-  func playerJustFinishedPlaying(_ player: CatSoundPlayer)
+protocol SoundPlayerDelegate: class {
+  func playerJustFinishedPlaying(_ player: SoundPlayer)
 }
