@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E75556FC24A3032A0094F445 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75556FB24A3032A0094F445 /* DataDecoder.swift */; };
+		E755570224A49C7F0094F445 /* SoundtrackMapProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E755570124A49C7F0094F445 /* SoundtrackMapProvider.swift */; };
+		E755570424A49C7F0094F445 /* SoundtrackMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E755570324A49C7F0094F445 /* SoundtrackMap.swift */; };
 		E7BF556D249D1E4400DB57B6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF556C249D1E4400DB57B6 /* FileManager.swift */; };
 		E7BF5573249D1EF600DB57B6 /* AudioBufferEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF5572249D1EF600DB57B6 /* AudioBufferEngine.swift */; };
 		E7BF5575249D1F0800DB57B6 /* AudioByteBufferEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF5574249D1F0800DB57B6 /* AudioByteBufferEngine.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		E75556FB24A3032A0094F445 /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		E755570124A49C7F0094F445 /* SoundtrackMapProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundtrackMapProvider.swift; sourceTree = "<group>"; };
+		E755570324A49C7F0094F445 /* SoundtrackMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundtrackMap.swift; sourceTree = "<group>"; };
 		E7BF556C249D1E4400DB57B6 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		E7BF5572249D1EF600DB57B6 /* AudioBufferEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBufferEngine.swift; sourceTree = "<group>"; };
 		E7BF5574249D1F0800DB57B6 /* AudioByteBufferEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioByteBufferEngine.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				E7BF5594249F2A7900DB57B6 /* CatSoundPlayers */,
 				E7BF55A624A11D1300DB57B6 /* BreathingSoundProcessor.swift */,
 				E7BF55A824A27FF600DB57B6 /* SoundSourceProvider.swift */,
+				E755570124A49C7F0094F445 /* SoundtrackMapProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				E7BF559E24A0570000DB57B6 /* File.swift */,
 				E7BF559C24A056D900DB57B6 /* SoundFragment.swift */,
 				E7BF559A24A056C600DB57B6 /* SoundSource.swift */,
+				E755570324A49C7F0094F445 /* SoundtrackMap.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7E6DB28249D18ED00F09B36 /* AppDelegate.swift in Sources */,
+				E755570224A49C7F0094F445 /* SoundtrackMapProvider.swift in Sources */,
 				E7BF55A124A0570000DB57B6 /* BreathingPhaseSoundPlayer.swift in Sources */,
 				E7BF5596249F2A7900DB57B6 /* CatSoundPlayer.swift in Sources */,
 				E7BF5590249F2A7900DB57B6 /* AudioByteBufferPlayer.swift in Sources */,
@@ -266,6 +273,7 @@
 				E7BF5592249F2A7900DB57B6 /* AudioPCMBufferPlayer.swift in Sources */,
 				E7BF559824A0569600DB57B6 /* MeowingSoundPlayer.swift in Sources */,
 				E7BF559D24A056D900DB57B6 /* SoundFragment.swift in Sources */,
+				E755570424A49C7F0094F445 /* SoundtrackMap.swift in Sources */,
 				E7E6DB2C249D18ED00F09B36 /* ContentView.swift in Sources */,
 				E7BF5575249D1F0800DB57B6 /* AudioByteBufferEngine.swift in Sources */,
 				E7BF5586249E1E3500DB57B6 /* AVAudioEngine.swift in Sources */,
