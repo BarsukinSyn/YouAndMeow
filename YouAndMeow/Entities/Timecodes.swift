@@ -1,5 +1,5 @@
 //
-//  SoundtrackTimecodes.swift
+//  Timecodes.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 25.06.2020.
@@ -8,4 +8,4 @@
 
 import Foundation
 
-typealias SoundtrackTimecodes = [TimeInterval]
+typealias Timecodes = [TimeInterval]

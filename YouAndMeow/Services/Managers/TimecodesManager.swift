@@ -1,5 +1,5 @@
 //
-//  SoundtrackTimecodesManager.swift
+//  TimecodesManager.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 26.06.2020.
@@ -8,10 +8,13 @@
 
 import Foundation
 
-class SoundtrackTimecodesManager {
-  let timecodes: SoundtrackTimecodes
+class TimecodesManager {
+  let timecodes: Timecodes
 
-  init(_ timecodes: SoundtrackTimecodes) {
+  init(withSource source: Source) throws {
+    let sourceBuffer = try source.readIntoByteBuffer()
+    let timecodes = try DataDecoder.decodePropertyList(sourceBuffer) as Timecodes
+
     self.timecodes = timecodes
   }
 

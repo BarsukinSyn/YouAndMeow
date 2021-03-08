@@ -1,5 +1,5 @@
 //
-//  AppAudioPlayer.swift
+//  CatSoundPlayer.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 26.06.2020.
@@ -8,22 +8,22 @@
 
 import Foundation
 
-final class AppAudioPlayer: SoundPlayerDelegate {
+final class CatSoundPlayer: SoundPlayerDelegate {
   private let breathingSoundPlayer: BreathingSoundPlayer
   private let breathingSoundProcessor: BreathingSoundProcessor
   private let meowingSoundPlayer: MeowingSoundPlayer
-  private let meowingsTimecodesManager: SoundtrackTimecodesManager
+  private let meowingsTimecodesManager: TimecodesManager
 
   init() throws {
     let breathingSoundProcessor = BreathingSoundProcessor()
     let breathingSoundPlayer = try SoundPlayerCreator.createBreathingSoundPlayer(withProcessor: breathingSoundProcessor)
     let meowingSoundPlayer = try SoundPlayerCreator.createMeowingSoundPlayer()
-    let meowingsTimecodes = try SoundtrackTimecodesProvider.getMeowingsTimecodes()
+    let meowingsTimecodesManager = try TimecodesManagerCreator.createMeowingsTimecodesManager()
 
     self.breathingSoundPlayer = breathingSoundPlayer
     self.breathingSoundProcessor = breathingSoundProcessor
     self.meowingSoundPlayer = meowingSoundPlayer
-    self.meowingsTimecodesManager = SoundtrackTimecodesManager(meowingsTimecodes)
+    self.meowingsTimecodesManager = meowingsTimecodesManager
 
     self.breathingSoundPlayer.delegate = self
     self.meowingSoundPlayer.delegate = self
