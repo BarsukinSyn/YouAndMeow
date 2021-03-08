@@ -11,53 +11,45 @@ import AVFoundation
 final class BreathingSoundPlayer: SoundPlayer, SoundPlayerDelegate {
   weak var delegate: SoundPlayerDelegate?
 
-  private let inhalationSoundPlayer: BreathingPhaseSoundPlayer
-  private let exhalationSoundPlayer: BreathingPhaseSoundPlayer
-  private var breathingSoundPlayers: [BreathingPhaseSoundPlayer] {
-    [self.inhalationSoundPlayer, self.exhalationSoundPlayer]
-  }
+  private var soundPlayers: [BreathingPhase: BreathingPhaseSoundPlayer]
 
   init(breathingPhaseSoundSources: [BreathingPhase: SoundSource]) throws {
-    guard let inhalationSoundSource = breathingPhaseSoundSources[.inhalation],
-      let exhalationSoundSource = breathingPhaseSoundSources[.exhalation]
-      else { throw BreathingSoundPlayer.Exception.incompleteData }
+    let soundPlayers = try breathingPhaseSoundSources.mapValues { try BreathingPhaseSoundPlayer(withSource: $0) }
 
-    let inhalationSoundPlayer = try BreathingPhaseSoundPlayer(withSource: inhalationSoundSource)
-    let exhalationSoundPlayer = try BreathingPhaseSoundPlayer(withSource: exhalationSoundSource)
+    self.soundPlayers = soundPlayers
 
-    self.inhalationSoundPlayer = inhalationSoundPlayer
-    self.exhalationSoundPlayer = exhalationSoundPlayer
-
-    self.inhalationSoundPlayer.delegate = self
-    self.exhalationSoundPlayer.delegate = self
+    self.soundPlayers.values.forEach { $0.delegate = self }
   }
 
-  func attach(equalizer: AVAudioUnitEQ) {
-    self.breathingSoundPlayers.forEach { $0.attach(equalizer: equalizer) }
+  func attach(equalizers: [BreathingPhase: AVAudioUnitEQ]) {
+    self.soundPlayers.forEach { (phase, player) in
+      if let equalizer = equalizers[phase] { player.attach(equalizer: equalizer) }
+    }
   }
 
   func prepareToPlay() throws {
-    try self.breathingSoundPlayers.forEach { try $0.prepareToPlay() }
+    try self.soundPlayers.values.forEach { try $0.prepareToPlay() }
   }
 
-  func play(fragment: SoundFragment) {}
+  func play(fragment: SoundFragment) {
+    self.soundPlayers[.inhalation]?.play(fragment: fragment)
+  }
 
   func stop() {
-    self.breathingSoundPlayers.forEach { $0.stop() }
+    self.soundPlayers.values.forEach { $0.stop() }
   }
 
   func playerJustFinishedPlaying(_ player: SoundPlayer) {
-    self.delegate?.playerJustFinishedPlaying(player)
-  }
-}
+    let fragment = SoundFragment(start: 0, end: 1)
 
-extension BreathingSoundPlayer {
-  enum BreathingPhase {
-    case inhalation
-    case exhalation
-  }
-  
-  enum Exception: Error {
-    case incompleteData
+    if player as AnyObject === self.soundPlayers[.inhalation] {
+      self.soundPlayers[.exhalation]?.play(fragment: fragment)
+    }
+
+    if player as AnyObject === self.soundPlayers[.exhalation] {
+      self.soundPlayers[.inhalation]?.play(fragment: fragment)
+    }
+
+    self.delegate?.playerJustFinishedPlaying(player)
   }
 }

@@ -37,7 +37,7 @@ final class AudioPCMBufferPlayer: AudioBufferPlayer {
   }
 
   func play() {
-    if !self.engine.isActive, self.isPlaying { return }
+    if !self.engine.isActive || self.isPlaying { return }
 
     self.playerNode.scheduleBuffer(self.input, at: nil, options: .loops, completionHandler: nil)
     self.playerNode.play()

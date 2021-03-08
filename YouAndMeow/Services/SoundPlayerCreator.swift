@@ -9,14 +9,17 @@
 import Foundation
 
 class SoundPlayerCreator {
-  static func createBreathingSoundPlayer() throws -> BreathingSoundPlayer {
+  static func createBreathingSoundPlayer(
+    withProcessor soundProcessor: BreathingSoundProcessor
+  ) throws -> BreathingSoundPlayer {
     let inhalationSoundSource = SoundSourceProvider.getInhalationSoundSource()
     let exhalationSoundSource = SoundSourceProvider.getExhalationSoundSource()
-
     let breathingSoundPlayer = try BreathingSoundPlayer(breathingPhaseSoundSources: [
       .inhalation: inhalationSoundSource,
       .exhalation: exhalationSoundSource
     ])
+
+    breathingSoundPlayer.attach(equalizers: soundProcessor.distanceProcessors.mapValues { $0.equalizer })
 
     return breathingSoundPlayer
   }

@@ -1,5 +1,5 @@
 //
-//  BreathingSoundProcessor.swift
+//  DistanceProcessor.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 22.06.2020.
@@ -8,7 +8,7 @@
 
 import AVFoundation
 
-final class BreathingSoundProcessor {
+final class DistanceProcessor {
   let equalizer: AVAudioUnitEQ
 
   private var lowShelfFilter: AVAudioUnitEQFilterParameters
