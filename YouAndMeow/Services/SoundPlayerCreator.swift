@@ -1,5 +1,5 @@
 //
-//  BreathingSoundPlayerCreator.swift
+//  SoundPlayerCreator.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 25.06.2020.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-class BreathingSoundPlayerCreator: SoundPlayerCreator {
-  static func create() throws -> BreathingSoundPlayer {
+class SoundPlayerCreator {
+  static func createBreathingSoundPlayer() throws -> BreathingSoundPlayer {
     let inhalationSoundSource = SoundSourceProvider.getInhalationSoundSource()
     let exhalationSoundSource = SoundSourceProvider.getExhalationSoundSource()
 
@@ -19,5 +19,12 @@ class BreathingSoundPlayerCreator: SoundPlayerCreator {
     ])
 
     return breathingSoundPlayer
+  }
+
+  static func createMeowingSoundPlayer() throws -> MeowingSoundPlayer {
+    let meowingSoundSource = SoundSourceProvider.getMeowingSoundSource()
+    let meowingSoundPlayer = try MeowingSoundPlayer(withSource: meowingSoundSource)
+
+    return meowingSoundPlayer
   }
 }
