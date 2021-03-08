@@ -13,6 +13,7 @@ final class AudioPCMBufferPlayer: AudioBufferPlayer {
   typealias Engine = AudioPCMBufferEngine
 
   let engine: Engine
+  var isPlaying: Bool { self.engine.isActive && self.playerNode.isPlaying }
 
   private let input: Input
   private let playerNode: AVAudioPlayerNode
@@ -36,7 +37,7 @@ final class AudioPCMBufferPlayer: AudioBufferPlayer {
   }
 
   func play() {
-    if !self.engine.isActive, self.playerNode.isPlaying { return }
+    if !self.engine.isActive, self.isPlaying { return }
 
     self.playerNode.scheduleBuffer(self.input, at: nil, options: .loops, completionHandler: nil)
     self.playerNode.play()

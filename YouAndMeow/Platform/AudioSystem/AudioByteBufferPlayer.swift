@@ -13,6 +13,7 @@ final class AudioByteBufferPlayer: AudioBufferPlayer {
   typealias Engine = AudioByteBufferEngine
 
   let engine: Engine
+  var isPlaying: Bool { self.engine.isActive }
 
   init(withInput input: Input) throws {
     let engine = try Engine(withInput: input)
@@ -21,13 +22,13 @@ final class AudioByteBufferPlayer: AudioBufferPlayer {
   }
 
   func prepareToPlay() {
-    if self.engine.isActive { return }
+    if self.isPlaying { return }
 
     self.engine.start()
   }
 
   func play() {
-    if self.engine.isActive { return }
+    if self.isPlaying { return }
 
     self.engine.output.play()
   }

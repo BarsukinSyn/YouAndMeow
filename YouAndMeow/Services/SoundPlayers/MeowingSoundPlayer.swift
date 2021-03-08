@@ -24,6 +24,8 @@ final class MeowingSoundPlayer: SoundPlayer {
   }
 
   func play(fragment: SoundFragment) {
+    if self.audioPlayer.isPlaying { return }
+
     self.audioPlayer.engine.output.currentTime = fragment.start
     self.audioPlayer.play()
 
