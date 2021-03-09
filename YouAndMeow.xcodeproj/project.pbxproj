@@ -17,6 +17,7 @@
 		E75556FC24A3032A0094F445 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75556FB24A3032A0094F445 /* DataDecoder.swift */; };
 		E755570224A49C7F0094F445 /* TimecodesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E755570124A49C7F0094F445 /* TimecodesProvider.swift */; };
 		E755570424A49C7F0094F445 /* Timecodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E755570324A49C7F0094F445 /* Timecodes.swift */; };
+		E78E14E824A6532C00899F67 /* ClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E14E724A6532C00899F67 /* ClosedRange.swift */; };
 		E7A1A9BC24A2262D00419F81 /* TimecodesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A1A9BB24A2262D00419F81 /* TimecodesManager.swift */; };
 		E7BF556D249D1E4400DB57B6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF556C249D1E4400DB57B6 /* FileManager.swift */; };
 		E7BF5573249D1EF600DB57B6 /* AudioBufferEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF5572249D1EF600DB57B6 /* AudioBufferEngine.swift */; };
@@ -57,6 +58,7 @@
 		E75556FB24A3032A0094F445 /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
 		E755570124A49C7F0094F445 /* TimecodesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimecodesProvider.swift; sourceTree = "<group>"; };
 		E755570324A49C7F0094F445 /* Timecodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timecodes.swift; sourceTree = "<group>"; };
+		E78E14E724A6532C00899F67 /* ClosedRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedRange.swift; sourceTree = "<group>"; };
 		E7A1A9BB24A2262D00419F81 /* TimecodesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimecodesManager.swift; sourceTree = "<group>"; };
 		E7BF556C249D1E4400DB57B6 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		E7BF5572249D1EF600DB57B6 /* AudioBufferEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBufferEngine.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 				E74EFCEF24A4C9D900EEC724 /* BreathingSoundProcessor.swift */,
 			);
 			path = SoundProcessors;
+			sourceTree = "<group>";
+		};
+		E78E14E624A6531D00899F67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E78E14E724A6532C00899F67 /* ClosedRange.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E7A6020E24A0912A00858684 /* Providers */ = {
@@ -258,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				E7BF559924A056B700DB57B6 /* Entities */,
+				E78E14E624A6531D00899F67 /* Extensions */,
 				E7BF556A249D1E2F00DB57B6 /* Platform */,
 				E7E6DB2F249D18EE00F09B36 /* Preview Content */,
 				E7DBFC0624A0ED7500E87A5E /* Resources */,
@@ -373,6 +384,7 @@
 				E755570424A49C7F0094F445 /* Timecodes.swift in Sources */,
 				E7E6DB2C249D18ED00F09B36 /* ContentView.swift in Sources */,
 				E72D476524A60E3400A2FB8A /* SoundPlayerCreator.swift in Sources */,
+				E78E14E824A6532C00899F67 /* ClosedRange.swift in Sources */,
 				E7BF5575249D1F0800DB57B6 /* AudioByteBufferEngine.swift in Sources */,
 				E7BF5586249E1E3500DB57B6 /* AVAudioEngine.swift in Sources */,
 				E74EFCF024A4C9D900EEC724 /* BreathingSoundProcessor.swift in Sources */,
