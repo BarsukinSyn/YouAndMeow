@@ -13,7 +13,10 @@ final class AudioPCMBufferEngine: AudioBufferEngine {
   typealias Output = AVAudioEngine
 
   let output: Output
-  var isActive: Bool { self.output.isRunning }
+
+  var isActive: Bool {
+    self.output.isRunning
+  }
 
   init(withInput input: Input) {
     let output = Output()

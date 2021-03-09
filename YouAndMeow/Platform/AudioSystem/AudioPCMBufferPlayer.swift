@@ -13,7 +13,15 @@ final class AudioPCMBufferPlayer: AudioBufferPlayer {
   typealias Engine = AudioPCMBufferEngine
 
   let engine: Engine
-  var isPlaying: Bool { self.engine.isActive && self.playerNode.isPlaying }
+
+  var isPlaying: Bool {
+    self.engine.isActive && self.playerNode.isPlaying
+  }
+
+  var volume: Float {
+    get { self.engine.output.mainMixerNode.outputVolume }
+    set { self.engine.output.mainMixerNode.outputVolume = newValue }
+  }
 
   private let input: Input
   private let playerNode: AVAudioPlayerNode

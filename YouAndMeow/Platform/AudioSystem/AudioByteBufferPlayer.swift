@@ -13,7 +13,20 @@ final class AudioByteBufferPlayer: AudioBufferPlayer {
   typealias Engine = AudioByteBufferEngine
 
   let engine: Engine
-  var isPlaying: Bool { self.engine.isActive }
+  
+  var isPlaying: Bool {
+    self.engine.isActive
+  }
+
+  var volume: Float {
+    get { self.engine.output.volume }
+    set { self.engine.output.volume = newValue }
+  }
+
+  var currentTime: TimeInterval {
+    get { self.engine.output.currentTime }
+    set { self.engine.output.currentTime = newValue }
+  }
 
   init(withInput input: Input) throws {
     let engine = try Engine(withInput: input)

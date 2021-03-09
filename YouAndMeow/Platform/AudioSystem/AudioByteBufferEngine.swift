@@ -13,7 +13,10 @@ final class AudioByteBufferEngine: AudioBufferEngine {
   typealias Output = AVAudioPlayer
 
   let output: Output
-  var isActive: Bool { self.output.isPlaying }
+
+  var isActive: Bool {
+    self.output.isPlaying
+  }
 
   init(withInput input: Input) throws {
     do {

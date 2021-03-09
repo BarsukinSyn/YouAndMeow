@@ -16,6 +16,7 @@ protocol AudioBufferPlayer {
 
   var engine: Engine { get }
   var isPlaying: Bool { get }
+  var volume: Float { get set }
 
   func prepareToPlay() throws
   func play()
