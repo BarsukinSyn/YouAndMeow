@@ -11,6 +11,11 @@
 		E72D476524A60E3400A2FB8A /* SoundPlayerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D476424A60E3400A2FB8A /* SoundPlayerCreator.swift */; };
 		E72D476724A60EAF00A2FB8A /* TimecodesManagerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D476624A60EAF00A2FB8A /* TimecodesManagerCreator.swift */; };
 		E74E265B24ADD55800A948A6 /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E265A24ADD55800A948A6 /* PlaybackSetting.swift */; };
+		E74E265E24ADD55800A948A6 /* DistanceSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E265D24ADD55800A948A6 /* DistanceSetting.swift */; };
+		E74E266024ADD55800A948A6 /* RateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E265F24ADD55800A948A6 /* RateSetting.swift */; };
+		E74E266224ADD55800A948A6 /* SymmetrySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266124ADD55800A948A6 /* SymmetrySetting.swift */; };
+		E74E266424ADD55800A948A6 /* VariabilitySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266324ADD55800A948A6 /* VariabilitySetting.swift */; };
+		E74E266624ADD55800A948A6 /* VolumeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266524ADD55800A948A6 /* VolumeSetting.swift */; };
 		E74EFCEC24A31E6700EEC724 /* Exhalation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E74EFCEA24A31E6700EEC724 /* Exhalation.m4a */; };
 		E74EFCED24A31E6700EEC724 /* Inhalation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E74EFCEB24A31E6700EEC724 /* Inhalation.m4a */; };
 		E74EFCF024A4C9D900EEC724 /* BreathingSoundProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74EFCEF24A4C9D900EEC724 /* BreathingSoundProcessor.swift */; };
@@ -53,6 +58,11 @@
 		E72D476424A60E3400A2FB8A /* SoundPlayerCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayerCreator.swift; sourceTree = "<group>"; };
 		E72D476624A60EAF00A2FB8A /* TimecodesManagerCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimecodesManagerCreator.swift; sourceTree = "<group>"; };
 		E74E265A24ADD55800A948A6 /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
+		E74E265D24ADD55800A948A6 /* DistanceSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceSetting.swift; sourceTree = "<group>"; };
+		E74E265F24ADD55800A948A6 /* RateSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateSetting.swift; sourceTree = "<group>"; };
+		E74E266124ADD55800A948A6 /* SymmetrySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymmetrySetting.swift; sourceTree = "<group>"; };
+		E74E266324ADD55800A948A6 /* VariabilitySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariabilitySetting.swift; sourceTree = "<group>"; };
+		E74E266524ADD55800A948A6 /* VolumeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSetting.swift; sourceTree = "<group>"; };
 		E74EFCEA24A31E6700EEC724 /* Exhalation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Exhalation.m4a; sourceTree = "<group>"; };
 		E74EFCEB24A31E6700EEC724 /* Inhalation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inhalation.m4a; sourceTree = "<group>"; };
 		E74EFCEF24A4C9D900EEC724 /* BreathingSoundProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSoundProcessor.swift; sourceTree = "<group>"; };
@@ -123,9 +133,22 @@
 		E74E265924ADD55800A948A6 /* PlaybackSettings */ = {
 			isa = PBXGroup;
 			children = (
+				E74E265C24ADD55800A948A6 /* Types */,
 				E74E265A24ADD55800A948A6 /* PlaybackSetting.swift */,
 			);
 			path = PlaybackSettings;
+			sourceTree = "<group>";
+		};
+		E74E265C24ADD55800A948A6 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				E74E265D24ADD55800A948A6 /* DistanceSetting.swift */,
+				E74E265F24ADD55800A948A6 /* RateSetting.swift */,
+				E74E266124ADD55800A948A6 /* SymmetrySetting.swift */,
+				E74E266324ADD55800A948A6 /* VariabilitySetting.swift */,
+				E74E266524ADD55800A948A6 /* VolumeSetting.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		E74EFCEE24A4C8F900EEC724 /* SoundProcessors */ = {
@@ -378,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E72D476724A60EAF00A2FB8A /* TimecodesManagerCreator.swift in Sources */,
+				E74E266424ADD55800A948A6 /* VariabilitySetting.swift in Sources */,
 				E7E6DB28249D18ED00F09B36 /* AppDelegate.swift in Sources */,
 				E7A1A9BC24A2262D00419F81 /* TimecodesManager.swift in Sources */,
 				E755570224A49C7F0094F445 /* TimecodesProvider.swift in Sources */,
@@ -392,6 +416,7 @@
 				E74EFCF224A4CB2F00EEC724 /* BreathingPhase.swift in Sources */,
 				E7BF559824A0569600DB57B6 /* MeowingSoundPlayer.swift in Sources */,
 				E7BF559D24A056D900DB57B6 /* SoundFragment.swift in Sources */,
+				E74E266624ADD55800A948A6 /* VolumeSetting.swift in Sources */,
 				E755570424A49C7F0094F445 /* Timecodes.swift in Sources */,
 				E7E6DB2C249D18ED00F09B36 /* ContentView.swift in Sources */,
 				E72D476524A60E3400A2FB8A /* SoundPlayerCreator.swift in Sources */,
@@ -400,15 +425,18 @@
 				E7BF5586249E1E3500DB57B6 /* AVAudioEngine.swift in Sources */,
 				E74E265B24ADD55800A948A6 /* PlaybackSetting.swift in Sources */,
 				E74EFCF024A4C9D900EEC724 /* BreathingSoundProcessor.swift in Sources */,
+				E74E265E24ADD55800A948A6 /* DistanceSetting.swift in Sources */,
 				E7BF55A324A11BED00DB57B6 /* BreathingSoundPlayer.swift in Sources */,
 				E7BF55A924A27FF600DB57B6 /* SoundSourceProvider.swift in Sources */,
 				E75556FC24A3032A0094F445 /* DataDecoder.swift in Sources */,
 				E7BF559B24A056C600DB57B6 /* SoundSource.swift in Sources */,
 				E7BF556D249D1E4400DB57B6 /* FileManager.swift in Sources */,
 				E72D476124A6016C00A2FB8A /* Source.swift in Sources */,
+				E74E266024ADD55800A948A6 /* RateSetting.swift in Sources */,
 				E7BF5577249D1F1D00DB57B6 /* AudioPCMBufferEngine.swift in Sources */,
 				E7BF558E249F2A7900DB57B6 /* AudioBufferPlayer.swift in Sources */,
 				E7BF55A724A11D1300DB57B6 /* DistanceProcessor.swift in Sources */,
+				E74E266224ADD55800A948A6 /* SymmetrySetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
