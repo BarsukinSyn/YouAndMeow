@@ -12,7 +12,7 @@ protocol SoundPlayer {
   var delegate: SoundPlayerDelegate? { get set }
 
   func prepareToPlay() throws
-  func play(fragment: SoundFragment)
+  func play(fragment: SoundFragment, atVolume: Float)
   func stop()
 }
 

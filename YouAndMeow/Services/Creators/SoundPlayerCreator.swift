@@ -9,19 +9,18 @@
 import Foundation
 
 class SoundPlayerCreator {
-  static func createBreathingSoundPlayer(
-    withProcessor soundProcessor: BreathingSoundProcessor
-  ) throws -> BreathingSoundPlayer {
+  static func createInhalationSoundPlayer() throws -> BreathingSoundPlayer {
     let inhalationSoundSource = SoundSourceProvider.getInhalationSoundSource()
+    let inhalationSoundPlayer = try BreathingSoundPlayer(withSource: inhalationSoundSource)
+
+    return inhalationSoundPlayer
+  }
+
+  static func createExhalationSoundPlayer() throws -> BreathingSoundPlayer {
     let exhalationSoundSource = SoundSourceProvider.getExhalationSoundSource()
-    let breathingSoundPlayer = try BreathingSoundPlayer(breathingPhaseSoundSources: [
-      .inhalation: inhalationSoundSource,
-      .exhalation: exhalationSoundSource
-    ])
+    let exhalationSoundPlayer = try BreathingSoundPlayer(withSource: exhalationSoundSource)
 
-    breathingSoundPlayer.attach(equalizers: soundProcessor.distanceProcessors.mapValues { $0.equalizer })
-
-    return breathingSoundPlayer
+    return exhalationSoundPlayer
   }
 
   static func createMeowingSoundPlayer() throws -> MeowingSoundPlayer {

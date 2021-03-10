@@ -8,38 +8,25 @@
 
 import Foundation
 
-final class CatSoundPlayer: SoundPlayerDelegate {
-  private let breathingSoundPlayer: BreathingSoundPlayer
-  private let breathingSoundProcessor: BreathingSoundProcessor
-  private let meowingSoundPlayer: MeowingSoundPlayer
-  private let meowingsTimecodesManager: TimecodesManager
+final class CatSoundPlayer {
+  private let breathingPlaybackController: BreathingPlaybackController
+  private let meowingPlaybackController: MeowingPlaybackController
 
   init() throws {
-    let breathingSoundProcessor = BreathingSoundProcessor()
-    let breathingSoundPlayer = try SoundPlayerCreator.createBreathingSoundPlayer(withProcessor: breathingSoundProcessor)
+    let inhalationSoundPlayer = try SoundPlayerCreator.createInhalationSoundPlayer()
+    let exhalationSoundPlayer = try SoundPlayerCreator.createExhalationSoundPlayer()
     let meowingSoundPlayer = try SoundPlayerCreator.createMeowingSoundPlayer()
-    let meowingsTimecodesManager = try TimecodesManagerCreator.createMeowingsTimecodesManager()
+    let meowingPlaybackController = try MeowingPlaybackController(withPlayer: meowingSoundPlayer)
+    let breathingPlaybackController = BreathingPlaybackController(
+      withInhalationSoundPlayer: inhalationSoundPlayer,
+      andExhalationSoundPlayer: exhalationSoundPlayer
+    )
 
-    self.breathingSoundPlayer = breathingSoundPlayer
-    self.breathingSoundProcessor = breathingSoundProcessor
-    self.meowingSoundPlayer = meowingSoundPlayer
-    self.meowingsTimecodesManager = meowingsTimecodesManager
-
-    self.breathingSoundPlayer.delegate = self
-    self.meowingSoundPlayer.delegate = self
+    self.breathingPlaybackController = breathingPlaybackController
+    self.meowingPlaybackController = meowingPlaybackController
   }
 
-  func playerJustFinishedPlaying(_ player: SoundPlayer) {}
-
-  private func playBreathingSound() {
-    let duration = SoundFragment(start: 0, end: 1)
-
-    self.breathingSoundPlayer.play(fragment: duration)
-  }
-
-  private func playMeowingSound() {
-    let randomSoundFragment = self.meowingsTimecodesManager.getRandomSoundFragment()
-
-    self.meowingSoundPlayer.play(fragment: randomSoundFragment)
+  func play() {
+    try? self.breathingPlaybackController.play()
   }
 }

@@ -8,48 +8,65 @@
 
 import AVFoundation
 
-final class BreathingSoundPlayer: SoundPlayer, SoundPlayerDelegate {
+final class BreathingSoundPlayer: SoundPlayer {
   weak var delegate: SoundPlayerDelegate?
 
-  private var soundPlayers: [BreathingPhase: BreathingPhaseSoundPlayer]
+  private var isPlaying: Bool
+  private var playbackTimer: Timer?
+  private let audioPlayer: AudioPCMBufferPlayer
 
-  init(breathingPhaseSoundSources: [BreathingPhase: SoundSource]) throws {
-    let soundPlayers = try breathingPhaseSoundSources.mapValues { try BreathingPhaseSoundPlayer(withSource: $0) }
+  init(withSource source: SoundSource) throws {
+    let audioBuffer = try source.readIntoPCMBuffer()
+    let audioPlayer = AudioPCMBufferPlayer(withInput: audioBuffer)
 
-    self.soundPlayers = soundPlayers
-
-    self.soundPlayers.values.forEach { $0.delegate = self }
+    self.audioPlayer = audioPlayer
+    self.isPlaying = false
   }
 
-  func attach(equalizers: [BreathingPhase: AVAudioUnitEQ]) {
-    self.soundPlayers.forEach { (phase, player) in
-      if let equalizer = equalizers[phase] { player.attach(equalizer: equalizer) }
-    }
+  func attach(equalizer: AVAudioUnitEQ) {
+    self.audioPlayer.attach(equalizer)
   }
 
   func prepareToPlay() throws {
-    try self.soundPlayers.values.forEach { try $0.prepareToPlay() }
+    if self.audioPlayer.isPlaying { return }
+
+    try self.audioPlayer.prepareToPlay()
+    self.audioPlayer.volume = 0
+    self.audioPlayer.play()
   }
 
-  func play(fragment: SoundFragment) {
-    self.soundPlayers[.inhalation]?.play(fragment: fragment)
+  func play(fragment: SoundFragment, atVolume volume: Float) {
+    if !self.audioPlayer.isPlaying || self.isPlaying { return }
+
+    let fadeDuration = fragment.duration / 3
+
+    self.isPlaying = true
+    self.setVolume(volume, fadeDuration: fadeDuration)
+    self.playbackTimer = Timer.scheduledTimer(withTimeInterval: fragment.duration, repeats: false) { _ in
+      self.setVolume(0, fadeDuration: fadeDuration) { self.delegate?.playerJustFinishedPlaying(self) }
+    }
   }
 
   func stop() {
-    self.soundPlayers.values.forEach { $0.stop() }
+    self.isPlaying = false
+    self.audioPlayer.stop()
+    self.playbackTimer?.invalidate()
   }
 
-  func playerJustFinishedPlaying(_ player: SoundPlayer) {
-    let fragment = SoundFragment(start: 0, end: 1)
+  private func setVolume(_ volume: Float, fadeDuration: TimeInterval, completionHandler: (() -> Void)? = nil) {
+    var remainingTimeInCentiseconds = max(1, fadeDuration * 100)
+    let volumeStep = (volume - self.audioPlayer.volume) / Float(remainingTimeInCentiseconds)
 
-    if player as AnyObject === self.soundPlayers[.inhalation] {
-      self.soundPlayers[.exhalation]?.play(fragment: fragment)
+    Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
+      if remainingTimeInCentiseconds < 1 || !self.audioPlayer.isPlaying {
+        timer.invalidate()
+        self.audioPlayer.volume = volume
+        completionHandler?()
+        return
+      }
+
+      remainingTimeInCentiseconds -= 1
+      self.audioPlayer.volume += volumeStep
     }
-
-    if player as AnyObject === self.soundPlayers[.exhalation] {
-      self.soundPlayers[.inhalation]?.play(fragment: fragment)
-    }
-
-    self.delegate?.playerJustFinishedPlaying(player)
   }
 }
