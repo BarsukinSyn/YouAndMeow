@@ -19,8 +19,8 @@ final class BreathingSoundPlayer: SoundPlayer {
     let audioBuffer = try source.readIntoPCMBuffer()
     let audioPlayer = AudioPCMBufferPlayer(withInput: audioBuffer)
 
-    self.audioPlayer = audioPlayer
     self.isPlaying = false
+    self.audioPlayer = audioPlayer
   }
 
   func attach(equalizer: AVAudioUnitEQ) {
@@ -43,14 +43,17 @@ final class BreathingSoundPlayer: SoundPlayer {
     self.isPlaying = true
     self.setVolume(volume, fadeDuration: fadeDuration)
     self.playbackTimer = Timer.scheduledTimer(withTimeInterval: fragment.duration, repeats: false) { _ in
-      self.setVolume(0, fadeDuration: fadeDuration) { self.delegate?.playerJustFinishedPlaying(self) }
+      self.setVolume(0, fadeDuration: fadeDuration) {
+        self.isPlaying = false
+        self.delegate?.playerJustFinishedPlaying(self)
+      }
     }
   }
 
   func stop() {
-    self.isPlaying = false
     self.audioPlayer.stop()
     self.playbackTimer?.invalidate()
+    self.isPlaying = false
   }
 
   private func setVolume(_ volume: Float, fadeDuration: TimeInterval, completionHandler: (() -> Void)? = nil) {

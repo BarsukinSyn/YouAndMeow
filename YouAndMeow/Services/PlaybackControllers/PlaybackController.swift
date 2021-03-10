@@ -8,7 +8,8 @@
 
 import Foundation
 
-protocol PlaybackController: SoundPlayerDelegate {
+protocol PlaybackController {
   func play() throws
   func stop()
+  func reset()
 }

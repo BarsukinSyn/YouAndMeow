@@ -25,8 +25,6 @@ final class MeowingPlaybackController: PlaybackController, MeowingPlaybackSettin
 
     self.soundPlayer = soundPlayer
     self.timecodesManager = timecodesManager
-
-    self.soundPlayer.delegate = self
   }
 
   func play() {
@@ -40,6 +38,11 @@ final class MeowingPlaybackController: PlaybackController, MeowingPlaybackSettin
     self.soundPlayer.stop()
   }
 
+  func reset() {
+    self.updateRate(self._rate.averageValue)
+    self.updateVolume(self._volume.maximumValue)
+  }
+
   func updateRate(_ rate: Float) {
     self.rate = rate
   }
@@ -47,6 +50,4 @@ final class MeowingPlaybackController: PlaybackController, MeowingPlaybackSettin
   func updateVolume(_ volume: Float) {
     self.volume = volume
   }
-
-  func playerJustFinishedPlaying(_ player: SoundPlayer) {}
 }

@@ -17,10 +17,6 @@ struct PlaybackSetting {
     (self.minimumValue + self.maximumValue) / 2
   }
 
-  var projectedValue: Float {
-    self.currentValue
-  }
-
   var wrappedValue: Float {
     get { self.currentValue }
     set { self.currentValue = (self.minimumValue...self.maximumValue).clamped(newValue) }

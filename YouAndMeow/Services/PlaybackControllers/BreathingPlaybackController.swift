@@ -16,13 +16,20 @@ protocol BreathingPlaybackSettings:
   VolumeSetting {
 }
 
-final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSettings {
+protocol BreathingPlaybackControllerDelegate {
+  func breathingCycleBegins()
+}
+
+final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSettings, SoundPlayerDelegate {
   @PlaybackSetting(minimumValue: 0.01, maximumValue: 1) private (set) var distance: Float = 0.505
   @PlaybackSetting(minimumValue: 20, maximumValue: 100) private (set) var rate: Float = 60
   @PlaybackSetting(minimumValue: -0.4, maximumValue: 0.4) private (set) var symmetry: Float = 0
   @PlaybackSetting(minimumValue: 0, maximumValue: 0.2) private (set) var variability: Float = 0.1
   @PlaybackSetting(minimumValue: 0, maximumValue: 1.5) private (set) var volume: Float = 1.5
 
+  var delegate: BreathingPlaybackControllerDelegate?
+
+  private var isPlaying: Bool
   private let inhalationSoundPlayer: BreathingSoundPlayer
   private let exhalationSoundPlayer: BreathingSoundPlayer
   private let distanceProcessors: [DistanceProcessor]
@@ -31,9 +38,13 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
     [self.inhalationSoundPlayer, self.exhalationSoundPlayer]
   }
 
+  var breathingPhaseBaseDuration: TimeInterval {
+    TimeInterval(60 / self.rate / 2)
+  }
+
   init(
-    withInhalationSoundPlayer inhalationSoundPlayer: BreathingSoundPlayer,
-    andExhalationSoundPlayer exhalationSoundPlayer: BreathingSoundPlayer
+    withInhalationPlayer inhalationSoundPlayer: BreathingSoundPlayer,
+    andExhalationPlayer exhalationSoundPlayer: BreathingSoundPlayer
   ) {
     let inhalationDistanceProcessor = DistanceProcessor()
     let exhalationDistanceProcessor = DistanceProcessor()
@@ -41,6 +52,7 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
     inhalationSoundPlayer.attach(equalizer: inhalationDistanceProcessor.equalizer)
     exhalationSoundPlayer.attach(equalizer: exhalationDistanceProcessor.equalizer)
 
+    self.isPlaying = false
     self.inhalationSoundPlayer = inhalationSoundPlayer
     self.exhalationSoundPlayer = exhalationSoundPlayer
     self.distanceProcessors = [inhalationDistanceProcessor, exhalationDistanceProcessor]
@@ -49,19 +61,29 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
   }
 
   func play() throws {
-    let mockedVolumeLevel: Float = 1
-    let mockedFragment = SoundFragment(start: 0, end: 1)
+    if self.isPlaying { return }
 
     try self.soundPlayers.forEach { try $0.prepareToPlay() }
-    self.inhalationSoundPlayer.play(fragment: mockedFragment, atVolume: mockedVolumeLevel)
+    self.playSound(player: self.exhalationSoundPlayer)
+    self.isPlaying = true
   }
 
   func stop() {
     self.soundPlayers.forEach { $0.stop() }
+    self.isPlaying = false
+  }
+
+  func reset() {
+    self.updateDistance(self._distance.averageValue)
+    self.updateRate(self._rate.averageValue)
+    self.updateSymmetry(self._symmetry.averageValue)
+    self.updateVariability(self._variability.averageValue)
+    self.updateVolume(self._volume.maximumValue)
   }
 
   func updateDistance(_ distance: Float) {
     self.distance = distance
+    self.distanceProcessors.forEach { $0.setDistance(self.distance) }
   }
 
   func updateRate(_ rate: Float) {
@@ -80,5 +102,20 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
     self.volume = volume
   }
 
-  func playerJustFinishedPlaying(_ player: SoundPlayer) {}
+  func playerJustFinishedPlaying(_ player: SoundPlayer) {
+    if player as AnyObject === self.exhalationSoundPlayer {
+      self.playSound(player: self.inhalationSoundPlayer)
+    }
+
+    if player as AnyObject === self.inhalationSoundPlayer {
+      self.delegate?.breathingCycleBegins()
+      self.playSound(player: self.exhalationSoundPlayer)
+    }
+  }
+
+  private func playSound(player: SoundPlayer) {
+    let soundFragment = SoundFragment(start: 0, end: self.breathingPhaseBaseDuration)
+
+    player.play(fragment: soundFragment, atVolume: self.volume)
+  }
 }

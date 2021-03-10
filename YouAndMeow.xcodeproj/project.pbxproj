@@ -21,7 +21,6 @@
 		E74E266D24AE3A3900A948A6 /* BreathingPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266C24AE3A3900A948A6 /* BreathingPlaybackController.swift */; };
 		E74EFCEC24A31E6700EEC724 /* Exhalation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E74EFCEA24A31E6700EEC724 /* Exhalation.m4a */; };
 		E74EFCED24A31E6700EEC724 /* Inhalation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E74EFCEB24A31E6700EEC724 /* Inhalation.m4a */; };
-		E74EFCF224A4CB2F00EEC724 /* BreathingPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74EFCF124A4CB2F00EEC724 /* BreathingPhase.swift */; };
 		E75556FC24A3032A0094F445 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75556FB24A3032A0094F445 /* DataDecoder.swift */; };
 		E755570224A49C7F0094F445 /* TimecodesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E755570124A49C7F0094F445 /* TimecodesProvider.swift */; };
 		E755570424A49C7F0094F445 /* Timecodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E755570324A49C7F0094F445 /* Timecodes.swift */; };
@@ -69,7 +68,6 @@
 		E74E266C24AE3A3900A948A6 /* BreathingPlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPlaybackController.swift; sourceTree = "<group>"; };
 		E74EFCEA24A31E6700EEC724 /* Exhalation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Exhalation.m4a; sourceTree = "<group>"; };
 		E74EFCEB24A31E6700EEC724 /* Inhalation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inhalation.m4a; sourceTree = "<group>"; };
-		E74EFCF124A4CB2F00EEC724 /* BreathingPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPhase.swift; sourceTree = "<group>"; };
 		E75556FB24A3032A0094F445 /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
 		E755570124A49C7F0094F445 /* TimecodesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimecodesProvider.swift; sourceTree = "<group>"; };
 		E755570324A49C7F0094F445 /* Timecodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timecodes.swift; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				E74E265924ADD55800A948A6 /* PlaybackSettings */,
-				E74EFCF124A4CB2F00EEC724 /* BreathingPhase.swift */,
 				E7BF559E24A0570000DB57B6 /* File.swift */,
 				E7BF559C24A056D900DB57B6 /* SoundFragment.swift */,
 				E7BF559A24A056C600DB57B6 /* SoundSource.swift */,
@@ -425,7 +422,6 @@
 				E7BF559F24A0570000DB57B6 /* File.swift in Sources */,
 				E7BF5592249F2A7900DB57B6 /* AudioPCMBufferPlayer.swift in Sources */,
 				E7DBFC0524A0EA7200E87A5E /* CatSoundPlayer.swift in Sources */,
-				E74EFCF224A4CB2F00EEC724 /* BreathingPhase.swift in Sources */,
 				E7BF559824A0569600DB57B6 /* MeowingSoundPlayer.swift in Sources */,
 				E7BF559D24A056D900DB57B6 /* SoundFragment.swift in Sources */,
 				E74E266624ADD55800A948A6 /* VolumeSetting.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class CatSoundPlayer {
+final class CatSoundPlayer: BreathingPlaybackControllerDelegate {
   private let breathingPlaybackController: BreathingPlaybackController
   private let meowingPlaybackController: MeowingPlaybackController
 
@@ -18,15 +18,19 @@ final class CatSoundPlayer {
     let meowingSoundPlayer = try SoundPlayerCreator.createMeowingSoundPlayer()
     let meowingPlaybackController = try MeowingPlaybackController(withPlayer: meowingSoundPlayer)
     let breathingPlaybackController = BreathingPlaybackController(
-      withInhalationSoundPlayer: inhalationSoundPlayer,
-      andExhalationSoundPlayer: exhalationSoundPlayer
+      withInhalationPlayer: inhalationSoundPlayer,
+      andExhalationPlayer: exhalationSoundPlayer
     )
 
     self.breathingPlaybackController = breathingPlaybackController
     self.meowingPlaybackController = meowingPlaybackController
+
+    self.breathingPlaybackController.delegate = self
   }
 
   func play() {
     try? self.breathingPlaybackController.play()
   }
+
+  func breathingCycleBegins() {}
 }
