@@ -11,5 +11,4 @@ import Foundation
 protocol PlaybackController {
   func play() throws
   func stop()
-  func reset()
 }

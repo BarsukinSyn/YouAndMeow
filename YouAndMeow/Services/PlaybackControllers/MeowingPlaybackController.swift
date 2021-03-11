@@ -8,14 +8,9 @@
 
 import Foundation
 
-protocol MeowingPlaybackSettings:
-  RateSetting,
-  VolumeSetting {
-}
-
-final class MeowingPlaybackController: PlaybackController, MeowingPlaybackSettings {
-  @PlaybackSetting(minimumValue: 0, maximumValue: 4) private (set) var rate: Float = 2
-  @PlaybackSetting(minimumValue: 0, maximumValue: 1) private (set) var volume: Float = 1
+final class MeowingPlaybackController: PlaybackController {
+  @LimitedValue(0 ... 4) private var rate: Float = 2
+  @LimitedValue(0 ... 1) private var volume: Float = 1
 
   private let soundPlayer: MeowingSoundPlayer
   private let timecodesManager: TimecodesManager
@@ -36,11 +31,6 @@ final class MeowingPlaybackController: PlaybackController, MeowingPlaybackSettin
 
   func stop() {
     self.soundPlayer.stop()
-  }
-
-  func reset() {
-    self.updateRate(self._rate.averageValue)
-    self.updateVolume(self._volume.maximumValue)
   }
 
   func updateRate(_ rate: Float) {

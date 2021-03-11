@@ -8,31 +8,23 @@
 
 import Foundation
 
-protocol BreathingPlaybackSettings:
-  DistanceSetting,
-  RateSetting,
-  SymmetrySetting,
-  VariabilitySetting,
-  VolumeSetting {
-}
-
-protocol BreathingPlaybackControllerDelegate {
+protocol BreathingPlaybackControllerDelegate: class {
   func breathingCycleBegins()
 }
 
-final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSettings, SoundPlayerDelegate {
-  @PlaybackSetting(minimumValue: 0.01, maximumValue: 1) private (set) var distance: Float = 0.505
-  @PlaybackSetting(minimumValue: 20, maximumValue: 100) private (set) var rate: Float = 60
-  @PlaybackSetting(minimumValue: -0.4, maximumValue: 0.4) private (set) var symmetry: Float = 0
-  @PlaybackSetting(minimumValue: 0, maximumValue: 0.2) private (set) var variability: Float = 0.1
-  @PlaybackSetting(minimumValue: 0, maximumValue: 1) private (set) var volume: Float = 1
+final class BreathingPlaybackController: PlaybackController, SoundPlayerDelegate {
+  weak var delegate: BreathingPlaybackControllerDelegate?
 
-  var delegate: BreathingPlaybackControllerDelegate?
+  private var isPlaying: Bool = false
+  @LimitedValue(0.01 ... 1) private var distance: Float = 0.505
+  @LimitedValue(20 ... 100) private var rate: Float = 60
+  @LimitedValue(-0.4 ... 0.4) private var symmetry: Float = 0
+  @LimitedValue(0 ... 0.2) private var variability: Float = 0.1
+  @LimitedValue(0 ... 1) private var volume: Float = 1
 
-  private var isPlaying: Bool
   private let inhalationSoundPlayer: BreathingSoundPlayer
   private let exhalationSoundPlayer: BreathingSoundPlayer
-  private let breathingSoundFragmentManager: BreathingSoundFragmentManager
+  private let breathingSoundFragmentsManager: BreathingSoundFragmentsManager
   private let distanceProcessors: [DistanceProcessor]
 
   private var soundPlayers: [BreathingSoundPlayer] {
@@ -45,17 +37,19 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
   ) {
     let inhalationDistanceProcessor = DistanceProcessor()
     let exhalationDistanceProcessor = DistanceProcessor()
+    let breathingSoundFragmentsManager = BreathingSoundFragmentsManager()
 
     inhalationSoundPlayer.attach(equalizer: inhalationDistanceProcessor.equalizer)
     exhalationSoundPlayer.attach(equalizer: exhalationDistanceProcessor.equalizer)
 
-    self.isPlaying = false
     self.inhalationSoundPlayer = inhalationSoundPlayer
     self.exhalationSoundPlayer = exhalationSoundPlayer
-    self.breathingSoundFragmentManager = BreathingSoundFragmentManager()
+    self.breathingSoundFragmentsManager = breathingSoundFragmentsManager
     self.distanceProcessors = [inhalationDistanceProcessor, exhalationDistanceProcessor]
 
     self.soundPlayers.forEach { $0.delegate = self }
+    self.breathingSoundFragmentsManager.updateRate(self._rate)
+    self.breathingSoundFragmentsManager.updateVariability(self._variability)
   }
 
   func play() throws {
@@ -71,14 +65,6 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
     self.isPlaying = false
   }
 
-  func reset() {
-    self.updateDistance(self._distance.averageValue)
-    self.updateRate(self._rate.averageValue)
-    self.updateSymmetry(self._symmetry.averageValue)
-    self.updateVariability(self._variability.averageValue)
-    self.updateVolume(self._volume.maximumValue)
-  }
-
   func updateDistance(_ distance: Float) {
     self.distance = distance
     self.distanceProcessors.forEach { $0.setDistance(self.distance) }
@@ -86,6 +72,7 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
 
   func updateRate(_ rate: Float) {
     self.rate = rate
+    self.breathingSoundFragmentsManager.updateRate(self._rate)
   }
 
   func updateSymmetry(_ symmetry: Float) {
@@ -94,6 +81,7 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
 
   func updateVariability(_ variability: Float) {
     self.variability = variability
+    self.breathingSoundFragmentsManager.updateVariability(self._variability)
   }
 
   func updateVolume(_ volume: Float) {
@@ -112,7 +100,7 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
   }
 
   private func playSound(from player: BreathingSoundPlayer) {
-    let soundFragment = self.breathingSoundFragmentManager.getSoundFragment()
+    let soundFragment = self.breathingSoundFragmentsManager.getNextSoundFragment()
     let playbackVolume = self.volume + (player === self.inhalationSoundPlayer ? -self.symmetry : self.symmetry)
 
     player.play(fragment: soundFragment, atVolume: playbackVolume)

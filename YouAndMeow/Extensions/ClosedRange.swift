@@ -9,7 +9,7 @@
 import Foundation
 
 extension ClosedRange {
-  func clamped(_ value : Bound) -> Bound {
+  func clamped(_ value: Bound) -> Bound {
     return value < self.lowerBound ? self.lowerBound : value > self.upperBound ? self.upperBound : value
   }
 }

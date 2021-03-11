@@ -11,7 +11,7 @@ import AVFoundation
 final class BreathingSoundPlayer: SoundPlayer {
   weak var delegate: SoundPlayerDelegate?
 
-  private var isPlaying: Bool
+  private var isPlaying: Bool = false
   private var playbackTimer: Timer?
   private let audioPlayer: AudioPCMBufferPlayer
 
@@ -19,7 +19,6 @@ final class BreathingSoundPlayer: SoundPlayer {
     let audioBuffer = try source.readIntoPCMBuffer()
     let audioPlayer = AudioPCMBufferPlayer(withInput: audioBuffer)
 
-    self.isPlaying = false
     self.audioPlayer = audioPlayer
   }
 

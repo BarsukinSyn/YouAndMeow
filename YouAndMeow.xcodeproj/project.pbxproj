@@ -7,16 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E718445124B4D1CE00839475 /* BreathingSoundFragmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718445024B4D1CE00839475 /* BreathingSoundFragmentManager.swift */; };
+		E718445124B4D1CE00839475 /* BreathingSoundFragmentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718445024B4D1CE00839475 /* BreathingSoundFragmentsManager.swift */; };
 		E72D476124A6016C00A2FB8A /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D476024A6016C00A2FB8A /* Source.swift */; };
 		E72D476524A60E3400A2FB8A /* SoundPlayerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D476424A60E3400A2FB8A /* SoundPlayerCreator.swift */; };
 		E72D476724A60EAF00A2FB8A /* TimecodesManagerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D476624A60EAF00A2FB8A /* TimecodesManagerCreator.swift */; };
-		E74E265B24ADD55800A948A6 /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E265A24ADD55800A948A6 /* PlaybackSetting.swift */; };
-		E74E265E24ADD55800A948A6 /* DistanceSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E265D24ADD55800A948A6 /* DistanceSetting.swift */; };
-		E74E266024ADD55800A948A6 /* RateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E265F24ADD55800A948A6 /* RateSetting.swift */; };
-		E74E266224ADD55800A948A6 /* SymmetrySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266124ADD55800A948A6 /* SymmetrySetting.swift */; };
-		E74E266424ADD55800A948A6 /* VariabilitySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266324ADD55800A948A6 /* VariabilitySetting.swift */; };
-		E74E266624ADD55800A948A6 /* VolumeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266524ADD55800A948A6 /* VolumeSetting.swift */; };
+		E74337B524B5E0D1006F3329 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74337B424B5E0D1006F3329 /* Comparable.swift */; };
+		E74337B824B5E41D006F3329 /* LimitedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74337B724B5E41D006F3329 /* LimitedValue.swift */; };
 		E74E266924AE39DF00A948A6 /* PlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266824AE39DF00A948A6 /* PlaybackController.swift */; };
 		E74E266B24AE3A0F00A948A6 /* MeowingPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266A24AE3A0F00A948A6 /* MeowingPlaybackController.swift */; };
 		E74E266D24AE3A3900A948A6 /* BreathingPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266C24AE3A3900A948A6 /* BreathingPlaybackController.swift */; };
@@ -55,16 +51,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E718445024B4D1CE00839475 /* BreathingSoundFragmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSoundFragmentManager.swift; sourceTree = "<group>"; };
+		E718445024B4D1CE00839475 /* BreathingSoundFragmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSoundFragmentsManager.swift; sourceTree = "<group>"; };
 		E72D476024A6016C00A2FB8A /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		E72D476424A60E3400A2FB8A /* SoundPlayerCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayerCreator.swift; sourceTree = "<group>"; };
 		E72D476624A60EAF00A2FB8A /* TimecodesManagerCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimecodesManagerCreator.swift; sourceTree = "<group>"; };
-		E74E265A24ADD55800A948A6 /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
-		E74E265D24ADD55800A948A6 /* DistanceSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceSetting.swift; sourceTree = "<group>"; };
-		E74E265F24ADD55800A948A6 /* RateSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateSetting.swift; sourceTree = "<group>"; };
-		E74E266124ADD55800A948A6 /* SymmetrySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymmetrySetting.swift; sourceTree = "<group>"; };
-		E74E266324ADD55800A948A6 /* VariabilitySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariabilitySetting.swift; sourceTree = "<group>"; };
-		E74E266524ADD55800A948A6 /* VolumeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSetting.swift; sourceTree = "<group>"; };
+		E74337B424B5E0D1006F3329 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
+		E74337B724B5E41D006F3329 /* LimitedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedValue.swift; sourceTree = "<group>"; };
 		E74E266824AE39DF00A948A6 /* PlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackController.swift; sourceTree = "<group>"; };
 		E74E266A24AE3A0F00A948A6 /* MeowingPlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowingPlaybackController.swift; sourceTree = "<group>"; };
 		E74E266C24AE3A3900A948A6 /* BreathingPlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPlaybackController.swift; sourceTree = "<group>"; };
@@ -118,7 +110,7 @@
 		E72D476224A60DD000A2FB8A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				E718445024B4D1CE00839475 /* BreathingSoundFragmentManager.swift */,
+				E718445024B4D1CE00839475 /* BreathingSoundFragmentsManager.swift */,
 				E7A1A9BB24A2262D00419F81 /* TimecodesManager.swift */,
 			);
 			path = Managers;
@@ -133,25 +125,12 @@
 			path = Creators;
 			sourceTree = "<group>";
 		};
-		E74E265924ADD55800A948A6 /* PlaybackSettings */ = {
+		E74337B624B5E402006F3329 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				E74E265C24ADD55800A948A6 /* Types */,
-				E74E265A24ADD55800A948A6 /* PlaybackSetting.swift */,
+				E74337B724B5E41D006F3329 /* LimitedValue.swift */,
 			);
-			path = PlaybackSettings;
-			sourceTree = "<group>";
-		};
-		E74E265C24ADD55800A948A6 /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				E74E265D24ADD55800A948A6 /* DistanceSetting.swift */,
-				E74E265F24ADD55800A948A6 /* RateSetting.swift */,
-				E74E266124ADD55800A948A6 /* SymmetrySetting.swift */,
-				E74E266324ADD55800A948A6 /* VariabilitySetting.swift */,
-				E74E266524ADD55800A948A6 /* VolumeSetting.swift */,
-			);
-			path = Types;
+			path = Wrappers;
 			sourceTree = "<group>";
 		};
 		E74EFCEE24A4C8F900EEC724 /* SoundProcessors */ = {
@@ -166,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				E78E14E724A6532C00899F67 /* ClosedRange.swift */,
+				E74337B424B5E0D1006F3329 /* Comparable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,7 +226,6 @@
 		E7BF559924A056B700DB57B6 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				E74E265924ADD55800A948A6 /* PlaybackSettings */,
 				E7BF559E24A0570000DB57B6 /* File.swift */,
 				E7BF559C24A056D900DB57B6 /* SoundFragment.swift */,
 				E7BF559A24A056C600DB57B6 /* SoundSource.swift */,
@@ -318,6 +297,7 @@
 				E7E6DB2F249D18EE00F09B36 /* Preview Content */,
 				E7DBFC0624A0ED7500E87A5E /* Resources */,
 				E7BF5593249F2A7900DB57B6 /* Services */,
+				E74337B624B5E402006F3329 /* Wrappers */,
 				E7E6DB27249D18ED00F09B36 /* AppDelegate.swift */,
 				E7E6DB2B249D18ED00F09B36 /* ContentView.swift */,
 				E7E6DB29249D18ED00F09B36 /* SceneDelegate.swift */,
@@ -413,7 +393,6 @@
 			files = (
 				E72D476724A60EAF00A2FB8A /* TimecodesManagerCreator.swift in Sources */,
 				E74E266D24AE3A3900A948A6 /* BreathingPlaybackController.swift in Sources */,
-				E74E266424ADD55800A948A6 /* VariabilitySetting.swift in Sources */,
 				E7E6DB28249D18ED00F09B36 /* AppDelegate.swift in Sources */,
 				E7A1A9BC24A2262D00419F81 /* TimecodesManager.swift in Sources */,
 				E755570224A49C7F0094F445 /* TimecodesProvider.swift in Sources */,
@@ -427,28 +406,25 @@
 				E7DBFC0524A0EA7200E87A5E /* CatSoundPlayer.swift in Sources */,
 				E7BF559824A0569600DB57B6 /* MeowingSoundPlayer.swift in Sources */,
 				E7BF559D24A056D900DB57B6 /* SoundFragment.swift in Sources */,
-				E74E266624ADD55800A948A6 /* VolumeSetting.swift in Sources */,
 				E755570424A49C7F0094F445 /* Timecodes.swift in Sources */,
+				E74337B824B5E41D006F3329 /* LimitedValue.swift in Sources */,
 				E7E6DB2C249D18ED00F09B36 /* ContentView.swift in Sources */,
 				E72D476524A60E3400A2FB8A /* SoundPlayerCreator.swift in Sources */,
 				E78E14E824A6532C00899F67 /* ClosedRange.swift in Sources */,
 				E7BF5575249D1F0800DB57B6 /* AudioByteBufferEngine.swift in Sources */,
+				E74337B524B5E0D1006F3329 /* Comparable.swift in Sources */,
 				E7BF5586249E1E3500DB57B6 /* AVAudioEngine.swift in Sources */,
-				E74E265B24ADD55800A948A6 /* PlaybackSetting.swift in Sources */,
 				E74E266B24AE3A0F00A948A6 /* MeowingPlaybackController.swift in Sources */,
-				E74E265E24ADD55800A948A6 /* DistanceSetting.swift in Sources */,
-				E718445124B4D1CE00839475 /* BreathingSoundFragmentManager.swift in Sources */,
+				E718445124B4D1CE00839475 /* BreathingSoundFragmentsManager.swift in Sources */,
 				E74E266924AE39DF00A948A6 /* PlaybackController.swift in Sources */,
 				E7BF55A924A27FF600DB57B6 /* SoundSourceProvider.swift in Sources */,
 				E75556FC24A3032A0094F445 /* DataDecoder.swift in Sources */,
 				E7BF559B24A056C600DB57B6 /* SoundSource.swift in Sources */,
 				E7BF556D249D1E4400DB57B6 /* FileManager.swift in Sources */,
 				E72D476124A6016C00A2FB8A /* Source.swift in Sources */,
-				E74E266024ADD55800A948A6 /* RateSetting.swift in Sources */,
 				E7BF5577249D1F1D00DB57B6 /* AudioPCMBufferEngine.swift in Sources */,
 				E7BF558E249F2A7900DB57B6 /* AudioBufferPlayer.swift in Sources */,
 				E7BF55A724A11D1300DB57B6 /* DistanceProcessor.swift in Sources */,
-				E74E266224ADD55800A948A6 /* SymmetrySetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
