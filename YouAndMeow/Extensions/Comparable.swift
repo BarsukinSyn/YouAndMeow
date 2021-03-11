@@ -12,4 +12,8 @@ extension Comparable {
   func clamped(_ range: ClosedRange<Self>) -> Self {
     return range.clamped(self)
   }
+
+  func isWithin(_ range: ClosedRange<Self>) -> Bool {
+    return self >= range.lowerBound && self <= range.upperBound
+  }
 }

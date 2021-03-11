@@ -8,36 +8,35 @@
 
 import Foundation
 
-final class MeowingPlaybackController: PlaybackController {
-  @LimitedValue(0 ... 4) private var rate: Float = 2
-  @LimitedValue(0 ... 1) private var volume: Float = 1
+final class MeowingPlaybackController {
+  @LimitedValue(0 ... 4) private (set) var rate: Float = 2
+  @LimitedValue(0 ... 1) private (set) var volume: Float = 1
 
   private let soundPlayer: MeowingSoundPlayer
-  private let timecodesManager: TimecodesManager
+  private let fragmentManager: MeowingFragmentManager
 
   init(withPlayer soundPlayer: MeowingSoundPlayer) throws {
-    let timecodesManager = try TimecodesManagerCreator.createMeowingsTimecodesManager()
+    let fragmentManager = try FragmentManagerCreator.createMeowingFragmentManager()
 
     self.soundPlayer = soundPlayer
-    self.timecodesManager = timecodesManager
+    self.fragmentManager = fragmentManager
   }
 
   func play() {
-    let mockedVolumeLevel: Float = 1
-    let randomSoundFragment = self.timecodesManager.getRandomSoundFragment()
+    let soundFragment = self.fragmentManager.getFragment()
 
-    self.soundPlayer.play(fragment: randomSoundFragment, atVolume: mockedVolumeLevel)
+    self.soundPlayer.play(fragment: soundFragment, atVolume: self.volume)
   }
 
   func stop() {
     self.soundPlayer.stop()
   }
 
-  func updateRate(_ rate: Float) {
+  func setRate(_ rate: Float) {
     self.rate = rate
   }
 
-  func updateVolume(_ volume: Float) {
+  func setVolume(_ volume: Float) {
     self.volume = volume
   }
 }

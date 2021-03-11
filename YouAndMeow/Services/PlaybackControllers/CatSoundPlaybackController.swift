@@ -1,5 +1,5 @@
 //
-//  CatSoundPlayer.swift
+//  CatSoundPlaybackController.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 26.06.2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class CatSoundPlayer: BreathingPlaybackControllerDelegate {
+final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
   private let breathingPlaybackController: BreathingPlaybackController
   private let meowingPlaybackController: MeowingPlaybackController
 
@@ -32,5 +32,16 @@ final class CatSoundPlayer: BreathingPlaybackControllerDelegate {
     try? self.breathingPlaybackController.play()
   }
 
-  func breathingCycleBegins() {}
+  func breathingCycleBegins() {
+    if self.shouldPlayMeowingSound(threshold: Float.random(in: 0 ... 1)) {
+      self.meowingPlaybackController.play()
+    }
+  }
+
+  private func shouldPlayMeowingSound(threshold: Float) -> Bool {
+    let meowingRate = self.meowingPlaybackController.rate
+    let breathingRate = self.breathingPlaybackController.rate
+
+    return meowingRate > 0 && (meowingRate / breathingRate) > threshold
+  }
 }
