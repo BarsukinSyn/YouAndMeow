@@ -25,21 +25,18 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
   @PlaybackSetting(minimumValue: 20, maximumValue: 100) private (set) var rate: Float = 60
   @PlaybackSetting(minimumValue: -0.4, maximumValue: 0.4) private (set) var symmetry: Float = 0
   @PlaybackSetting(minimumValue: 0, maximumValue: 0.2) private (set) var variability: Float = 0.1
-  @PlaybackSetting(minimumValue: 0, maximumValue: 1.5) private (set) var volume: Float = 1.5
+  @PlaybackSetting(minimumValue: 0, maximumValue: 1) private (set) var volume: Float = 1
 
   var delegate: BreathingPlaybackControllerDelegate?
 
   private var isPlaying: Bool
   private let inhalationSoundPlayer: BreathingSoundPlayer
   private let exhalationSoundPlayer: BreathingSoundPlayer
+  private let breathingSoundFragmentManager: BreathingSoundFragmentManager
   private let distanceProcessors: [DistanceProcessor]
 
   private var soundPlayers: [BreathingSoundPlayer] {
     [self.inhalationSoundPlayer, self.exhalationSoundPlayer]
-  }
-
-  var breathingPhaseBaseDuration: TimeInterval {
-    TimeInterval(60 / self.rate / 2)
   }
 
   init(
@@ -55,6 +52,7 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
     self.isPlaying = false
     self.inhalationSoundPlayer = inhalationSoundPlayer
     self.exhalationSoundPlayer = exhalationSoundPlayer
+    self.breathingSoundFragmentManager = BreathingSoundFragmentManager()
     self.distanceProcessors = [inhalationDistanceProcessor, exhalationDistanceProcessor]
 
     self.soundPlayers.forEach { $0.delegate = self }
@@ -64,7 +62,7 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
     if self.isPlaying { return }
 
     try self.soundPlayers.forEach { try $0.prepareToPlay() }
-    self.playSound(player: self.exhalationSoundPlayer)
+    self.playSound(from: self.exhalationSoundPlayer)
     self.isPlaying = true
   }
 
@@ -104,18 +102,19 @@ final class BreathingPlaybackController: PlaybackController, BreathingPlaybackSe
 
   func playerJustFinishedPlaying(_ player: SoundPlayer) {
     if player as AnyObject === self.exhalationSoundPlayer {
-      self.playSound(player: self.inhalationSoundPlayer)
+      self.playSound(from: self.inhalationSoundPlayer)
     }
 
     if player as AnyObject === self.inhalationSoundPlayer {
       self.delegate?.breathingCycleBegins()
-      self.playSound(player: self.exhalationSoundPlayer)
+      self.playSound(from: self.exhalationSoundPlayer)
     }
   }
 
-  private func playSound(player: SoundPlayer) {
-    let soundFragment = SoundFragment(start: 0, end: self.breathingPhaseBaseDuration)
+  private func playSound(from player: BreathingSoundPlayer) {
+    let soundFragment = self.breathingSoundFragmentManager.getSoundFragment()
+    let playbackVolume = self.volume + (player === self.inhalationSoundPlayer ? -self.symmetry : self.symmetry)
 
-    player.play(fragment: soundFragment, atVolume: self.volume)
+    player.play(fragment: soundFragment, atVolume: playbackVolume)
   }
 }
