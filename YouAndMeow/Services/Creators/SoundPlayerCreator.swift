@@ -8,7 +8,9 @@
 
 import Foundation
 
-class SoundPlayerCreator {
+final class SoundPlayerCreator {
+  private init() {}
+
   static func createInhalationSoundPlayer() throws -> BreathingSoundPlayer {
     let inhalationSoundSource = SoundSourceProvider.getInhalationSoundSource()
     let inhalationSoundPlayer = try BreathingSoundPlayer(withSource: inhalationSoundSource)

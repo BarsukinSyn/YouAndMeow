@@ -8,7 +8,9 @@
 
 import Foundation
 
-class SoundSourceProvider {
+final class SoundSourceProvider {
+  private init() {}
+
   static func getMeowingSoundSource() -> SoundSource {
     let meowingSoundFile = File(name: "Meowing", type: "m4a")
     let meowingSoundSource = SoundSource(file: meowingSoundFile)
