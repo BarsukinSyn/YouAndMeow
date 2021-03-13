@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7160D6A24F032FF000B6825 /* RoundingAccuracy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7160D6924F032FF000B6825 /* RoundingAccuracy.swift */; };
 		E718445124B4D1CE00839475 /* BreathingFragmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718445024B4D1CE00839475 /* BreathingFragmentManager.swift */; };
 		E72D476124A6016C00A2FB8A /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D476024A6016C00A2FB8A /* Source.swift */; };
 		E72D476524A60E3400A2FB8A /* SoundPlayerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D476424A60E3400A2FB8A /* SoundPlayerCreator.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7160D6924F032FF000B6825 /* RoundingAccuracy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundingAccuracy.swift; sourceTree = "<group>"; };
 		E718445024B4D1CE00839475 /* BreathingFragmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingFragmentManager.swift; sourceTree = "<group>"; };
 		E72D476024A6016C00A2FB8A /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		E72D476424A60E3400A2FB8A /* SoundPlayerCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayerCreator.swift; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7160D6824F032D3000B6825 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				E7160D6924F032FF000B6825 /* RoundingAccuracy.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		E72D476224A60DD000A2FB8A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +310,7 @@
 				E7E6DB2F249D18EE00F09B36 /* Preview Content */,
 				E7DBFC0624A0ED7500E87A5E /* Resources */,
 				E7BF5593249F2A7900DB57B6 /* Services */,
+				E7160D6824F032D3000B6825 /* Types */,
 				E74337B624B5E402006F3329 /* Wrappers */,
 				E7E6DB27249D18ED00F09B36 /* AppDelegate.swift */,
 				E7E6DB2B249D18ED00F09B36 /* ContentView.swift */,
@@ -422,6 +433,7 @@
 				E7BF55A924A27FF600DB57B6 /* SoundSourceProvider.swift in Sources */,
 				E75556FC24A3032A0094F445 /* DataDecoder.swift in Sources */,
 				E7BF559B24A056C600DB57B6 /* SoundSource.swift in Sources */,
+				E7160D6A24F032FF000B6825 /* RoundingAccuracy.swift in Sources */,
 				E7BF556D249D1E4400DB57B6 /* FileManager.swift in Sources */,
 				E72D476124A6016C00A2FB8A /* Source.swift in Sources */,
 				E7BF5577249D1F1D00DB57B6 /* AudioPCMBufferEngine.swift in Sources */,

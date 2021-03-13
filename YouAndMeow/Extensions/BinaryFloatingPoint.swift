@@ -8,16 +8,8 @@
 
 import Foundation
 
-enum RoundingAccuracyOptions: Int {
-  case tenth = 10
-  case hundredth = 100
-  case thousandth = 1000
-}
-
 extension BinaryFloatingPoint {
-  typealias RoundingAccuracy = RoundingAccuracyOptions
-
-  func rounded(to accuracy: BinaryFloatingPoint.RoundingAccuracy) -> Self {
+  func rounded(to accuracy: RoundingAccuracy) -> Self {
     let accuracy = Self(accuracy.rawValue)
     let roundedValue = Darwin.round(self * accuracy) / accuracy
 
