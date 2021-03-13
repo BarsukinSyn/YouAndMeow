@@ -9,8 +9,6 @@
 import Foundation
 
 extension Timer {
-  typealias VoidFunction = () -> Void
-
   static func throttle(wait: TimeInterval, action: @escaping VoidFunction) -> VoidFunction {
     var pending = false
     let wrappedAction = {

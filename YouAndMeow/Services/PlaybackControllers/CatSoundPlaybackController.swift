@@ -14,15 +14,9 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
   private let playMeowingSound: VoidFunction
 
   init() throws {
-    let inhalationSoundPlayer = try SoundPlayerCreator.createInhalationSoundPlayer()
-    let exhalationSoundPlayer = try SoundPlayerCreator.createExhalationSoundPlayer()
-    let meowingSoundPlayer = try SoundPlayerCreator.createMeowingSoundPlayer()
-    let meowingPlaybackController = try MeowingPlaybackController(withPlayer: meowingSoundPlayer)
+    let breathingPlaybackController = try PlaybackControllerCreator.createBreathingPlaybackController()
+    let meowingPlaybackController = try PlaybackControllerCreator.createMeowingPlaybackController()
     let throttledMeowingPlayback = Timer.throttle(wait: 5, action: meowingPlaybackController.play)
-    let breathingPlaybackController = BreathingPlaybackController(
-      withInhalationPlayer: inhalationSoundPlayer,
-      andExhalationPlayer: exhalationSoundPlayer
-    )
 
     self.breathingPlaybackController = breathingPlaybackController
     self.meowingPlaybackController = meowingPlaybackController
@@ -33,6 +27,11 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
 
   func play() {
     try? self.breathingPlaybackController.play()
+  }
+
+  func stop() {
+    self.breathingPlaybackController.stop()
+    self.meowingPlaybackController.stop()
   }
 
   func breathingCycleBegins() {

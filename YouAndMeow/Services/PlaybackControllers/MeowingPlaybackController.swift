@@ -15,9 +15,7 @@ final class MeowingPlaybackController {
   private let soundPlayer: MeowingSoundPlayer
   private let fragmentManager: MeowingFragmentManager
 
-  init(withPlayer soundPlayer: MeowingSoundPlayer) throws {
-    let fragmentManager = try FragmentManagerCreator.createMeowingFragmentManager()
-
+  init(withPlayer soundPlayer: MeowingSoundPlayer, andFragmentManager fragmentManager: MeowingFragmentManager) {
     self.soundPlayer = soundPlayer
     self.fragmentManager = fragmentManager
   }

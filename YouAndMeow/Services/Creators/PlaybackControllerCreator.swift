@@ -1,0 +1,37 @@
+//
+//  PlaybackControllerCreator.swift
+//  YouAndMeow
+//
+//  Created by Vladimir on 16.07.2020.
+//  Copyright © 2020 Barsukin syn. All rights reserved.
+//
+
+import Foundation
+
+final class PlaybackControllerCreator {
+  private init() {}
+
+  static func createBreathingPlaybackController() throws -> BreathingPlaybackController {
+    let inhalationSoundPlayer = try SoundPlayerCreator.createInhalationSoundPlayer()
+    let exhalationSoundPlayer = try SoundPlayerCreator.createExhalationSoundPlayer()
+    let breathingFragmentManager = FragmentManagerCreator.createBreathingFragmentManager()
+    let breathingPlaybackController = BreathingPlaybackController(
+      withInhalationPlayer: inhalationSoundPlayer,
+      exhalationPlayer: exhalationSoundPlayer,
+      andFragmentManager: breathingFragmentManager
+    )
+
+    return breathingPlaybackController
+  }
+
+  static func createMeowingPlaybackController() throws -> MeowingPlaybackController {
+    let meowingSoundPlayer = try SoundPlayerCreator.createMeowingSoundPlayer()
+    let meowingFragmentManager = try FragmentManagerCreator.createMeowingFragmentManager()
+    let meowingPlaybackController = MeowingPlaybackController(
+      withPlayer: meowingSoundPlayer,
+      andFragmentManager: meowingFragmentManager
+    )
+
+    return meowingPlaybackController
+  }
+}

@@ -15,6 +15,7 @@
 		E72D476524A60E3400A2FB8A /* SoundPlayerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D476424A60E3400A2FB8A /* SoundPlayerCreator.swift */; };
 		E74337B524B5E0D1006F3329 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74337B424B5E0D1006F3329 /* Comparable.swift */; };
 		E74337B824B5E41D006F3329 /* LimitedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74337B724B5E41D006F3329 /* LimitedValue.swift */; };
+		E747EFBA24F0CDD9000E0CD0 /* PlaybackControllerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747EFB924F0CDD9000E0CD0 /* PlaybackControllerCreator.swift */; };
 		E74E266B24AE3A0F00A948A6 /* MeowingPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266A24AE3A0F00A948A6 /* MeowingPlaybackController.swift */; };
 		E74E266D24AE3A3900A948A6 /* BreathingPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E266C24AE3A3900A948A6 /* BreathingPlaybackController.swift */; };
 		E74EFCEC24A31E6700EEC724 /* Exhalation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E74EFCEA24A31E6700EEC724 /* Exhalation.m4a */; };
@@ -63,6 +64,7 @@
 		E72D476424A60E3400A2FB8A /* SoundPlayerCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayerCreator.swift; sourceTree = "<group>"; };
 		E74337B424B5E0D1006F3329 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		E74337B724B5E41D006F3329 /* LimitedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedValue.swift; sourceTree = "<group>"; };
+		E747EFB924F0CDD9000E0CD0 /* PlaybackControllerCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControllerCreator.swift; sourceTree = "<group>"; };
 		E74E266A24AE3A0F00A948A6 /* MeowingPlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowingPlaybackController.swift; sourceTree = "<group>"; };
 		E74E266C24AE3A3900A948A6 /* BreathingPlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPlaybackController.swift; sourceTree = "<group>"; };
 		E74EFCEA24A31E6700EEC724 /* Exhalation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Exhalation.m4a; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				E7F67F1C24EFCD9F0060C17C /* FragmentManagerCreator.swift */,
+				E747EFB924F0CDD9000E0CD0 /* PlaybackControllerCreator.swift */,
 				E72D476424A60E3400A2FB8A /* SoundPlayerCreator.swift */,
 			);
 			path = Creators;
@@ -431,6 +434,7 @@
 				E72D476524A60E3400A2FB8A /* SoundPlayerCreator.swift in Sources */,
 				E78E14E824A6532C00899F67 /* ClosedRange.swift in Sources */,
 				E7BF5575249D1F0800DB57B6 /* AudioByteBufferEngine.swift in Sources */,
+				E747EFBA24F0CDD9000E0CD0 /* PlaybackControllerCreator.swift in Sources */,
 				E74337B524B5E0D1006F3329 /* Comparable.swift in Sources */,
 				E7BF5586249E1E3500DB57B6 /* AVAudioEngine.swift in Sources */,
 				E74E266B24AE3A0F00A948A6 /* MeowingPlaybackController.swift in Sources */,
