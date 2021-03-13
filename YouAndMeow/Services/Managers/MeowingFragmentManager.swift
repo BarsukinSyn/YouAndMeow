@@ -17,8 +17,8 @@ final class MeowingFragmentManager: FragmentManager {
 
   func getFragment() -> SoundFragment {
     let randomIntervalIndex = Int.random(in: 0 ..< self.intervals.count - 1)
-    let fragmentStart = self.intervals[randomIntervalIndex]
-    let fragmentEnd = self.intervals[randomIntervalIndex + 1]
+    let fragmentStart = self.intervals[randomIntervalIndex].rounded(to: .hundredth)
+    let fragmentEnd = self.intervals[randomIntervalIndex + 1].rounded(to: .hundredth)
     let fragment = SoundFragment(start: fragmentStart, end: fragmentEnd)
 
     return fragment

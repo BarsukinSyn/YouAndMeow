@@ -40,7 +40,7 @@ final class BreathingFragmentManager: FragmentManager {
   }
 
   func getFragment() -> SoundFragment {
-    let duration = self.getInterval()
+    let duration = self.getInterval().rounded(to: .hundredth)
     let fragment = SoundFragment(start: 0, end: duration)
 
     return fragment
@@ -64,7 +64,7 @@ final class BreathingFragmentManager: FragmentManager {
     let scale = self.defaultIntervalScale + scaleShift
     let intervals = Array(repeating: self.defaultInterval * scale, count: count)
 
-    self.intervals = intervals.scaled(to: 0.85 ... 1)
+    self.intervals = intervals.scaledEach(to: 0.85 ... 1)
   }
 
   private func clearIntervals() {

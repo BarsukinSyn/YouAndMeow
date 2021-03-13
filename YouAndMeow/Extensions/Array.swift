@@ -9,7 +9,11 @@
 import Foundation
 
 extension Array where Element: BinaryFloatingPoint {
-  func scaled(to range: ClosedRange<Float>) -> Self {
+  func rounded(to accuracy: Element.RoundingAccuracy) -> Self {
+    return self.map { $0.rounded(to: accuracy) }
+  }
+
+  func scaledEach(to range: ClosedRange<Float>) -> Self {
     return self.map { $0.scaled(to: range) }
   }
 }
