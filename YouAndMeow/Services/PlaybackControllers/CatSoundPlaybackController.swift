@@ -11,12 +11,14 @@ import Foundation
 final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
   private let breathingPlaybackController: BreathingPlaybackController
   private let meowingPlaybackController: MeowingPlaybackController
+  private let playMeowingSound: VoidFunction
 
   init() throws {
     let inhalationSoundPlayer = try SoundPlayerCreator.createInhalationSoundPlayer()
     let exhalationSoundPlayer = try SoundPlayerCreator.createExhalationSoundPlayer()
     let meowingSoundPlayer = try SoundPlayerCreator.createMeowingSoundPlayer()
     let meowingPlaybackController = try MeowingPlaybackController(withPlayer: meowingSoundPlayer)
+    let throttledMeowingPlayback = Timer.throttle(wait: 5, action: meowingPlaybackController.play)
     let breathingPlaybackController = BreathingPlaybackController(
       withInhalationPlayer: inhalationSoundPlayer,
       andExhalationPlayer: exhalationSoundPlayer
@@ -24,6 +26,7 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
 
     self.breathingPlaybackController = breathingPlaybackController
     self.meowingPlaybackController = meowingPlaybackController
+    self.playMeowingSound = throttledMeowingPlayback
 
     self.breathingPlaybackController.delegate = self
   }
@@ -34,7 +37,7 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
 
   func breathingCycleBegins() {
     if self.shouldPlayMeowingSound(threshold: Float.random(in: 0 ... 1)) {
-      self.meowingPlaybackController.play()
+      self.playMeowingSound()
     }
   }
 
