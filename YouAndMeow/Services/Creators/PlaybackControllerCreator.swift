@@ -16,8 +16,7 @@ final class PlaybackControllerCreator {
     let exhalationSoundPlayer = try SoundPlayerCreator.createExhalationSoundPlayer()
     let breathingFragmentManager = FragmentManagerCreator.createBreathingFragmentManager()
     let breathingPlaybackController = BreathingPlaybackController(
-      withInhalationPlayer: inhalationSoundPlayer,
-      exhalationPlayer: exhalationSoundPlayer,
+      withPlayers: (inhalationSoundPlayer, exhalationSoundPlayer),
       andFragmentManager: breathingFragmentManager
     )
 

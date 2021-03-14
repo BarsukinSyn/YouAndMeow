@@ -21,6 +21,7 @@
 		E74EFCEC24A31E6700EEC724 /* Exhalation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E74EFCEA24A31E6700EEC724 /* Exhalation.m4a */; };
 		E74EFCED24A31E6700EEC724 /* Inhalation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E74EFCEB24A31E6700EEC724 /* Inhalation.m4a */; };
 		E75556FC24A3032A0094F445 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75556FB24A3032A0094F445 /* DataDecoder.swift */; };
+		E756C5E424F29AA600B04880 /* BreathingPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756C5E324F29AA600B04880 /* BreathingPhase.swift */; };
 		E75F2E9F24EECE6A001C7DEC /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75F2E9E24EECE6A001C7DEC /* Array.swift */; };
 		E75F2EA124EED78A001C7DEC /* BinaryFloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75F2EA024EED78A001C7DEC /* BinaryFloatingPoint.swift */; };
 		E774843824EE945F00419F3E /* FragmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E774843724EE945F00419F3E /* FragmentManager.swift */; };
@@ -70,6 +71,7 @@
 		E74EFCEA24A31E6700EEC724 /* Exhalation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Exhalation.m4a; sourceTree = "<group>"; };
 		E74EFCEB24A31E6700EEC724 /* Inhalation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inhalation.m4a; sourceTree = "<group>"; };
 		E75556FB24A3032A0094F445 /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		E756C5E324F29AA600B04880 /* BreathingPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPhase.swift; sourceTree = "<group>"; };
 		E75F2E9E24EECE6A001C7DEC /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		E75F2EA024EED78A001C7DEC /* BinaryFloatingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryFloatingPoint.swift; sourceTree = "<group>"; };
 		E774843724EE945F00419F3E /* FragmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentManager.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		E7160D6824F032D3000B6825 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				E756C5E324F29AA600B04880 /* BreathingPhase.swift */,
 				E7160D6924F032FF000B6825 /* RoundingAccuracy.swift */,
 				E7160D6D24F03398000B6825 /* VoidFunction.swift */,
 			);
@@ -418,6 +421,7 @@
 				E7E6DB28249D18ED00F09B36 /* AppDelegate.swift in Sources */,
 				E75F2E9F24EECE6A001C7DEC /* Array.swift in Sources */,
 				E75F2EA124EED78A001C7DEC /* BinaryFloatingPoint.swift in Sources */,
+				E756C5E424F29AA600B04880 /* BreathingPhase.swift in Sources */,
 				E7BF55A124A0570000DB57B6 /* BreathingSoundPlayer.swift in Sources */,
 				E7BF5596249F2A7900DB57B6 /* SoundPlayer.swift in Sources */,
 				E7BF5590249F2A7900DB57B6 /* AudioByteBufferPlayer.swift in Sources */,
