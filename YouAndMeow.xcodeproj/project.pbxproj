@@ -122,7 +122,6 @@
 		E7160D6824F032D3000B6825 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				E756C5E324F29AA600B04880 /* BreathingPhase.swift */,
 				E7160D6924F032FF000B6825 /* RoundingAccuracy.swift */,
 				E7160D6D24F03398000B6825 /* VoidFunction.swift */,
 			);
@@ -252,6 +251,7 @@
 		E7BF559924A056B700DB57B6 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				E756C5E324F29AA600B04880 /* BreathingPhase.swift */,
 				E7BF559E24A0570000DB57B6 /* File.swift */,
 				E7BF559C24A056D900DB57B6 /* SoundFragment.swift */,
 				E7BF559A24A056C600DB57B6 /* SoundSource.swift */,

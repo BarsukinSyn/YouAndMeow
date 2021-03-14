@@ -26,16 +26,11 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
   private let fragmentManager: BreathingFragmentManager
   private let distanceProcessors: [DistanceProcessor]
 
-  private var unwrappedSoundPlayers: [BreathingSoundPlayer] {
-    Mirror(reflecting: self.soundPlayers).children.map { $0.value } as! [BreathingSoundPlayer]
-  }
-
   init(
     withPlayers soundPlayers: BreathingPhase<BreathingSoundPlayer>,
     andFragmentManager fragmentManager: BreathingFragmentManager
   ) {
-    let playersCount = Mirror(reflecting: soundPlayers).children.count
-    let distanceProcessors = Array(repeating: 0, count: playersCount).map { (_) in DistanceProcessor() }
+    let distanceProcessors = Array(repeating: "", count: soundPlayers.list.count).map { (_) in DistanceProcessor() }
 
     self.soundPlayers = soundPlayers
     self.fragmentManager = fragmentManager
@@ -43,7 +38,7 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
 
     self.fragmentManager.setRate(self._rate)
     self.fragmentManager.setVariability(self._variability)
-    self.unwrappedSoundPlayers.enumerated().forEach { (index, player) in
+    self.soundPlayers.list.enumerated().forEach { (index, player) in
       player.delegate = self
       player.attach(equalizer: self.distanceProcessors[index].equalizer)
     }
@@ -52,13 +47,13 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
   func play() throws {
     if self.isPlaying { return }
 
-    try self.unwrappedSoundPlayers.forEach { try $0.prepareToPlay() }
+    try self.soundPlayers.list.forEach { try $0.prepareToPlay() }
     self.playSound(from: self.soundPlayers.exhalation)
     self.isPlaying = true
   }
 
   func stop() {
-    self.unwrappedSoundPlayers.forEach { $0.stop() }
+    self.soundPlayers.list.forEach { $0.stop() }
     self.isPlaying = false
   }
 

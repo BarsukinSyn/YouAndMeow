@@ -8,4 +8,11 @@
 
 import Foundation
 
-typealias BreathingPhase<T> = (inhalation: T, exhalation: T)
+struct BreathingPhase<T> {
+  let inhalation: T
+  let exhalation: T
+
+  var list: [T] {
+    Mirror(reflecting: self).children.map { $0.value } as! [T]
+  }
+}
