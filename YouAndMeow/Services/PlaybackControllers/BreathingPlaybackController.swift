@@ -22,12 +22,12 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
   @LimitedValue(0 ... 0.2) private (set) var variability: Float = 0.1
   @LimitedValue(0 ... 1) private (set) var volume: Float = 1
 
-  private let soundPlayers: BreathingPhase<BreathingSoundPlayer>
+  private let soundPlayers: BreathingPhases<BreathingSoundPlayer>
   private let fragmentManager: BreathingFragmentManager
   private let distanceProcessors: [DistanceProcessor]
 
   init(
-    withPlayers soundPlayers: BreathingPhase<BreathingSoundPlayer>,
+    withPlayers soundPlayers: BreathingPhases<BreathingSoundPlayer>,
     andFragmentManager fragmentManager: BreathingFragmentManager
   ) {
     let distanceProcessors = Array(repeating: "", count: soundPlayers.list.count).map { (_) in DistanceProcessor() }

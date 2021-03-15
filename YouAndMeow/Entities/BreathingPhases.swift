@@ -1,5 +1,5 @@
 //
-//  BreathingPhase.swift
+//  BreathingPhases.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 18.07.2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BreathingPhase<T> {
+struct BreathingPhases<T> {
   let inhalation: T
   let exhalation: T
 

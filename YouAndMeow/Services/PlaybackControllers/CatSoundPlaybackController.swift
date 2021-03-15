@@ -25,13 +25,38 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
     self.breathingPlaybackController.delegate = self
   }
 
-  func play() {
-    try? self.breathingPlaybackController.play()
+  func play() throws {
+    try self.breathingPlaybackController.play()
   }
 
   func stop() {
     self.breathingPlaybackController.stop()
     self.meowingPlaybackController.stop()
+  }
+
+  func setDistance(_ distance: Float) {
+    self.breathingPlaybackController.setDistance(distance)
+  }
+
+  func setBreathingRate(_ rate: Float) {
+    self.breathingPlaybackController.setRate(rate)
+  }
+
+  func setMeowingRate(_ rate: Float) {
+    self.meowingPlaybackController.setRate(rate)
+  }
+
+  func setSymmetry(_ symmetry: Float) {
+    self.breathingPlaybackController.setSymmetry(symmetry)
+  }
+
+  func setVariability(_ variability: Float) {
+    self.breathingPlaybackController.setVariability(variability)
+  }
+
+  func setVolume(_ volume: Float) {
+    self.breathingPlaybackController.setVolume(volume)
+    self.meowingPlaybackController.setVolume(volume)
   }
 
   func breathingCycleBegins() {
