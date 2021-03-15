@@ -41,7 +41,7 @@ final class BreathingSoundPlayer: SoundPlayer {
 
     self.isPlaying = true
     self.setVolume(volume, fadeDuration: fadeDuration)
-    self.playbackTimer = Timer.scheduledTimer(withTimeInterval: fragment.duration, repeats: false) { _ in
+    self.playbackTimer = Timer.scheduledTimer(withTimeInterval: fragment.duration, repeats: false) { (_) in
       self.setVolume(0, fadeDuration: fadeDuration) {
         self.isPlaying = false
         self.delegate?.playerJustFinishedPlaying(self)
@@ -59,7 +59,7 @@ final class BreathingSoundPlayer: SoundPlayer {
     var remainingTimeInCentiseconds = max(1, fadeDuration * 100)
     let volumeStep = (volume - self.audioPlayer.volume) / Float(remainingTimeInCentiseconds)
 
-    Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
+    Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
       if remainingTimeInCentiseconds < 1 || !self.audioPlayer.isPlaying {
         timer.invalidate()
         self.audioPlayer.volume = volume

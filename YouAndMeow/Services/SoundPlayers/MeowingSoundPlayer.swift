@@ -41,7 +41,7 @@ final class MeowingSoundPlayer: SoundPlayer {
     self.audioPlayerCurrentTime = fragment.start
     self.audioPlayer.play()
 
-    Timer.scheduledTimer(withTimeInterval: fragment.duration, repeats: false) { _ in
+    Timer.scheduledTimer(withTimeInterval: fragment.duration, repeats: false) { (_) in
       self.pause()
       self.delegate?.playerJustFinishedPlaying(self)
     }

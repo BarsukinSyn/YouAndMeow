@@ -60,7 +60,7 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
   }
 
   func breathingCycleBegins() {
-    if self.shouldPlayMeowingSound(threshold: Float.random(in: 0 ... 1)) {
+    if self.shouldPlayMeowingSound(threshold: .random(in: 0 ... 1)) {
       self.playMeowingSound()
     }
   }
