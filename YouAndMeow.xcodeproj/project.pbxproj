@@ -156,12 +156,12 @@
 			path = Wrappers;
 			sourceTree = "<group>";
 		};
-		E74EFCEE24A4C8F900EEC724 /* SoundProcessors */ = {
+		E74EFCEE24A4C8F900EEC724 /* Processors */ = {
 			isa = PBXGroup;
 			children = (
 				E7BF55A624A11D1300DB57B6 /* DistanceProcessor.swift */,
 			);
-			path = SoundProcessors;
+			path = Processors;
 			sourceTree = "<group>";
 		};
 		E78E14E624A6531D00899F67 /* Extensions */ = {
@@ -228,24 +228,24 @@
 		E7BF5593249F2A7900DB57B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E7E0766724B509970095D1A6 /* Controllers */,
 				E72D476324A60DE000A2FB8A /* Creators */,
 				E72D476224A60DD000A2FB8A /* Managers */,
-				E7E0766724B509970095D1A6 /* PlaybackControllers */,
+				E7BF5594249F2A7900DB57B6 /* Players */,
+				E74EFCEE24A4C8F900EEC724 /* Processors */,
 				E7A6020E24A0912A00858684 /* Providers */,
-				E7BF5594249F2A7900DB57B6 /* SoundPlayers */,
-				E74EFCEE24A4C8F900EEC724 /* SoundProcessors */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		E7BF5594249F2A7900DB57B6 /* SoundPlayers */ = {
+		E7BF5594249F2A7900DB57B6 /* Players */ = {
 			isa = PBXGroup;
 			children = (
 				E7BF55A024A0570000DB57B6 /* BreathingSoundPlayer.swift */,
 				E7BF559724A0569600DB57B6 /* MeowingSoundPlayer.swift */,
 				E7BF5595249F2A7900DB57B6 /* SoundPlayer.swift */,
 			);
-			path = SoundPlayers;
+			path = Players;
 			sourceTree = "<group>";
 		};
 		E7BF559924A056B700DB57B6 /* Entities */ = {
@@ -287,14 +287,14 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		E7E0766724B509970095D1A6 /* PlaybackControllers */ = {
+		E7E0766724B509970095D1A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				E74E266C24AE3A3900A948A6 /* BreathingPlaybackController.swift */,
 				E7DBFC0424A0EA7200E87A5E /* CatSoundPlaybackController.swift */,
 				E74E266A24AE3A0F00A948A6 /* MeowingPlaybackController.swift */,
 			);
-			path = PlaybackControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E7E6DB1B249D18ED00F09B36 = {
