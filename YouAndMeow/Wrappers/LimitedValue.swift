@@ -10,21 +10,21 @@ import Foundation
 
 @propertyWrapper
 struct LimitedValue<T: Comparable> {
-  let limit: ClosedRange<T>
+  let range: ClosedRange<T>
 
   private var currentValue: T!
 
   var wrappedValue: T {
     get { self.currentValue }
-    set { self.currentValue = newValue.clamped(self.limit) }
+    set { self.currentValue = newValue.clamped(self.range) }
   }
 
-  init(wrappedValue: T, limit: ClosedRange<T>) {
-    self.limit = limit
+  init(wrappedValue: T, range: ClosedRange<T>) {
+    self.range = range
     self.wrappedValue = wrappedValue
   }
 
-  init(wrappedValue: T, _ limit: ClosedRange<T>) {
-    self.init(wrappedValue: wrappedValue, limit: limit)
+  init(wrappedValue: T, _ range: ClosedRange<T>) {
+    self.init(wrappedValue: wrappedValue, range: range)
   }
 }
