@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AudioBufferEngine {
+protocol AudioBufferEngine: class {
   typealias Exception = AudioBufferEngineException
 
   associatedtype Input

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SoundPlayer {
+protocol SoundPlayer: class {
   var delegate: SoundPlayerDelegate? { get set }
 
   func prepareToPlay() throws

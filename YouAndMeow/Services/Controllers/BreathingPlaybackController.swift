@@ -81,11 +81,11 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
   }
 
   func playerJustFinishedPlaying(_ player: SoundPlayer) {
-    if player as AnyObject === self.soundPlayers.exhalation {
+    if player === self.soundPlayers.exhalation {
       self.playSound(from: self.soundPlayers.inhalation)
     }
 
-    if player as AnyObject === self.soundPlayers.inhalation {
+    if player === self.soundPlayers.inhalation {
       self.delegate?.breathingCycleBegins()
       self.playSound(from: self.soundPlayers.exhalation)
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AudioBufferPlayer {
+protocol AudioBufferPlayer: class {
   associatedtype Input
   associatedtype Engine
 

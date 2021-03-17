@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol FragmentManager {
+protocol FragmentManager: class {
   init(withIntervals: [TimeInterval])
 
   func getFragment() -> SoundFragment
