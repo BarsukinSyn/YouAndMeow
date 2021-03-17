@@ -9,7 +9,7 @@
 import Foundation
 
 extension Array where Element: BinaryFloatingPoint {
-  func rounded(to accuracy: RoundingAccuracy) -> Self {
+  func roundedEach(to accuracy: RoundingAccuracy) -> Self {
     return self.map { $0.rounded(to: accuracy) }
   }
 
