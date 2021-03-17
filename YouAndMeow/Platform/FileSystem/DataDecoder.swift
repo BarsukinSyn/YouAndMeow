@@ -8,7 +8,9 @@
 
 import Foundation
 
-class DataDecoder {
+final class DataDecoder {
+  private init() {}
+
   static func decodePropertyList<T: Decodable>(_ data: Data) throws -> T {
     do {
       let decodedData = try PropertyListDecoder().decode(T.self, from: data)

@@ -8,7 +8,9 @@
 
 import AVFoundation
 
-class FileManager {
+final class FileManager {
+  private init() {}
+
   static func getURL(forResource name: String, withExtension ext: String) throws -> URL {
     guard let url = Bundle.main.url(forResource: name, withExtension: ext)
       else { throw FileManager.Exception.fileNotFound }
