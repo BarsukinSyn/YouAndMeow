@@ -8,7 +8,13 @@
 
 import Foundation
 
-final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
+final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate, MeowingPlaybackControllerDelegate {
+  @LimitedValue(0 ... 1) private (set) var volume: Float = 1
+
+  private var muffledBreathingPlaybackVolume: Float {
+    self.volume * 0.75
+  }
+
   private let breathingPlaybackController: BreathingPlaybackController
   private let meowingPlaybackController: MeowingPlaybackController
   private let playMeowingSound: VoidFunction
@@ -16,13 +22,14 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
   init() throws {
     let breathingPlaybackController = try PlaybackControllerCreator.createBreathingPlaybackController()
     let meowingPlaybackController = try PlaybackControllerCreator.createMeowingPlaybackController()
-    let throttledMeowingPlayback = Timer.throttle(wait: 5, action: meowingPlaybackController.play)
+    let throttledMeowingPlaybackMethod = Timer.throttle(wait: 5, action: meowingPlaybackController.play)
 
     self.breathingPlaybackController = breathingPlaybackController
     self.meowingPlaybackController = meowingPlaybackController
-    self.playMeowingSound = throttledMeowingPlayback
+    self.playMeowingSound = throttledMeowingPlaybackMethod
 
     self.breathingPlaybackController.delegate = self
+    self.meowingPlaybackController.delegate = self
   }
 
   func play() throws {
@@ -56,14 +63,21 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate {
   }
 
   func setVolume(_ volume: Float) {
+    self.volume = volume
+
     self.breathingPlaybackController.setVolume(volume)
     self.meowingPlaybackController.setVolume(volume)
   }
 
-  func breathingCycleBegins() {
+  func breathingPlaybackCycleBegins() {
     if self.shouldPlayMeowingSound(threshold: .random(in: 0 ... 1)) {
+      self.breathingPlaybackController.setVolume(self.muffledBreathingPlaybackVolume)
       self.playMeowingSound()
     }
+  }
+
+  func meowingPlaybackFinished() {
+    self.breathingPlaybackController.setVolume(self.volume)
   }
 
   private func shouldPlayMeowingSound(threshold: Float) -> Bool {

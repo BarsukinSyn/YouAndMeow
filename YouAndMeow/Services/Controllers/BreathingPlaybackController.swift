@@ -9,18 +9,19 @@
 import Foundation
 
 protocol BreathingPlaybackControllerDelegate: class {
-  func breathingCycleBegins()
+  func breathingPlaybackCycleBegins()
 }
 
 final class BreathingPlaybackController: SoundPlayerDelegate {
   weak var delegate: BreathingPlaybackControllerDelegate?
 
-  private var isPlaying: Bool = false
   @LimitedValue(0.01 ... 1) private (set) var distance: Float = 0.505
   @LimitedValue(20 ... 100) private (set) var rate: Float = 60
   @LimitedValue(-0.4 ... 0.4) private (set) var symmetry: Float = 0
   @LimitedValue(0 ... 0.2) private (set) var variability: Float = 0.1
   @LimitedValue(0 ... 1) private (set) var volume: Float = 1
+
+  private var isPlaying: Bool = false
 
   private let soundPlayers: BreathingPhases<BreathingSoundPlayer>
   private let fragmentManager: BreathingFragmentManager
@@ -86,7 +87,7 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
     }
 
     if player === self.soundPlayers.inhalation {
-      self.delegate?.breathingCycleBegins()
+      self.delegate?.breathingPlaybackCycleBegins()
       self.playSound(from: self.soundPlayers.exhalation)
     }
   }

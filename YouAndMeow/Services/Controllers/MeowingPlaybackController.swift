@@ -8,7 +8,13 @@
 
 import Foundation
 
-final class MeowingPlaybackController {
+protocol MeowingPlaybackControllerDelegate: class {
+  func meowingPlaybackFinished()
+}
+
+final class MeowingPlaybackController: SoundPlayerDelegate {
+  weak var delegate: MeowingPlaybackControllerDelegate?
+
   @LimitedValue(0.01 ... 1) private (set) var distance: Float = 0.505
   @LimitedValue(0 ... 4) private (set) var rate: Float = 2
   @LimitedValue(0 ... 1) private (set) var volume: Float = 1
@@ -23,6 +29,8 @@ final class MeowingPlaybackController {
   init(withPlayer soundPlayer: MeowingSoundPlayer, andFragmentManager fragmentManager: MeowingFragmentManager) {
     self.soundPlayer = soundPlayer
     self.fragmentManager = fragmentManager
+
+    self.soundPlayer.delegate = self
   }
 
   func play() {
@@ -45,5 +53,9 @@ final class MeowingPlaybackController {
 
   func setVolume(_ volume: Float) {
     self.volume = volume
+  }
+
+  func playerJustFinishedPlaying(_ player: SoundPlayer) {
+    self.delegate?.meowingPlaybackFinished()
   }
 }

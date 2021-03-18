@@ -55,15 +55,17 @@ final class BreathingSoundPlayer: SoundPlayer {
     self.isPlaying = false
   }
 
-  private func setVolume(_ volume: Float, fadeDuration: TimeInterval, completionHandler: (() -> Void)? = nil) {
+  private func setVolume(_ volume: Float, fadeDuration: TimeInterval, completionHandler: VoidFunction? = nil) {
     var remainingTimeInCentiseconds = max(1, fadeDuration * 100)
     let volumeStep = (volume - self.audioPlayer.volume) / Float(remainingTimeInCentiseconds)
 
     Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
       if remainingTimeInCentiseconds < 1 || !self.audioPlayer.isPlaying {
-        timer.invalidate()
         self.audioPlayer.volume = volume
+
+        timer.invalidate()
         completionHandler?()
+
         return
       }
 
