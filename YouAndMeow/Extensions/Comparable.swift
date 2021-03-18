@@ -10,7 +10,7 @@ import Foundation
 
 extension Comparable {
   func clamped(_ range: ClosedRange<Self>) -> Self {
-    return range.clamped(self)
+    return self < range.lowerBound ? range.lowerBound : self > range.upperBound ? range.upperBound : self
   }
 
   func isWithin(_ range: ClosedRange<Self>) -> Bool {
