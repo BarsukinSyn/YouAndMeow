@@ -232,9 +232,12 @@
 			children = (
 				E7E0766724B509970095D1A6 /* Controllers */,
 				E72D476324A60DE000A2FB8A /* Creators */,
+				E7BF559924A056B700DB57B6 /* Entities */,
+				E78E14E624A6531D00899F67 /* Extensions */,
 				E72D476224A60DD000A2FB8A /* Managers */,
 				E7BF5594249F2A7900DB57B6 /* Players */,
 				E74EFCEE24A4C8F900EEC724 /* Processors */,
+				E7160D6824F032D3000B6825 /* Types */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -314,13 +317,10 @@
 		E7E6DB26249D18ED00F09B36 /* YouAndMeow */ = {
 			isa = PBXGroup;
 			children = (
-				E7BF559924A056B700DB57B6 /* Entities */,
-				E78E14E624A6531D00899F67 /* Extensions */,
 				E7BF556A249D1E2F00DB57B6 /* Platform */,
 				E7E6DB2F249D18EE00F09B36 /* Preview Content */,
 				E7DBFC0624A0ED7500E87A5E /* Resources */,
 				E7BF5593249F2A7900DB57B6 /* Services */,
-				E7160D6824F032D3000B6825 /* Types */,
 				E7E6DB27249D18ED00F09B36 /* AppDelegate.swift */,
 				E7E6DB2B249D18ED00F09B36 /* ContentView.swift */,
 				E7E6DB29249D18ED00F09B36 /* SceneDelegate.swift */,
