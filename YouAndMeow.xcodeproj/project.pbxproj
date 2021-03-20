@@ -175,12 +175,24 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		E7BB931225A53D79003FA386 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E7BF559E24A0570000DB57B6 /* File.swift */,
+				E7BF559A24A056C600DB57B6 /* SoundSource.swift */,
+				E72D476024A6016C00A2FB8A /* Source.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		E7BF556A249D1E2F00DB57B6 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
 				E7BF5571249D1EE700DB57B6 /* AudioSystem */,
+				E7BB931225A53D79003FA386 /* Entities */,
 				E7BF5584249E1E2700DB57B6 /* Extensions */,
 				E7BF556B249D1E3700DB57B6 /* FileSystem */,
+				E7A6020E24A0912A00858684 /* Providers */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -223,7 +235,6 @@
 				E72D476224A60DD000A2FB8A /* Managers */,
 				E7BF5594249F2A7900DB57B6 /* Players */,
 				E74EFCEE24A4C8F900EEC724 /* Processors */,
-				E7A6020E24A0912A00858684 /* Providers */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -242,10 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				E756C5E324F29AA600B04880 /* BreathingPhases.swift */,
-				E7BF559E24A0570000DB57B6 /* File.swift */,
 				E7BF559C24A056D900DB57B6 /* SoundFragment.swift */,
-				E7BF559A24A056C600DB57B6 /* SoundSource.swift */,
-				E72D476024A6016C00A2FB8A /* Source.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
