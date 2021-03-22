@@ -12,22 +12,22 @@ final class SoundPlayerCreator {
   private init() {}
 
   static func createInhalationSoundPlayer() throws -> BreathingSoundPlayer {
-    let inhalationSoundSource = SoundSourceProvider.getInhalationSoundSource()
-    let inhalationSoundPlayer = try BreathingSoundPlayer(withSource: inhalationSoundSource)
+    let inhalationSoundBuffer = try SoundProvider.getInhalationSoundPCMBuffer()
+    let inhalationSoundPlayer = BreathingSoundPlayer(withInput: inhalationSoundBuffer)
 
     return inhalationSoundPlayer
   }
 
   static func createExhalationSoundPlayer() throws -> BreathingSoundPlayer {
-    let exhalationSoundSource = SoundSourceProvider.getExhalationSoundSource()
-    let exhalationSoundPlayer = try BreathingSoundPlayer(withSource: exhalationSoundSource)
+    let exhalationSoundBuffer = try SoundProvider.getExhalationSoundPCMBuffer()
+    let exhalationSoundPlayer = BreathingSoundPlayer(withInput: exhalationSoundBuffer)
 
     return exhalationSoundPlayer
   }
 
   static func createMeowingSoundPlayer() throws -> MeowingSoundPlayer {
-    let meowingSoundSource = SoundSourceProvider.getMeowingSoundSource()
-    let meowingSoundPlayer = try MeowingSoundPlayer(withSource: meowingSoundSource)
+    let meowingSoundBuffer = try SoundProvider.getMeowingSoundByteBuffer()
+    let meowingSoundPlayer = try MeowingSoundPlayer(withInput: meowingSoundBuffer)
 
     return meowingSoundPlayer
   }

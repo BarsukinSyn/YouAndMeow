@@ -15,9 +15,8 @@ final class BreathingSoundPlayer: SoundPlayer {
   private var playbackTimer: Timer?
   private let audioPlayer: AudioPCMBufferPlayer
 
-  init(withSource source: SoundSource) throws {
-    let audioBuffer = try source.readIntoPCMBuffer()
-    let audioPlayer = AudioPCMBufferPlayer(withInput: audioBuffer)
+  init(withInput input: AVAudioPCMBuffer) {
+    let audioPlayer = AudioPCMBufferPlayer(withInput: input)
 
     self.audioPlayer = audioPlayer
   }

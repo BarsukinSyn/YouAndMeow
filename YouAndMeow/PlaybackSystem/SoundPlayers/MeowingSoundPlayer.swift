@@ -23,9 +23,8 @@ final class MeowingSoundPlayer: SoundPlayer {
     set { self.audioPlayer.currentTime = newValue }
   }
 
-  init(withSource source: SoundSource) throws {
-    let audioBuffer = try source.readIntoByteBuffer()
-    let audioPlayer = try AudioByteBufferPlayer(withInput: audioBuffer)
+  init(withInput input: Data) throws {
+    let audioPlayer = try AudioByteBufferPlayer(withInput: input)
 
     self.audioPlayer = audioPlayer
   }

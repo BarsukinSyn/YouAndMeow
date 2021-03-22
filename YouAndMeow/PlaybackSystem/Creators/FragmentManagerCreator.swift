@@ -18,10 +18,8 @@ final class FragmentManagerCreator {
   }
 
   static func createMeowingFragmentManager() throws -> MeowingFragmentManager {
-    let meowingIntervalsSource = IntervalsSourceProvider.getMeowingIntervals()
-    let sourceBuffer = try meowingIntervalsSource.readIntoByteBuffer()
-    let intervals = try DataDecoder.decodePropertyList(sourceBuffer) as [TimeInterval]
-    let meowingFragmentManager = MeowingFragmentManager(withIntervals: intervals)
+    let meowingIntervals = try IntervalsProvider.getMeowingIntervals()
+    let meowingFragmentManager = MeowingFragmentManager(withIntervals: meowingIntervals)
 
     return meowingFragmentManager
   }
