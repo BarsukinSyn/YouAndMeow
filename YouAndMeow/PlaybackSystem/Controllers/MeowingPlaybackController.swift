@@ -34,7 +34,7 @@ final class MeowingPlaybackController: SoundPlayerDelegate {
   }
 
   func play() {
-    let soundFragment = self.fragmentManager.getFragment()
+    let soundFragment = self.fragmentManager.getRandomFragment()
 
     self.soundPlayer.play(fragment: soundFragment, atVolume: self.playbackVolume)
   }

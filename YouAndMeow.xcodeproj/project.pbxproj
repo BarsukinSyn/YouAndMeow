@@ -23,7 +23,6 @@
 		E756C5E424F29AA600B04880 /* BreathingPhases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756C5E324F29AA600B04880 /* BreathingPhases.swift */; };
 		E75F2E9F24EECE6A001C7DEC /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75F2E9E24EECE6A001C7DEC /* Array.swift */; };
 		E75F2EA124EED78A001C7DEC /* BinaryFloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75F2EA024EED78A001C7DEC /* BinaryFloatingPoint.swift */; };
-		E774843824EE945F00419F3E /* FragmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E774843724EE945F00419F3E /* FragmentManager.swift */; };
 		E7BF556D249D1E4400DB57B6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF556C249D1E4400DB57B6 /* FileManager.swift */; };
 		E7BF5573249D1EF600DB57B6 /* AudioBufferEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF5572249D1EF600DB57B6 /* AudioBufferEngine.swift */; };
 		E7BF5575249D1F0800DB57B6 /* AudioByteBufferEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF5574249D1F0800DB57B6 /* AudioByteBufferEngine.swift */; };
@@ -69,7 +68,6 @@
 		E756C5E324F29AA600B04880 /* BreathingPhases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPhases.swift; sourceTree = "<group>"; };
 		E75F2E9E24EECE6A001C7DEC /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		E75F2EA024EED78A001C7DEC /* BinaryFloatingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryFloatingPoint.swift; sourceTree = "<group>"; };
-		E774843724EE945F00419F3E /* FragmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentManager.swift; sourceTree = "<group>"; };
 		E7BF556C249D1E4400DB57B6 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		E7BF5572249D1EF600DB57B6 /* AudioBufferEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBufferEngine.swift; sourceTree = "<group>"; };
 		E7BF5574249D1F0800DB57B6 /* AudioByteBufferEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioByteBufferEngine.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				E718445024B4D1CE00839475 /* BreathingFragmentManager.swift */,
-				E774843724EE945F00419F3E /* FragmentManager.swift */,
 				E7F67F1E24EFCF050060C17C /* MeowingFragmentManager.swift */,
 			);
 			path = Managers;
@@ -421,7 +418,6 @@
 				E7BF5586249E1E3500DB57B6 /* AVAudioEngine.swift in Sources */,
 				E74E266B24AE3A0F00A948A6 /* MeowingPlaybackController.swift in Sources */,
 				E718445124B4D1CE00839475 /* BreathingFragmentManager.swift in Sources */,
-				E774843824EE945F00419F3E /* FragmentManager.swift in Sources */,
 				E7BF55A924A27FF600DB57B6 /* SoundProvider.swift in Sources */,
 				E75556FC24A3032A0094F445 /* DataDecoder.swift in Sources */,
 				E7160D7024F03398000B6825 /* Timer.swift in Sources */,

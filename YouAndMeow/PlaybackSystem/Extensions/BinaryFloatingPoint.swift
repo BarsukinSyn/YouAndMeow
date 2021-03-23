@@ -16,7 +16,11 @@ extension BinaryFloatingPoint {
     return roundedValue
   }
 
-  func scaled(to range: ClosedRange<Float>) -> Self {
+  func scaled(by factor: Float) -> Self {
+    return self * Self(factor)
+  }
+
+  func scaled(in range: ClosedRange<Float>) -> Self {
     let scale = Float.random(in: range)
     let scaledValue = self * Self(scale)
 

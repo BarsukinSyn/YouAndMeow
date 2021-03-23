@@ -13,7 +13,11 @@ extension Array where Element: BinaryFloatingPoint {
     return self.map { $0.rounded(to: accuracy) }
   }
 
-  func scaledEach(to range: ClosedRange<Float>) -> Self {
-    return self.map { $0.scaled(to: range) }
+  func scaledEach(by factor: Float) -> Self {
+    return self.map { $0.scaled(by: factor) }
+  }
+
+  func scaledEach(in range: ClosedRange<Float>) -> Self {
+    return self.map { $0.scaled(in: range) }
   }
 }

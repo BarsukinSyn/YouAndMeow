@@ -93,7 +93,7 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
   }
 
   private func playSound(from player: BreathingSoundPlayer) {
-    let soundFragment = self.fragmentManager.getFragment()
+    let soundFragment = self.fragmentManager.getRandomFragment()
     let playbackVolume = self.volume + (player === self.soundPlayers.inhalation ? -self.symmetry : self.symmetry)
 
     player.play(fragment: soundFragment, atVolume: playbackVolume)

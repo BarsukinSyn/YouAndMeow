@@ -12,20 +12,14 @@ final class SoundProvider {
   private init() {}
 
   static func getInhalationSoundPCMBuffer() throws -> AVAudioPCMBuffer {
-    let inhalationSoundBuffer = try FileManager.readIntoPCMBuffer(resource: "Inhalation", withExtension: "m4a")
-
-    return inhalationSoundBuffer
+    return try FileManager.readIntoPCMBuffer(resource: "Inhalation", withExtension: "m4a")
   }
 
   static func getExhalationSoundPCMBuffer() throws -> AVAudioPCMBuffer {
-    let exhalationSoundBuffer = try FileManager.readIntoPCMBuffer(resource: "Exhalation", withExtension: "m4a")
-
-    return exhalationSoundBuffer
+    return try FileManager.readIntoPCMBuffer(resource: "Exhalation", withExtension: "m4a")
   }
 
   static func getMeowingSoundByteBuffer() throws -> Data {
-    let meowingSoundBuffer = try FileManager.readIntoByteBuffer(resource: "Meowing", withExtension: "m4a")
-
-    return meowingSoundBuffer
+    return try FileManager.readIntoByteBuffer(resource: "Meowing", withExtension: "m4a")
   }
 }

@@ -12,9 +12,7 @@ final class FragmentManagerCreator {
   private init() {}
 
   static func createBreathingFragmentManager() -> BreathingFragmentManager {
-    let breathingFragmentManager = BreathingFragmentManager(withIntervals: [])
-
-    return breathingFragmentManager
+    return BreathingFragmentManager()
   }
 
   static func createMeowingFragmentManager() throws -> MeowingFragmentManager {

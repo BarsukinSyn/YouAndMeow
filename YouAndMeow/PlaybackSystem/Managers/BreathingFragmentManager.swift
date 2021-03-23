@@ -8,8 +8,8 @@
 
 import Foundation
 
-final class BreathingFragmentManager: FragmentManager {
-  private var intervals: [TimeInterval]
+final class BreathingFragmentManager {
+  private var intervals: [TimeInterval] = []
   @LimitedValue(0 ... 0) private var rate: Float = 0
   @LimitedValue(0 ... 0) private var variability: Float = 0
 
@@ -25,10 +25,6 @@ final class BreathingFragmentManager: FragmentManager {
     return scale
   }
 
-  init(withIntervals intervals: [TimeInterval]) {
-    self.intervals = intervals
-  }
-
   func setRate(_ rate: LimitedValue<Float>) {
     self._rate = rate
     self.clearIntervals()
@@ -39,34 +35,44 @@ final class BreathingFragmentManager: FragmentManager {
     self.clearIntervals()
   }
 
-  func getFragment() -> SoundFragment {
-    let duration = self.getInterval().scaled(to: 0.9 ... 1.1)
-    let fragment = SoundFragment(start: 0, end: duration)
+  func getRandomFragment() -> SoundFragment {
+    return self.getNextFragment(scaledBy: .random(in: 0.9 ... 1.1))
+  }
+
+  private func getNextFragment(scaledBy factor: Float) -> SoundFragment {
+    let interval = self.getInterval().scaled(by: factor)
+    let fragment = SoundFragment(start: 0, end: interval)
 
     return fragment
   }
 
   private func getInterval() -> TimeInterval {
     if self.shouldUpdateIntervals(threshold: .random(in: 0 ... 1)) {
-      self.updateIntervals()
+      self.updateIntervals(scaleEachIn: 0.85 ... 1)
     }
 
     return self.intervals.popLast() ?? self.defaultInterval
   }
 
   private func shouldUpdateIntervals(threshold: Float) -> Bool {
-    return self.intervals.isEmpty && self.variability > 0 && self.variability > threshold
+    let intervalsIsEmpty = self.intervals.isEmpty
+    let variabilityIsPositive = self.variability > 0
+    let thresholdIsExceeded = self.variability > threshold
+
+    return intervalsIsEmpty && variabilityIsPositive && thresholdIsExceeded
   }
 
-  private func updateIntervals() {
+  private func updateIntervals(scaleEachIn range: ClosedRange<Float>) {
     let intervals = self.generateIntervals(count: .random(in: 3 ... 8), scaleShift: .random(in: 0.85 ... 1))
+    let scaledIntervals = intervals.scaledEach(in: range)
 
-    self.intervals = intervals.scaledEach(to: 0.85 ... 1)
+    self.intervals = scaledIntervals
   }
 
   private func generateIntervals(count: Int, scaleShift: Double) -> [TimeInterval] {
     let scale = self.defaultIntervalScale + scaleShift
-    let intervals = Array(repeating: self.defaultInterval * scale, count: count)
+    let scaledInterval = self.defaultInterval * scale
+    let intervals = Array(repeating: scaledInterval, count: count)
 
     return intervals
   }

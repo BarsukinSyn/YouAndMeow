@@ -12,7 +12,7 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate, Meo
   @LimitedValue(0 ... 1) private (set) var volume: Float = 1
 
   private var muffledBreathingPlaybackVolume: Float {
-    self.volume * 0.75
+    self.volume / 2
   }
 
   private let breathingPlaybackController: BreathingPlaybackController
@@ -83,7 +83,9 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate, Meo
   private func shouldPlayMeowingSound(threshold: Float) -> Bool {
     let meowingRate = self.meowingPlaybackController.rate
     let breathingRate = self.breathingPlaybackController.rate
+    let meowingRateIsPositive = meowingRate > 0
+    let thresholdIsExceeded = (meowingRate / breathingRate) > threshold
 
-    return meowingRate > 0 && (meowingRate / breathingRate) > threshold
+    return meowingRateIsPositive && thresholdIsExceeded
   }
 }
