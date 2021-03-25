@@ -241,13 +241,13 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		E7DBFC0624A0ED7500E87A5E /* Resources */ = {
+		E7DBFC0624A0ED7500E87A5E /* Static */ = {
 			isa = PBXGroup;
 			children = (
 				E7DBFC0724A0ED7500E87A5E /* Intervals */,
 				E7DBFC0924A0ED7500E87A5E /* Sounds */,
 			);
-			path = Resources;
+			path = Static;
 			sourceTree = "<group>";
 		};
 		E7DBFC0724A0ED7500E87A5E /* Intervals */ = {
@@ -299,8 +299,8 @@
 			children = (
 				E7BF5593249F2A7900DB57B6 /* PlaybackSystem */,
 				E7E6DB2F249D18EE00F09B36 /* Preview Content */,
-				E7DBFC0624A0ED7500E87A5E /* Resources */,
 				E7BF556A249D1E2F00DB57B6 /* SourceRepository */,
+				E7DBFC0624A0ED7500E87A5E /* Static */,
 				E7E6DB27249D18ED00F09B36 /* AppDelegate.swift */,
 				E7E6DB2B249D18ED00F09B36 /* ContentView.swift */,
 				E7E6DB29249D18ED00F09B36 /* SceneDelegate.swift */,
