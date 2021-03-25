@@ -13,16 +13,6 @@ final class MeowingSoundPlayer: SoundPlayer {
 
   private let audioPlayer: AudioByteBufferPlayer
 
-  private var audioPlayerVolume: Float {
-    get { self.audioPlayer.volume }
-    set { self.audioPlayer.volume = newValue }
-  }
-
-  private var audioPlayerCurrentTime: TimeInterval {
-    get { self.audioPlayer.currentTime }
-    set { self.audioPlayer.currentTime = newValue }
-  }
-
   init(withInput input: Data) throws {
     let audioPlayer = try AudioByteBufferPlayer(withInput: input)
 
@@ -36,8 +26,8 @@ final class MeowingSoundPlayer: SoundPlayer {
   func play(fragment: SoundFragment, atVolume volume: Float) {
     if self.audioPlayer.isPlaying { return }
 
-    self.audioPlayerVolume = volume
-    self.audioPlayerCurrentTime = fragment.start
+    self.audioPlayer.volume = volume
+    self.audioPlayer.currentTime = fragment.start
     self.audioPlayer.play()
 
     Timer.scheduledTimer(withTimeInterval: fragment.duration, repeats: false) { (_) in
