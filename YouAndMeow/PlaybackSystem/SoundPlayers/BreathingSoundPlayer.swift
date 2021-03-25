@@ -39,9 +39,9 @@ final class BreathingSoundPlayer: SoundPlayer {
     let fadeDuration = fragment.duration / 3
 
     self.isPlaying = true
-    self.setVolume(volume, fadeDuration: fadeDuration)
+    self.fadeVolume(volume, duration: fadeDuration)
     self.playbackTimer = Timer.scheduledTimer(withTimeInterval: fragment.duration, repeats: false) { (_) in
-      self.setVolume(0, fadeDuration: fadeDuration) {
+      self.fadeVolume(0, duration: fadeDuration) {
         self.isPlaying = false
         self.delegate?.playerJustFinishedPlaying(self)
       }
@@ -54,8 +54,8 @@ final class BreathingSoundPlayer: SoundPlayer {
     self.isPlaying = false
   }
 
-  private func setVolume(_ volume: Float, fadeDuration: TimeInterval, completionHandler: VoidFunction? = nil) {
-    var remainingTimeInCentiseconds = max(1, fadeDuration * 100)
+  private func fadeVolume(_ volume: Float, duration: TimeInterval, completionHandler: VoidFunction? = nil) {
+    var remainingTimeInCentiseconds = max(1, duration * 100)
     let volumeStep = (volume - self.audioPlayer.volume) / Float(remainingTimeInCentiseconds)
 
     Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
