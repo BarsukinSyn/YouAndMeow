@@ -20,7 +20,7 @@ final class AudioPCMBufferPlayer: AudioBufferPlayer {
 
   var volume: Float {
     get { self.engine.output.mainMixerNode.outputVolume }
-    set { self.engine.output.mainMixerNode.outputVolume = newValue }
+    set { self.engine.output.mainMixerNode.outputVolume = newValue.rounded(to: .hundredth) }
   }
 
   private let input: Input

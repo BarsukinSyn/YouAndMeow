@@ -20,12 +20,12 @@ final class AudioByteBufferPlayer: AudioBufferPlayer {
 
   var volume: Float {
     get { self.engine.output.volume }
-    set { self.engine.output.volume = newValue }
+    set { self.engine.output.volume = newValue.rounded(to: .hundredth) }
   }
 
   var currentTime: TimeInterval {
     get { self.engine.output.currentTime }
-    set { self.engine.output.currentTime = newValue }
+    set { self.engine.output.currentTime = newValue.rounded(to: .hundredth) }
   }
 
   init(withInput input: Input) throws {
