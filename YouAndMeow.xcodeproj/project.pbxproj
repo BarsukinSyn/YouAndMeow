@@ -168,8 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				E7E8F44825B5A8D600CEEB98 /* DataRepositories */,
+				E7E8F46925B5A8F000CEEB98 /* Extensions */,
 				E7E8F45625B5A8F000CEEB98 /* PlaybackSystem */,
 				E7E8F49B25B5A94400CEEB98 /* Static */,
+				E7E8F45E25B5A8F000CEEB98 /* Types */,
 				E7E8F41C25B5A85F00CEEB98 /* ContentView.swift */,
 				E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */,
 				E7E8F42325B5A86000CEEB98 /* Info.plist */,
@@ -238,11 +240,9 @@
 				E7E8F47525B5A8F000CEEB98 /* Controllers */,
 				E7E8F47125B5A8F000CEEB98 /* Creators */,
 				E7E8F47925B5A8F000CEEB98 /* Entities */,
-				E7E8F46925B5A8F000CEEB98 /* Extensions */,
 				E7E8F46225B5A8F000CEEB98 /* Managers */,
 				E7E8F46F25B5A8F000CEEB98 /* Processors */,
 				E7E8F46525B5A8F000CEEB98 /* SoundPlayers */,
-				E7E8F45E25B5A8F000CEEB98 /* Types */,
 			);
 			path = PlaybackSystem;
 			sourceTree = "<group>";
