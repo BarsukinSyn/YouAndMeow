@@ -3,7 +3,6 @@
 //  YouAndMeow
 //
 //  Created by Vladimir on 19.06.2020.
-//  Copyright © 2020 Barsukin syn. All rights reserved.
 //
 
 import SwiftUI
@@ -21,7 +20,6 @@ struct ContentView: View {
     } label: { 
       Text("Play")
     }
-
   }
 }
 
