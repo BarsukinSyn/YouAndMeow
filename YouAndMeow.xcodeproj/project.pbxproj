@@ -36,8 +36,8 @@
 		E7BF559D24A056D900DB57B6 /* SoundFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF559C24A056D900DB57B6 /* SoundFragment.swift */; };
 		E7BF55A124A0570000DB57B6 /* BreathingSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF55A024A0570000DB57B6 /* BreathingSoundPlayer.swift */; };
 		E7BF55A724A11D1300DB57B6 /* DistanceProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF55A624A11D1300DB57B6 /* DistanceProcessor.swift */; };
-		E7BF55A924A27FF600DB57B6 /* SoundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF55A824A27FF600DB57B6 /* SoundProvider.swift */; };
-		E7D685A524EFD75C003F218F /* IntervalsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D685A424EFD75C003F218F /* IntervalsProvider.swift */; };
+		E7BF55A924A27FF600DB57B6 /* SoundRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF55A824A27FF600DB57B6 /* SoundRepository.swift */; };
+		E7D685A524EFD75C003F218F /* IntervalsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D685A424EFD75C003F218F /* IntervalsRepository.swift */; };
 		E7DBFC0524A0EA7200E87A5E /* CatSoundPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DBFC0424A0EA7200E87A5E /* CatSoundPlaybackController.swift */; };
 		E7DBFC0B24A0ED7500E87A5E /* MeowingIntervals.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7DBFC0824A0ED7500E87A5E /* MeowingIntervals.plist */; };
 		E7DBFC0C24A0ED7500E87A5E /* Meowing.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E7DBFC0A24A0ED7500E87A5E /* Meowing.m4a */; };
@@ -81,8 +81,8 @@
 		E7BF559C24A056D900DB57B6 /* SoundFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFragment.swift; sourceTree = "<group>"; };
 		E7BF55A024A0570000DB57B6 /* BreathingSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSoundPlayer.swift; sourceTree = "<group>"; };
 		E7BF55A624A11D1300DB57B6 /* DistanceProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceProcessor.swift; sourceTree = "<group>"; };
-		E7BF55A824A27FF600DB57B6 /* SoundProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundProvider.swift; sourceTree = "<group>"; };
-		E7D685A424EFD75C003F218F /* IntervalsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalsProvider.swift; sourceTree = "<group>"; };
+		E7BF55A824A27FF600DB57B6 /* SoundRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRepository.swift; sourceTree = "<group>"; };
+		E7D685A424EFD75C003F218F /* IntervalsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalsRepository.swift; sourceTree = "<group>"; };
 		E7DBFC0424A0EA7200E87A5E /* CatSoundPlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSoundPlaybackController.swift; sourceTree = "<group>"; };
 		E7DBFC0824A0ED7500E87A5E /* MeowingIntervals.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MeowingIntervals.plist; sourceTree = "<group>"; };
 		E7DBFC0A24A0ED7500E87A5E /* Meowing.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Meowing.m4a; sourceTree = "<group>"; };
@@ -166,23 +166,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E7A6020E24A0912A00858684 /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-				E7D685A424EFD75C003F218F /* IntervalsProvider.swift */,
-				E7BF55A824A27FF600DB57B6 /* SoundProvider.swift */,
-			);
-			path = Providers;
-			sourceTree = "<group>";
-		};
-		E7BF556A249D1E2F00DB57B6 /* SourceRepository */ = {
+		E7BF556A249D1E2F00DB57B6 /* DataRepositories */ = {
 			isa = PBXGroup;
 			children = (
 				E70BFCD425A5A63C00A32786 /* Decoders */,
 				E7BF556B249D1E3700DB57B6 /* Managers */,
-				E7A6020E24A0912A00858684 /* Providers */,
+				E7D685A424EFD75C003F218F /* IntervalsRepository.swift */,
+				E7BF55A824A27FF600DB57B6 /* SoundRepository.swift */,
 			);
-			path = SourceRepository;
+			path = DataRepositories;
 			sourceTree = "<group>";
 		};
 		E7BF556B249D1E3700DB57B6 /* Managers */ = {
@@ -297,9 +289,9 @@
 		E7E6DB26249D18ED00F09B36 /* YouAndMeow */ = {
 			isa = PBXGroup;
 			children = (
+				E7BF556A249D1E2F00DB57B6 /* DataRepositories */,
 				E7BF5593249F2A7900DB57B6 /* PlaybackSystem */,
 				E7E6DB2F249D18EE00F09B36 /* Preview Content */,
-				E7BF556A249D1E2F00DB57B6 /* SourceRepository */,
 				E7DBFC0624A0ED7500E87A5E /* Static */,
 				E7E6DB27249D18ED00F09B36 /* AppDelegate.swift */,
 				E7E6DB2B249D18ED00F09B36 /* ContentView.swift */,
@@ -418,14 +410,14 @@
 				E7BF5586249E1E3500DB57B6 /* AVAudioEngine.swift in Sources */,
 				E74E266B24AE3A0F00A948A6 /* MeowingPlaybackController.swift in Sources */,
 				E718445124B4D1CE00839475 /* BreathingFragmentManager.swift in Sources */,
-				E7BF55A924A27FF600DB57B6 /* SoundProvider.swift in Sources */,
+				E7BF55A924A27FF600DB57B6 /* SoundRepository.swift in Sources */,
 				E75556FC24A3032A0094F445 /* DataDecoder.swift in Sources */,
 				E7160D7024F03398000B6825 /* Timer.swift in Sources */,
 				E7160D6A24F032FF000B6825 /* RoundingAccuracy.swift in Sources */,
 				E7BF556D249D1E4400DB57B6 /* FileManager.swift in Sources */,
 				E7BF5577249D1F1D00DB57B6 /* AudioPCMBufferEngine.swift in Sources */,
 				E7BF558E249F2A7900DB57B6 /* AudioBufferPlayer.swift in Sources */,
-				E7D685A524EFD75C003F218F /* IntervalsProvider.swift in Sources */,
+				E7D685A524EFD75C003F218F /* IntervalsRepository.swift in Sources */,
 				E7F67F1D24EFCD9F0060C17C /* FragmentManagerCreator.swift in Sources */,
 				E7BF55A724A11D1300DB57B6 /* DistanceProcessor.swift in Sources */,
 				E7160D6E24F03398000B6825 /* VoidFunction.swift in Sources */,

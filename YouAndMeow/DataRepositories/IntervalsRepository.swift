@@ -1,5 +1,5 @@
 //
-//  IntervalsProvider.swift
+//  IntervalsRepository.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 08.07.2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class IntervalsProvider {
+final class IntervalsRepository {
   private init() {}
 
   static func getMeowingIntervals() throws -> [TimeInterval] {

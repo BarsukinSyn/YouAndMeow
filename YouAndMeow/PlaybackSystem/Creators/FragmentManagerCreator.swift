@@ -16,7 +16,7 @@ final class FragmentManagerCreator {
   }
 
   static func createMeowingFragmentManager() throws -> MeowingFragmentManager {
-    let meowingIntervals = try IntervalsProvider.getMeowingIntervals()
+    let meowingIntervals = try IntervalsRepository.getMeowingIntervals()
     let meowingFragmentManager = MeowingFragmentManager(withIntervals: meowingIntervals)
 
     return meowingFragmentManager

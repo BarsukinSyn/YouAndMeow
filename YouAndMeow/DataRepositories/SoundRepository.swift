@@ -1,5 +1,5 @@
 //
-//  SoundProvider.swift
+//  SoundRepository.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 23.06.2020.
@@ -8,7 +8,7 @@
 
 import AVFoundation
 
-final class SoundProvider {
+final class SoundRepository {
   private init() {}
 
   static func getInhalationSoundPCMBuffer() throws -> AVAudioPCMBuffer {
