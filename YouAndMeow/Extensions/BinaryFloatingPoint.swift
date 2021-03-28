@@ -25,4 +25,15 @@ extension BinaryFloatingPoint {
 
     return scaledValue
   }
+
+  func mappedBetweenRanges(initial: ClosedRange<Self>, target: ClosedRange<Self>) -> Self {
+    var position = self
+
+    position -= initial.lowerBound
+    position /= initial.upperBound - initial.lowerBound
+    position *= target.upperBound - target.lowerBound
+    position += target.lowerBound
+
+    return position
+  }
 }

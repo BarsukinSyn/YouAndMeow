@@ -30,7 +30,9 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
     withPlayers soundPlayers: BreathingPhases<BreathingSoundPlayer>,
     andFragmentManager fragmentManager: BreathingFragmentManager
   ) {
-    let distanceProcessors = Array(repeating: "", count: soundPlayers.list.count).map { (_) in DistanceProcessor() }
+    let distanceProcessors = Array(repeating: "", count: soundPlayers.list.count).map { (_) in
+      DistanceProcessor()
+    }
 
     self.soundPlayers = soundPlayers
     self.fragmentManager = fragmentManager
