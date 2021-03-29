@@ -12,13 +12,13 @@ struct SliderBuilder<V: View>: View {
 
   private let bounds: ClosedRange<Float>
   private let thumbWidth: CGFloat?
-  private let renderSliderTemplate: RenderFunction<SliderComponents, V>
+  private let renderSliderTemplate: RenderFunction<SliderModifiers, V>
 
   init(
     value: Binding<Float>,
     in bounds: ClosedRange<Float>,
     thumbWidth: CGFloat? = nil,
-    _ renderSliderTemplate: @escaping RenderFunction<SliderComponents, V>
+    _ renderSliderTemplate: @escaping RenderFunction<SliderModifiers, V>
   ) {
     self._value = value
     self.bounds = bounds
@@ -28,11 +28,11 @@ struct SliderBuilder<V: View>: View {
 
   var body: some View {
     GeometryReader { (geometry) in
-      self.renderSlider(in: geometry.frame(in: .global))
+      self.buildSlider(in: geometry.frame(in: .global))
     }
   }
 
-  private func renderSlider(in frame: CGRect) -> some View {
+  private func buildSlider(in frame: CGRect) -> some View {
     let trackLength = Float(self.getTrackLength(in: frame))
 
     let thumbWidth = self.getThumbWidth(in: frame)
@@ -42,11 +42,11 @@ struct SliderBuilder<V: View>: View {
     let minimumTrackSize = CGSize(width: thumbOffset + thumbWidth / 2, height: frame.height)
     let maximumTrackSize = CGSize(width: frame.width - minimumTrackSize.width, height: frame.height)
 
-    let thumbModifier = SliderModifier(size: thumbSize, offset: thumbOffset)
-    let minimumTrackModifier = SliderModifier(size: minimumTrackSize, offset: 0)
-    let maximumTrackModifier = SliderModifier(size: maximumTrackSize, offset: minimumTrackSize.width)
+    let thumbModifier = SliderComponentModifier(size: thumbSize, offset: thumbOffset)
+    let minimumTrackModifier = SliderComponentModifier(size: minimumTrackSize, offset: 0)
+    let maximumTrackModifier = SliderComponentModifier(size: maximumTrackSize, offset: minimumTrackSize.width)
 
-    let sliderComponents = SliderComponents(
+    let sliderModifiers = SliderModifiers(
       thumb: thumbModifier,
       minimumTrack: minimumTrackModifier,
       maximumTrack: maximumTrackModifier
@@ -56,7 +56,7 @@ struct SliderBuilder<V: View>: View {
       self.dragGestureHandler(gesture, in: frame)
     }
 
-    let sliderView = self.renderSliderTemplate(sliderComponents).gesture(dragGesture)
+    let sliderView = self.renderSliderTemplate(sliderModifiers).gesture(dragGesture)
 
     return sliderView
   }
