@@ -1,5 +1,5 @@
 //
-//  SimpleSliderTrackShapeModifiers.swift
+//  SimpleSliderTrackShapeModifier.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 22.01.2021.

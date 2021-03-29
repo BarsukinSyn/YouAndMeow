@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SliderModifiers {
+struct SliderComponentModifiers {
   let thumb: SliderComponentModifier
   let minimumTrack: SliderComponentModifier
   let maximumTrack: SliderComponentModifier

@@ -12,13 +12,13 @@ struct SliderBuilder<V: View>: View {
 
   private let bounds: ClosedRange<Float>
   private let thumbWidth: CGFloat?
-  private let renderSliderTemplate: RenderFunction<SliderModifiers, V>
+  private let renderSliderTemplate: RenderFunction<SliderComponentModifiers, V>
 
   init(
     value: Binding<Float>,
     in bounds: ClosedRange<Float>,
     thumbWidth: CGFloat? = nil,
-    _ renderSliderTemplate: @escaping RenderFunction<SliderModifiers, V>
+    _ renderSliderTemplate: @escaping RenderFunction<SliderComponentModifiers, V>
   ) {
     self._value = value
     self.bounds = bounds
@@ -46,7 +46,7 @@ struct SliderBuilder<V: View>: View {
     let minimumTrackModifier = SliderComponentModifier(size: minimumTrackSize, offset: 0)
     let maximumTrackModifier = SliderComponentModifier(size: maximumTrackSize, offset: minimumTrackSize.width)
 
-    let sliderModifiers = SliderModifiers(
+    let componentStyles = SliderComponentModifiers(
       thumb: thumbModifier,
       minimumTrack: minimumTrackModifier,
       maximumTrack: maximumTrackModifier
@@ -56,7 +56,7 @@ struct SliderBuilder<V: View>: View {
       self.dragGestureHandler(gesture, in: frame)
     }
 
-    let sliderView = self.renderSliderTemplate(sliderModifiers).gesture(dragGesture)
+    let sliderView = self.renderSliderTemplate(componentStyles).gesture(dragGesture)
 
     return sliderView
   }

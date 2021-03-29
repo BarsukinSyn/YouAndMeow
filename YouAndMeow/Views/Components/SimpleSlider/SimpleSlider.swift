@@ -10,45 +10,41 @@ import SwiftUI
 struct SimpleSlider: View {
   @Binding var value: Float
 
-  let bounds: ClosedRange<Float>
-  let thumbColor: Color
-  let minimumTrackColor: Color
-  let maximumTrackColor: Color
+  var bounds: ClosedRange<Float>
 
-  private let containerHeight: CGFloat = 25
+  var minimumValueLabel: String?
+  var maximumValueLabel: String?
+  var minimumTrackColor: Color = .blue
+  var maximumTrackColor: Color = Color.gray.opacity(0.15)
+  var thumbColor: Color = .white
 
-  init(
-    value: Binding<Float>,
-    in bounds: ClosedRange<Float>,
-    thumbColor: Color = .white,
-    minimumTrackColor: Color = .blue,
-    maximumTrackColor: Color = Color.gray.opacity(0.15)
-  ) {
-    self._value = value
-    self.bounds = bounds
-    self.thumbColor = thumbColor
-    self.minimumTrackColor = minimumTrackColor
-    self.maximumTrackColor = maximumTrackColor
-  }
+  private let sliderHeight: CGFloat = 22
+  private let verticalSpacing: CGFloat = 4
 
   var body: some View {
-    SliderBuilder(value: self.$value, in: self.bounds) { (modifiers) in
-      ZStack {
-        SimpleSliderTrack(
-          minimumTrackColor: self.minimumTrackColor,
-          maximumTrackColor: self.maximumTrackColor,
-          minimumTrackModifier: modifiers.minimumTrack,
-          maximumTrackModifier: modifiers.maximumTrack
-        )
-
-        SimpleSliderThumb(color: self.thumbColor, modifier: modifiers.thumb)
+    VStack(spacing: self.verticalSpacing) {
+      if let minimumValueLabel = self.minimumValueLabel, let maximumValueLabel = self.maximumValueLabel {
+        SimpleSliderValueLabel(minimumValueLabel: minimumValueLabel, maximumValueLabel: maximumValueLabel)
       }
-    }.frame(height: self.containerHeight)
+
+      SliderBuilder(value: self.$value, in: self.bounds) { (modifiers) in
+        ZStack {
+          SimpleSliderTrack(
+            minimumTrackColor: self.minimumTrackColor,
+            maximumTrackColor: self.maximumTrackColor,
+            minimumTrackModifier: modifiers.minimumTrack,
+            maximumTrackModifier: modifiers.maximumTrack
+          )
+
+          SimpleSliderThumb(color: self.thumbColor, modifier: modifiers.thumb)
+        }
+      }.frame(height: self.sliderHeight)
+    }
   }
 }
 
 struct SimpleSlider_Previews: PreviewProvider {
   static var previews: some View {
-    SimpleSlider(value: .constant(1), in: 0...2)
+    SimpleSlider(value: .constant(1), bounds: 0...2)
   }
 }

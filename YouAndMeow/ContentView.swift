@@ -17,7 +17,7 @@ struct ContentView: View {
   var body: some View {
     Button {
       try? self.player?.play()
-    } label: { 
+    } label: {
       Text("Play")
     }
   }
