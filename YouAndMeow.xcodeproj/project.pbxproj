@@ -7,17 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7156BB225C17E8700B7F211 /* PlaybackButtonPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BB125C17E8700B7F211 /* PlaybackButtonPanel.swift */; };
+		E7156BBE25C1822600B7F211 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BBD25C1822600B7F211 /* TextButton.swift */; };
+		E7156BC625C1828C00B7F211 /* TextButtonLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BC525C1828C00B7F211 /* TextButtonLabelModifier.swift */; };
+		E7156BD425C18A2D00B7F211 /* PlaybackControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BD325C18A2D00B7F211 /* PlaybackControlPanel.swift */; };
+		E7156BDC25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BDB25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift */; };
 		E775032325B75FBD00D4E9FC /* SliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032225B75FBD00D4E9FC /* SliderBuilder.swift */; };
 		E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */; };
 		E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */; };
 		E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775033425B75FEB00D4E9FC /* RenderFunction.swift */; };
+		E7BD81D225C1E4880083FE69 /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81D125C1E4880083FE69 /* PlaybackSetting.swift */; };
+		E7BD81E025C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81DF25C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift */; };
 		E7CB413425BAF6940035E229 /* SimpleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB413325BAF6940035E229 /* SimpleSlider.swift */; };
 		E7CB414925BB03590035E229 /* SimpleSliderTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB414825BB03590035E229 /* SimpleSliderTrack.swift */; };
 		E7CB415125BB036A0035E229 /* SimpleSliderThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB415025BB036A0035E229 /* SimpleSliderThumb.swift */; };
 		E7CB415925BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB415825BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift */; };
-		E7D9A82025BED63A00EE072A /* PlaybackControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A81F25BED63A00EE072A /* PlaybackControlPanel.swift */; };
-		E7D9A82825BEE5F400EE072A /* PlaybackControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A82725BEE5F400EE072A /* PlaybackControlType.swift */; };
-		E7D9A82D25BEE62200EE072A /* PlaybackControlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A82C25BEE62200EE072A /* PlaybackControlViewModel.swift */; };
+		E7D9A82025BED63A00EE072A /* PlaybackSettingsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A81F25BED63A00EE072A /* PlaybackSettingsPanel.swift */; };
+		E7D9A82825BEE5F400EE072A /* PlaybackSettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */; };
+		E7D9A82D25BEE62200EE072A /* PlaybackSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A82C25BEE62200EE072A /* PlaybackSettingViewModel.swift */; };
 		E7E8F41B25B5A85F00CEEB98 /* YouAndMeowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */; };
 		E7E8F41D25B5A85F00CEEB98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F41C25B5A85F00CEEB98 /* ContentView.swift */; };
 		E7E8F41F25B5A86000CEEB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F41E25B5A86000CEEB98 /* Assets.xcassets */; };
@@ -82,17 +89,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7156BB125C17E8700B7F211 /* PlaybackButtonPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackButtonPanel.swift; sourceTree = "<group>"; };
+		E7156BBD25C1822600B7F211 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		E7156BC525C1828C00B7F211 /* TextButtonLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonLabelModifier.swift; sourceTree = "<group>"; };
+		E7156BD325C18A2D00B7F211 /* PlaybackControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlPanel.swift; sourceTree = "<group>"; };
+		E7156BDB25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlPanelViewModel.swift; sourceTree = "<group>"; };
 		E775032225B75FBD00D4E9FC /* SliderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBuilder.swift; sourceTree = "<group>"; };
 		E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderStructureModifiers.swift; sourceTree = "<group>"; };
 		E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderComponentModifier.swift; sourceTree = "<group>"; };
 		E775033425B75FEB00D4E9FC /* RenderFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderFunction.swift; sourceTree = "<group>"; };
+		E7BD81D125C1E4880083FE69 /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
+		E7BD81DF25C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingsPanelViewModel.swift; sourceTree = "<group>"; };
 		E7CB413325BAF6940035E229 /* SimpleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSlider.swift; sourceTree = "<group>"; };
 		E7CB414825BB03590035E229 /* SimpleSliderTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSliderTrack.swift; sourceTree = "<group>"; };
 		E7CB415025BB036A0035E229 /* SimpleSliderThumb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSliderThumb.swift; sourceTree = "<group>"; };
 		E7CB415825BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSliderTrackShapeModifier.swift; sourceTree = "<group>"; };
-		E7D9A81F25BED63A00EE072A /* PlaybackControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlPanel.swift; sourceTree = "<group>"; };
-		E7D9A82725BEE5F400EE072A /* PlaybackControlType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlType.swift; sourceTree = "<group>"; };
-		E7D9A82C25BEE62200EE072A /* PlaybackControlViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlViewModel.swift; sourceTree = "<group>"; };
+		E7D9A81F25BED63A00EE072A /* PlaybackSettingsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingsPanel.swift; sourceTree = "<group>"; };
+		E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingType.swift; sourceTree = "<group>"; };
+		E7D9A82C25BEE62200EE072A /* PlaybackSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingViewModel.swift; sourceTree = "<group>"; };
 		E7E8F41725B5A85F00CEEB98 /* YouAndMeow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouAndMeow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouAndMeowApp.swift; sourceTree = "<group>"; };
 		E7E8F41C25B5A85F00CEEB98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,10 +184,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7156BBC25C1820F00B7F211 /* TextButton */ = {
+			isa = PBXGroup;
+			children = (
+				E7156BBD25C1822600B7F211 /* TextButton.swift */,
+				E7156BC525C1828C00B7F211 /* TextButtonLabelModifier.swift */,
+			);
+			path = TextButton;
+			sourceTree = "<group>";
+		};
+		E72F723425C00BAE000B8094 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E7E8F46E25B5A8F000CEEB98 /* AVAudioEngine.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E72F723525C00BEC000B8094 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				E775033425B75FEB00D4E9FC /* RenderFunction.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		E766CE9C25BF434E00E9F0E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E7D9A82725BEE5F400EE072A /* PlaybackControlType.swift */,
+				E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,7 +220,9 @@
 		E766CEA325BF442C00E9F0E7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E7D9A82C25BEE62200EE072A /* PlaybackControlViewModel.swift */,
+				E7156BDB25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift */,
+				E7D9A82C25BEE62200EE072A /* PlaybackSettingViewModel.swift */,
+				E7BD81DF25C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -209,6 +250,7 @@
 			children = (
 				E7CB414725BB03410035E229 /* SimpleSlider */,
 				E775032125B75FA900D4E9FC /* SliderBuilder */,
+				E7156BBC25C1820F00B7F211 /* TextButton */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +260,7 @@
 			children = (
 				E773481C25BF401D004B6DF2 /* Player */,
 				E773481D25BF4032004B6DF2 /* Shared */,
+				E72F723525C00BEC000B8094 /* Types */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -225,7 +268,10 @@
 		E775032025B75F9C00D4E9FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E7D9A81F25BED63A00EE072A /* PlaybackControlPanel.swift */,
+				E7156BB125C17E8700B7F211 /* PlaybackButtonPanel.swift */,
+				E7156BD325C18A2D00B7F211 /* PlaybackControlPanel.swift */,
+				E7D9A81F25BED63A00EE072A /* PlaybackSettingsPanel.swift */,
+				E7BD81D125C1E4880083FE69 /* PlaybackSetting.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,6 +396,7 @@
 				E7E8F47525B5A8F000CEEB98 /* Controllers */,
 				E7E8F47125B5A8F000CEEB98 /* Creators */,
 				E7E8F47925B5A8F000CEEB98 /* Entities */,
+				E72F723425C00BAE000B8094 /* Extensions */,
 				E7E8F46225B5A8F000CEEB98 /* Managers */,
 				E7E8F46F25B5A8F000CEEB98 /* Processors */,
 				E7E8F46525B5A8F000CEEB98 /* SoundPlayers */,
@@ -374,7 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				E7E8F45F25B5A8F000CEEB98 /* LimitedValue.swift */,
-				E775033425B75FEB00D4E9FC /* RenderFunction.swift */,
 				E7E8F46125B5A8F000CEEB98 /* RoundingAccuracy.swift */,
 				E7E8F46025B5A8F000CEEB98 /* VoidFunction.swift */,
 			);
@@ -404,7 +450,6 @@
 			isa = PBXGroup;
 			children = (
 				E7E8F46A25B5A8F000CEEB98 /* Array.swift */,
-				E7E8F46E25B5A8F000CEEB98 /* AVAudioEngine.swift */,
 				E7E8F46D25B5A8F000CEEB98 /* BinaryFloatingPoint.swift */,
 				E7E8F46B25B5A8F000CEEB98 /* Comparable.swift */,
 				E7E8F46C25B5A8F000CEEB98 /* Timer.swift */,
@@ -615,13 +660,15 @@
 				E7E8F45225B5A8D700CEEB98 /* DataDecoder.swift in Sources */,
 				E7E8F49325B5A8F000CEEB98 /* MeowingPlaybackController.swift in Sources */,
 				E7CB415925BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift in Sources */,
-				E7D9A82D25BEE62200EE072A /* PlaybackControlViewModel.swift in Sources */,
+				E7D9A82D25BEE62200EE072A /* PlaybackSettingViewModel.swift in Sources */,
 				E7CB414925BB03590035E229 /* SimpleSliderTrack.swift in Sources */,
 				E7E8F48625B5A8F000CEEB98 /* BreathingFragmentManager.swift in Sources */,
 				E7E8F48925B5A8F000CEEB98 /* MeowingSoundPlayer.swift in Sources */,
 				E7E8F41D25B5A85F00CEEB98 /* ContentView.swift in Sources */,
-				E7D9A82825BEE5F400EE072A /* PlaybackControlType.swift in Sources */,
+				E7156BDC25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift in Sources */,
+				E7D9A82825BEE5F400EE072A /* PlaybackSettingType.swift in Sources */,
 				E7E8F47F25B5A8F000CEEB98 /* AudioPCMBufferPlayer.swift in Sources */,
+				E7156BC625C1828C00B7F211 /* TextButtonLabelModifier.swift in Sources */,
 				E7E8F49025B5A8F000CEEB98 /* FragmentManagerCreator.swift in Sources */,
 				E7E8F49725B5A8F000CEEB98 /* SoundFragment.swift in Sources */,
 				E7E8F41B25B5A85F00CEEB98 /* YouAndMeowApp.swift in Sources */,
@@ -633,22 +680,26 @@
 				E7EE0D7A25BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift in Sources */,
 				E7E8F49525B5A8F000CEEB98 /* CatSoundPlaybackController.swift in Sources */,
 				E7E8F48A25B5A8F000CEEB98 /* Array.swift in Sources */,
-				E7D9A82025BED63A00EE072A /* PlaybackControlPanel.swift in Sources */,
+				E7D9A82025BED63A00EE072A /* PlaybackSettingsPanel.swift in Sources */,
 				E7E8F48225B5A8F000CEEB98 /* LimitedValue.swift in Sources */,
 				E7E8F47D25B5A8F000CEEB98 /* AudioBufferEngine.swift in Sources */,
 				E7E8F49225B5A8F000CEEB98 /* SoundPlayerCreator.swift in Sources */,
 				E7CB415125BB036A0035E229 /* SimpleSliderThumb.swift in Sources */,
 				E7CB413425BAF6940035E229 /* SimpleSlider.swift in Sources */,
 				E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */,
+				E7156BBE25C1822600B7F211 /* TextButton.swift in Sources */,
 				E7E8F47E25B5A8F000CEEB98 /* AudioPCMBufferEngine.swift in Sources */,
+				E7156BD425C18A2D00B7F211 /* PlaybackControlPanel.swift in Sources */,
 				E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */,
 				E7E8F47C25B5A8F000CEEB98 /* AudioByteBufferEngine.swift in Sources */,
 				E7E8F48D25B5A8F000CEEB98 /* BinaryFloatingPoint.swift in Sources */,
 				E7E8F48325B5A8F000CEEB98 /* VoidFunction.swift in Sources */,
+				E7BD81E025C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift in Sources */,
 				E7E8F48025B5A8F000CEEB98 /* AudioByteBufferPlayer.swift in Sources */,
 				E7E8F49425B5A8F000CEEB98 /* BreathingPlaybackController.swift in Sources */,
 				E7E8F48725B5A8F000CEEB98 /* BreathingSoundPlayer.swift in Sources */,
 				E7E8F49625B5A8F000CEEB98 /* BreathingPhases.swift in Sources */,
+				E7156BB225C17E8700B7F211 /* PlaybackButtonPanel.swift in Sources */,
 				E7E8F48525B5A8F000CEEB98 /* MeowingFragmentManager.swift in Sources */,
 				E7E8F45125B5A8D700CEEB98 /* IntervalsRepository.swift in Sources */,
 				E7E8F45025B5A8D700CEEB98 /* FileManager.swift in Sources */,
@@ -657,6 +708,7 @@
 				E7E8F48F25B5A8F000CEEB98 /* DistanceProcessor.swift in Sources */,
 				E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */,
 				E7EE0D7B25BC0C2800638D2F /* SimpleSliderValueLabel.swift in Sources */,
+				E7BD81D225C1E4880083FE69 /* PlaybackSetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

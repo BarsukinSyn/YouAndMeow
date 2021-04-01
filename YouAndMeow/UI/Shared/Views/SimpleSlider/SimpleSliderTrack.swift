@@ -13,7 +13,10 @@ struct SimpleSliderTrack: View {
   var minimumTrackModifier: SliderComponentModifier
   var maximumTrackModifier: SliderComponentModifier
 
-  private let trackShapeModifier = SimpleSliderTrackShapeModifier(frameHeight: 6, cornerRadius: 3)
+  private let trackShapeModifier: SimpleSliderTrackShapeModifier = SimpleSliderTrackShapeModifier(
+    frameHeight: 6,
+    cornerRadius: 3
+  )
 
   var body: some View {
     Group {

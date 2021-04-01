@@ -11,7 +11,7 @@ struct SimpleSliderValueLabel: View {
   var minimumValueLabel: String
   var maximumValueLabel: String
 
-  private let textModifier = SimpleSliderValueLabelTextModifier()
+  private let textModifier: SimpleSliderValueLabelTextModifier = SimpleSliderValueLabelTextModifier()
 
   var body: some View {
     HStack {

@@ -8,17 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-  var player: CatSoundPlaybackController?
-
-  init() {
-    self.player = try? CatSoundPlaybackController()
-  }
-
   var body: some View {
-    Button {
-      try? self.player?.play()
-    } label: {
-      Text("Play")
+    VStack {
+      PlaybackControlPanel()
     }
   }
 }
