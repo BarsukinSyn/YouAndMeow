@@ -18,8 +18,8 @@ struct SimpleSlider: View {
   var maximumTrackColor: Color = Color.gray.opacity(0.15)
   var thumbColor: Color = .white
 
-  private let sliderHeight: CGFloat = 22
-  private let verticalSpacing: CGFloat = 4
+  private let sliderHeight: CGFloat = 24
+  private let verticalSpacing: CGFloat = 8
 
   var body: some View {
     VStack(spacing: self.verticalSpacing) {
@@ -45,6 +45,11 @@ struct SimpleSlider: View {
 
 struct SimpleSlider_Previews: PreviewProvider {
   static var previews: some View {
-    SimpleSlider(value: .constant(1), bounds: 0...2)
+    SimpleSlider(
+      value: .constant(1),
+      bounds: 0...2,
+      minimumValueLabel: "Minimum value",
+      maximumValueLabel: "Maximum value"
+    )
   }
 }

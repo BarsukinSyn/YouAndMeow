@@ -40,13 +40,13 @@ final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate, Meo
     self.meowingPlaybackController.stop()
   }
 
+  func setBreathingRate(_ rate: Float) {
+    self.breathingPlaybackController.setRate(rate)
+  }
+
   func setDistance(_ distance: Float) {
     self.breathingPlaybackController.setDistance(distance)
     self.meowingPlaybackController.setDistance(distance)
-  }
-
-  func setBreathingRate(_ rate: Float) {
-    self.breathingPlaybackController.setRate(rate)
   }
 
   func setMeowingRate(_ rate: Float) {
