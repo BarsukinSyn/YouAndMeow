@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SimpleSliderTrackShapeModifier: ViewModifier {
-  let frameHeight: CGFloat
-  let cornerRadius: CGFloat
+  var frameHeight: CGFloat
+  var cornerRadius: CGFloat
 
   func body(content: Content) -> some View {
     content.frame(height: self.frameHeight).cornerRadius(self.cornerRadius)

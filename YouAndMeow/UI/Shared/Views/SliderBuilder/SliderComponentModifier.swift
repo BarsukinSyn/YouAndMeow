@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SliderComponentModifier: ViewModifier {
-  let size: CGSize
-  let offset: CGFloat
+  var size: CGSize
+  var offset: CGFloat
 
   func body(content: Content) -> some View {
     content

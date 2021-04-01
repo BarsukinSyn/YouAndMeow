@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlaybackControlPanel: View {
-  let controls: [PlaybackControlViewData]
+  let controls: [PlaybackControlViewModel]
 
   private let verticalSpacing: CGFloat = 24
 
@@ -29,7 +29,7 @@ struct PlaybackControlPanel: View {
 struct PlaybackControlPanel_Previews: PreviewProvider {
   static var previews: some View {
     PlaybackControlPanel(controls: PlaybackControlType.allCases.map { (type) in
-      PlaybackControlViewData(
+      PlaybackControlViewModel(
         type: type,
         value: .constant(1),
         bounds: 0...2,

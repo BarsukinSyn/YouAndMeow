@@ -13,17 +13,17 @@ struct SimpleSliderTrack: View {
   var minimumTrackModifier: SliderComponentModifier
   var maximumTrackModifier: SliderComponentModifier
 
-  private let shapeModifier = SimpleSliderTrackShapeModifier(frameHeight: 6, cornerRadius: 3)
+  private let trackShapeModifier = SimpleSliderTrackShapeModifier(frameHeight: 6, cornerRadius: 3)
 
   var body: some View {
     Group {
       self.minimumTrackColor
         .modifier(self.minimumTrackModifier)
-        .modifier(self.shapeModifier)
+        .modifier(self.trackShapeModifier)
 
       self.maximumTrackColor
         .modifier(self.maximumTrackModifier)
-        .modifier(self.shapeModifier)
+        .modifier(self.trackShapeModifier)
     }
   }
 }

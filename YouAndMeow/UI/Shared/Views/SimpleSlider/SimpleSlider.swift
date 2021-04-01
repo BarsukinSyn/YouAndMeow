@@ -27,7 +27,7 @@ struct SimpleSlider: View {
         SimpleSliderValueLabel(minimumValueLabel: minimumValueLabel, maximumValueLabel: maximumValueLabel)
       }
 
-      SliderBuilder(value: self.$value, in: self.bounds) { (modifiers) in
+      SliderBuilder(value: self.$value, bounds: self.bounds) { (modifiers) in
         ZStack {
           SimpleSliderTrack(
             minimumTrackColor: self.minimumTrackColor,

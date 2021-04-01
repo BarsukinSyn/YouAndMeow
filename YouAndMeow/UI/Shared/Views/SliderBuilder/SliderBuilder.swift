@@ -10,21 +10,9 @@ import SwiftUI
 struct SliderBuilder<V: View>: View {
   @Binding var value: Float
 
-  private let bounds: ClosedRange<Float>
-  private let thumbWidth: CGFloat?
-  private let renderSliderTemplate: RenderFunction<SliderComponentModifiers, V>
-
-  init(
-    value: Binding<Float>,
-    in bounds: ClosedRange<Float>,
-    thumbWidth: CGFloat? = nil,
-    _ renderSliderTemplate: @escaping RenderFunction<SliderComponentModifiers, V>
-  ) {
-    self._value = value
-    self.bounds = bounds
-    self.thumbWidth = thumbWidth
-    self.renderSliderTemplate = renderSliderTemplate
-  }
+  var bounds: ClosedRange<Float>
+  var thumbWidth: CGFloat? = nil
+  var renderSliderTemplate: RenderFunction<SliderStructureModifiers, V>
 
   var body: some View {
     GeometryReader { (geometry) in
@@ -46,7 +34,7 @@ struct SliderBuilder<V: View>: View {
     let minimumTrackModifier = SliderComponentModifier(size: minimumTrackSize, offset: 0)
     let maximumTrackModifier = SliderComponentModifier(size: maximumTrackSize, offset: minimumTrackSize.width)
 
-    let componentStyles = SliderComponentModifiers(
+    let sliderStructureModifiers = SliderStructureModifiers(
       thumb: thumbModifier,
       minimumTrack: minimumTrackModifier,
       maximumTrack: maximumTrackModifier
@@ -56,7 +44,7 @@ struct SliderBuilder<V: View>: View {
       self.dragGestureHandler(gesture, in: frame)
     }
 
-    let sliderView = self.renderSliderTemplate(componentStyles).gesture(dragGesture)
+    let sliderView = self.renderSliderTemplate(sliderStructureModifiers).gesture(dragGesture)
 
     return sliderView
   }
