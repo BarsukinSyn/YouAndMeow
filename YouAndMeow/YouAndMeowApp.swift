@@ -11,7 +11,7 @@ import SwiftUI
 struct YouAndMeowApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      PlayerScreen()
     }
   }
 }

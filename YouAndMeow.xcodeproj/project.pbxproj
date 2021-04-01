@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E7156BB225C17E8700B7F211 /* PlaybackButtonPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BB125C17E8700B7F211 /* PlaybackButtonPanel.swift */; };
+		E7109B8925C4A1ED00A2862F /* PlaybackControlButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109B8825C4A1ED00A2862F /* PlaybackControlButtons.swift */; };
+		E7109B8E25C4AF4200A2862F /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109B8D25C4AF4200A2862F /* Dictionary.swift */; };
+		E7109B9725C522CE00A2862F /* PlaybackSystemEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109B9625C522CE00A2862F /* PlaybackSystemEnvironment.swift */; };
+		E7109B9F25C5253600A2862F /* PlaybackSettingsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109B9E25C5253600A2862F /* PlaybackSettingsEnvironment.swift */; };
+		E7109BA725C52B2200A2862F /* PlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109BA625C52B2200A2862F /* PlayerScreen.swift */; };
+		E7156BB225C17E8700B7F211 /* ButtonPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BB125C17E8700B7F211 /* ButtonPanel.swift */; };
 		E7156BBE25C1822600B7F211 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BBD25C1822600B7F211 /* TextButton.swift */; };
 		E7156BC625C1828C00B7F211 /* TextButtonLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BC525C1828C00B7F211 /* TextButtonLabelModifier.swift */; };
-		E7156BD425C18A2D00B7F211 /* PlaybackControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BD325C18A2D00B7F211 /* PlaybackControlPanel.swift */; };
-		E7156BDC25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BDB25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift */; };
+		E7156BD425C18A2D00B7F211 /* PlayerControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */; };
+		E7239DE025C4350500FFBF5A /* PlaybackSettingMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */; };
+		E7239DF125C445F300FFBF5A /* PlaybackSettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DF025C445F300FFBF5A /* PlaybackSettingData.swift */; };
 		E775032325B75FBD00D4E9FC /* SliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032225B75FBD00D4E9FC /* SliderBuilder.swift */; };
 		E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */; };
 		E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */; };
 		E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775033425B75FEB00D4E9FC /* RenderFunction.swift */; };
-		E7BD81D225C1E4880083FE69 /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81D125C1E4880083FE69 /* PlaybackSetting.swift */; };
-		E7BD81E025C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81DF25C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift */; };
+		E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */; };
+		E7CAD2C525C3054D007761A9 /* PlaybackSettingPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */; };
 		E7CB413425BAF6940035E229 /* SimpleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB413325BAF6940035E229 /* SimpleSlider.swift */; };
 		E7CB414925BB03590035E229 /* SimpleSliderTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB414825BB03590035E229 /* SimpleSliderTrack.swift */; };
 		E7CB415125BB036A0035E229 /* SimpleSliderThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB415025BB036A0035E229 /* SimpleSliderThumb.swift */; };
 		E7CB415925BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB415825BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift */; };
-		E7D9A82025BED63A00EE072A /* PlaybackSettingsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A81F25BED63A00EE072A /* PlaybackSettingsPanel.swift */; };
+		E7D9A82025BED63A00EE072A /* PlaybackSettingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A81F25BED63A00EE072A /* PlaybackSettingPanel.swift */; };
 		E7D9A82825BEE5F400EE072A /* PlaybackSettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */; };
-		E7D9A82D25BEE62200EE072A /* PlaybackSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A82C25BEE62200EE072A /* PlaybackSettingViewModel.swift */; };
 		E7E8F41B25B5A85F00CEEB98 /* YouAndMeowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */; };
-		E7E8F41D25B5A85F00CEEB98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F41C25B5A85F00CEEB98 /* ContentView.swift */; };
 		E7E8F41F25B5A86000CEEB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F41E25B5A86000CEEB98 /* Assets.xcassets */; };
 		E7E8F42225B5A86000CEEB98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F42125B5A86000CEEB98 /* Preview Assets.xcassets */; };
 		E7E8F42D25B5A86000CEEB98 /* YouAndMeowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F42C25B5A86000CEEB98 /* YouAndMeowTests.swift */; };
@@ -89,27 +93,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E7156BB125C17E8700B7F211 /* PlaybackButtonPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackButtonPanel.swift; sourceTree = "<group>"; };
+		E7109B8825C4A1ED00A2862F /* PlaybackControlButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlButtons.swift; sourceTree = "<group>"; };
+		E7109B8D25C4AF4200A2862F /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		E7109B9625C522CE00A2862F /* PlaybackSystemEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSystemEnvironment.swift; sourceTree = "<group>"; };
+		E7109B9E25C5253600A2862F /* PlaybackSettingsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingsEnvironment.swift; sourceTree = "<group>"; };
+		E7109BA625C52B2200A2862F /* PlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreen.swift; sourceTree = "<group>"; };
+		E7156BB125C17E8700B7F211 /* ButtonPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPanel.swift; sourceTree = "<group>"; };
 		E7156BBD25C1822600B7F211 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		E7156BC525C1828C00B7F211 /* TextButtonLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonLabelModifier.swift; sourceTree = "<group>"; };
-		E7156BD325C18A2D00B7F211 /* PlaybackControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlPanel.swift; sourceTree = "<group>"; };
-		E7156BDB25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlPanelViewModel.swift; sourceTree = "<group>"; };
+		E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlPanel.swift; sourceTree = "<group>"; };
+		E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingMetadata.swift; sourceTree = "<group>"; };
+		E7239DF025C445F300FFBF5A /* PlaybackSettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingData.swift; sourceTree = "<group>"; };
 		E775032225B75FBD00D4E9FC /* SliderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBuilder.swift; sourceTree = "<group>"; };
 		E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderStructureModifiers.swift; sourceTree = "<group>"; };
 		E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderComponentModifier.swift; sourceTree = "<group>"; };
 		E775033425B75FEB00D4E9FC /* RenderFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderFunction.swift; sourceTree = "<group>"; };
-		E7BD81D125C1E4880083FE69 /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
-		E7BD81DF25C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingsPanelViewModel.swift; sourceTree = "<group>"; };
+		E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingSlider.swift; sourceTree = "<group>"; };
+		E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingPanelViewModel.swift; sourceTree = "<group>"; };
 		E7CB413325BAF6940035E229 /* SimpleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSlider.swift; sourceTree = "<group>"; };
 		E7CB414825BB03590035E229 /* SimpleSliderTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSliderTrack.swift; sourceTree = "<group>"; };
 		E7CB415025BB036A0035E229 /* SimpleSliderThumb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSliderThumb.swift; sourceTree = "<group>"; };
 		E7CB415825BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSliderTrackShapeModifier.swift; sourceTree = "<group>"; };
-		E7D9A81F25BED63A00EE072A /* PlaybackSettingsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingsPanel.swift; sourceTree = "<group>"; };
+		E7D9A81F25BED63A00EE072A /* PlaybackSettingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingPanel.swift; sourceTree = "<group>"; };
 		E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingType.swift; sourceTree = "<group>"; };
-		E7D9A82C25BEE62200EE072A /* PlaybackSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingViewModel.swift; sourceTree = "<group>"; };
 		E7E8F41725B5A85F00CEEB98 /* YouAndMeow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouAndMeow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouAndMeowApp.swift; sourceTree = "<group>"; };
-		E7E8F41C25B5A85F00CEEB98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7E8F41E25B5A86000CEEB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7E8F42125B5A86000CEEB98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7E8F42325B5A86000CEEB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,6 +192,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7109B9525C5225B00A2862F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				E7109B9E25C5253600A2862F /* PlaybackSettingsEnvironment.swift */,
+				E7109B9625C522CE00A2862F /* PlaybackSystemEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		E7156BBC25C1820F00B7F211 /* TextButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +229,8 @@
 		E766CE9C25BF434E00E9F0E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E7239DF025C445F300FFBF5A /* PlaybackSettingData.swift */,
+				E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */,
 				E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */,
 			);
 			path = Models;
@@ -220,9 +239,7 @@
 		E766CEA325BF442C00E9F0E7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E7156BDB25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift */,
-				E7D9A82C25BEE62200EE072A /* PlaybackSettingViewModel.swift */,
-				E7BD81DF25C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift */,
+				E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -230,9 +247,11 @@
 		E773481C25BF401D004B6DF2 /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				E7109B9525C5225B00A2862F /* Environment */,
 				E766CE9C25BF434E00E9F0E7 /* Models */,
 				E766CEA325BF442C00E9F0E7 /* ViewModels */,
 				E775032025B75F9C00D4E9FC /* Views */,
+				E7109BA625C52B2200A2862F /* PlayerScreen.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -268,10 +287,11 @@
 		E775032025B75F9C00D4E9FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E7156BB125C17E8700B7F211 /* PlaybackButtonPanel.swift */,
-				E7156BD325C18A2D00B7F211 /* PlaybackControlPanel.swift */,
-				E7D9A81F25BED63A00EE072A /* PlaybackSettingsPanel.swift */,
-				E7BD81D125C1E4880083FE69 /* PlaybackSetting.swift */,
+				E7156BB125C17E8700B7F211 /* ButtonPanel.swift */,
+				E7109B8825C4A1ED00A2862F /* PlaybackControlButtons.swift */,
+				E7D9A81F25BED63A00EE072A /* PlaybackSettingPanel.swift */,
+				E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */,
+				E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,7 +348,6 @@
 				E7E8F49B25B5A94400CEEB98 /* Static */,
 				E7E8F45E25B5A8F000CEEB98 /* Types */,
 				E775031F25B75F8700D4E9FC /* UI */,
-				E7E8F41C25B5A85F00CEEB98 /* ContentView.swift */,
 				E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */,
 				E7E8F42325B5A86000CEEB98 /* Info.plist */,
 				E7E8F42025B5A86000CEEB98 /* Preview Content */,
@@ -452,6 +471,7 @@
 				E7E8F46A25B5A8F000CEEB98 /* Array.swift */,
 				E7E8F46D25B5A8F000CEEB98 /* BinaryFloatingPoint.swift */,
 				E7E8F46B25B5A8F000CEEB98 /* Comparable.swift */,
+				E7109B8D25C4AF4200A2862F /* Dictionary.swift */,
 				E7E8F46C25B5A8F000CEEB98 /* Timer.swift */,
 			);
 			path = Extensions;
@@ -655,17 +675,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7239DF125C445F300FFBF5A /* PlaybackSettingData.swift in Sources */,
 				E7E8F48425B5A8F000CEEB98 /* RoundingAccuracy.swift in Sources */,
 				E7E8F48B25B5A8F000CEEB98 /* Comparable.swift in Sources */,
 				E7E8F45225B5A8D700CEEB98 /* DataDecoder.swift in Sources */,
 				E7E8F49325B5A8F000CEEB98 /* MeowingPlaybackController.swift in Sources */,
 				E7CB415925BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift in Sources */,
-				E7D9A82D25BEE62200EE072A /* PlaybackSettingViewModel.swift in Sources */,
 				E7CB414925BB03590035E229 /* SimpleSliderTrack.swift in Sources */,
 				E7E8F48625B5A8F000CEEB98 /* BreathingFragmentManager.swift in Sources */,
+				E7109B8E25C4AF4200A2862F /* Dictionary.swift in Sources */,
 				E7E8F48925B5A8F000CEEB98 /* MeowingSoundPlayer.swift in Sources */,
-				E7E8F41D25B5A85F00CEEB98 /* ContentView.swift in Sources */,
-				E7156BDC25C18B5B00B7F211 /* PlaybackControlPanelViewModel.swift in Sources */,
+				E7109B9F25C5253600A2862F /* PlaybackSettingsEnvironment.swift in Sources */,
 				E7D9A82825BEE5F400EE072A /* PlaybackSettingType.swift in Sources */,
 				E7E8F47F25B5A8F000CEEB98 /* AudioPCMBufferPlayer.swift in Sources */,
 				E7156BC625C1828C00B7F211 /* TextButtonLabelModifier.swift in Sources */,
@@ -680,7 +700,8 @@
 				E7EE0D7A25BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift in Sources */,
 				E7E8F49525B5A8F000CEEB98 /* CatSoundPlaybackController.swift in Sources */,
 				E7E8F48A25B5A8F000CEEB98 /* Array.swift in Sources */,
-				E7D9A82025BED63A00EE072A /* PlaybackSettingsPanel.swift in Sources */,
+				E7D9A82025BED63A00EE072A /* PlaybackSettingPanel.swift in Sources */,
+				E7109BA725C52B2200A2862F /* PlayerScreen.swift in Sources */,
 				E7E8F48225B5A8F000CEEB98 /* LimitedValue.swift in Sources */,
 				E7E8F47D25B5A8F000CEEB98 /* AudioBufferEngine.swift in Sources */,
 				E7E8F49225B5A8F000CEEB98 /* SoundPlayerCreator.swift in Sources */,
@@ -689,26 +710,29 @@
 				E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */,
 				E7156BBE25C1822600B7F211 /* TextButton.swift in Sources */,
 				E7E8F47E25B5A8F000CEEB98 /* AudioPCMBufferEngine.swift in Sources */,
-				E7156BD425C18A2D00B7F211 /* PlaybackControlPanel.swift in Sources */,
+				E7239DE025C4350500FFBF5A /* PlaybackSettingMetadata.swift in Sources */,
+				E7156BD425C18A2D00B7F211 /* PlayerControlPanel.swift in Sources */,
 				E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */,
 				E7E8F47C25B5A8F000CEEB98 /* AudioByteBufferEngine.swift in Sources */,
+				E7109B8925C4A1ED00A2862F /* PlaybackControlButtons.swift in Sources */,
 				E7E8F48D25B5A8F000CEEB98 /* BinaryFloatingPoint.swift in Sources */,
 				E7E8F48325B5A8F000CEEB98 /* VoidFunction.swift in Sources */,
-				E7BD81E025C1E7410083FE69 /* PlaybackSettingsPanelViewModel.swift in Sources */,
 				E7E8F48025B5A8F000CEEB98 /* AudioByteBufferPlayer.swift in Sources */,
 				E7E8F49425B5A8F000CEEB98 /* BreathingPlaybackController.swift in Sources */,
 				E7E8F48725B5A8F000CEEB98 /* BreathingSoundPlayer.swift in Sources */,
 				E7E8F49625B5A8F000CEEB98 /* BreathingPhases.swift in Sources */,
-				E7156BB225C17E8700B7F211 /* PlaybackButtonPanel.swift in Sources */,
+				E7CAD2C525C3054D007761A9 /* PlaybackSettingPanelViewModel.swift in Sources */,
+				E7156BB225C17E8700B7F211 /* ButtonPanel.swift in Sources */,
 				E7E8F48525B5A8F000CEEB98 /* MeowingFragmentManager.swift in Sources */,
 				E7E8F45125B5A8D700CEEB98 /* IntervalsRepository.swift in Sources */,
 				E7E8F45025B5A8D700CEEB98 /* FileManager.swift in Sources */,
 				E7E8F48125B5A8F000CEEB98 /* AudioBufferPlayer.swift in Sources */,
 				E7E8F48C25B5A8F000CEEB98 /* Timer.swift in Sources */,
+				E7109B9725C522CE00A2862F /* PlaybackSystemEnvironment.swift in Sources */,
 				E7E8F48F25B5A8F000CEEB98 /* DistanceProcessor.swift in Sources */,
 				E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */,
 				E7EE0D7B25BC0C2800638D2F /* SimpleSliderValueLabel.swift in Sources */,
-				E7BD81D225C1E4880083FE69 /* PlaybackSetting.swift in Sources */,
+				E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
