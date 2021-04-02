@@ -12,9 +12,3 @@ struct TextButtonLabelModifier: ViewModifier {
     content
   }
 }
-
-struct TextButtonLabelModifier_Previews: PreviewProvider {
-  static var previews: some View {
-    Text("Press").modifier(TextButtonLabelModifier())
-  }
-}

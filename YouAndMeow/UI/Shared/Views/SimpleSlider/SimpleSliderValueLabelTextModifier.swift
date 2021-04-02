@@ -12,9 +12,3 @@ struct SimpleSliderValueLabelTextModifier: ViewModifier {
     content
   }
 }
-
-struct SimpleSliderValueLabelTextModifier_Previews: PreviewProvider {
-  static var previews: some View {
-    Text("Minimum value").modifier(SimpleSliderValueLabelTextModifier())
-  }
-}

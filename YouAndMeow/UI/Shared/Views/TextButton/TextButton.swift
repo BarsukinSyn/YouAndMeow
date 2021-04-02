@@ -23,9 +23,3 @@ struct TextButton: View {
     self.body.disabled(disabled)
   }
 }
-
-struct TextButton_Previews: PreviewProvider {
-  static var previews: some View {
-    TextButton(label: "Press", action: {})
-  }
-}

@@ -42,14 +42,3 @@ struct SimpleSlider: View {
     }
   }
 }
-
-struct SimpleSlider_Previews: PreviewProvider {
-  static var previews: some View {
-    SimpleSlider(
-      value: .constant(1),
-      bounds: 0...2,
-      minimumValueLabel: "Minimum value",
-      maximumValueLabel: "Maximum value"
-    )
-  }
-}

@@ -18,12 +18,3 @@ struct SimpleSliderThumb: View {
     }.modifier(self.modifier)
   }
 }
-
-struct SimpleSliderThumb_Previews: PreviewProvider {
-  static var previews: some View {
-    SimpleSliderThumb(
-      color: .blue,
-      modifier: SliderComponentModifier(size: CGSize(width: 25, height: 25), offset: 10)
-    )
-  }
-}

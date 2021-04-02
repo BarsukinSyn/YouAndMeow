@@ -21,9 +21,3 @@ struct SimpleSliderValueLabel: View {
     }
   }
 }
-
-struct SimpleSliderValueLabel_Previews: PreviewProvider {
-  static var previews: some View {
-    SimpleSliderValueLabel(minimumValueLabel: "Minimum value", maximumValueLabel: "Maximum value")
-  }
-}

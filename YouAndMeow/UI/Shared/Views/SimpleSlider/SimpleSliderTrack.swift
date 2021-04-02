@@ -30,16 +30,3 @@ struct SimpleSliderTrack: View {
     }
   }
 }
-
-struct SimpleSliderTrack_Previews: PreviewProvider {
-  static var previews: some View {
-    ZStack {
-      SimpleSliderTrack(
-        minimumTrackColor: .blue,
-        maximumTrackColor: .yellow,
-        minimumTrackModifier: SliderComponentModifier(size: CGSize(width: 50, height: 6), offset: 10),
-        maximumTrackModifier: SliderComponentModifier(size: CGSize(width: 50, height: 6), offset: 60)
-      )
-    }
-  }
-}

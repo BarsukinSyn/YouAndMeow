@@ -15,9 +15,3 @@ struct SimpleSliderTrackShapeModifier: ViewModifier {
     content.frame(height: self.frameHeight).cornerRadius(self.cornerRadius)
   }
 }
-
-struct SimpleSliderTrackShapeModifiers_Previews: PreviewProvider {
-  static var previews: some View {
-    Color(.orange).modifier(SimpleSliderTrackShapeModifier(frameHeight: 8, cornerRadius: 6))
-  }
-}
