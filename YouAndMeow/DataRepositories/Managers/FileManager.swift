@@ -25,7 +25,7 @@ final class FileManager {
 
       return data
     } catch {
-      throw FileManager.Exception.fileСanNotBeRead
+      throw FileManager.Exception.fileCannotBeRead
     }
   }
 
@@ -36,13 +36,13 @@ final class FileManager {
       let data = try AVAudioFile(forReading: url)
 
       guard let buffer = AVAudioPCMBuffer(pcmFormat: data.processingFormat, frameCapacity: UInt32(data.length))
-        else { throw FileManager.Exception.fileСanNotBeRead }
+        else { throw FileManager.Exception.fileCannotBeRead }
 
       try data.read(into: buffer)
 
       return buffer
     } catch {
-      throw FileManager.Exception.fileСanNotBeRead
+      throw FileManager.Exception.fileCannotBeRead
     }
   }
 }
@@ -50,7 +50,7 @@ final class FileManager {
 extension FileManager {
   enum Exception: Error {
     case fileNotFound
-    case fileСanNotBeRead
+    case fileCannotBeRead
   }
 }
 

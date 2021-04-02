@@ -17,8 +17,8 @@ final class BreathingFragmentManager {
   }
 
   private var defaultIntervalScale: Double {
-    let rateRange = self._rate.range
-    let ratio = (self.rate - rateRange.lowerBound) / (rateRange.upperBound - rateRange.lowerBound)
+    let rateBounds = self._rate.bounds
+    let ratio = (self.rate - rateBounds.lowerBound) / (rateBounds.upperBound - rateBounds.lowerBound)
     let scale = ratio.isWithin(0 ... 0.4) ? -0.25 : ratio.isWithin(0.8 ... 1) ? 0.75 : .random(in: 0 ... 0.35)
 
     return scale
