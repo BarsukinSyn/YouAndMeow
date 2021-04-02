@@ -16,7 +16,7 @@ final class PlaybackSettingPanelViewModel {
     .meowingRate
   ]
 
-  private let settingMetadataSet: [PlaybackSettingType: PlaybackSettingMetadata] = !!![
+  private let settingMetadataSet: [PlaybackSettingType: PlaybackSettingMetadata] = <!>[
     .breathingRate: (minimumValueLabel: "Sleepy", maximumValueLabel: "Happy"),
     .distance: (minimumValueLabel: "Close", maximumValueLabel: "Distant"),
     .meowingRate: (minimumValueLabel: "Purrfect", maximumValueLabel: "Meow-y"),

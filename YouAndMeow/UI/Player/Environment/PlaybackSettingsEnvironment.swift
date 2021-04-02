@@ -8,7 +8,7 @@
 import Foundation
 
 final class PlaybackSettingsEnvironment: ObservableObject {
-  @Published private (set) var settingSet: [PlaybackSettingType: PlaybackSettingData] = !!![
+  @Published private (set) var settingSet: [PlaybackSettingType: PlaybackSettingData] = <!>[
     .breathingRate: (value: 60, bounds: 20 ... 100),
     .distance: (value: 0.505, bounds: 0.01 ... 1),
     .meowingRate: (value: 2, bounds: 0 ... 4),
@@ -27,8 +27,8 @@ final class PlaybackSettingsEnvironment: ObservableObject {
   }
 
   func setValue(_ value: Float, settingType: PlaybackSettingType) {
-    let setting = self.settingSet[settingType]!
-    let newValue = value.clamped(setting.bounds)
+    let data = self.getData(of: settingType)
+    let newValue = value.clamped(data.bounds)
 
     self.settingSet[settingType]!.value = newValue
     self.updatePlaybackControllerSetting(settingType, value: newValue)

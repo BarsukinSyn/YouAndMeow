@@ -7,10 +7,10 @@
 
 import Foundation
 
-prefix operator !!!
+prefix operator <!>
 
 extension Dictionary where Key: CaseIterable {
-  static prefix func !!! (_ dictionary: Self) -> Self {
+  static prefix func <!> (_ dictionary: Self) -> Self {
     return self.init(strictly: true, dictionary: dictionary)
   }
 
