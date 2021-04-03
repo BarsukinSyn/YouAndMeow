@@ -15,14 +15,14 @@ struct PlaybackSettingSlider: View {
 
   var body: some View {
     SimpleSlider(
-      value: self.valueBinding,
+      value: self.bindedValue,
       bounds: self.data.bounds,
       minimumValueLabel: self.meta.minimumValueLabel,
       maximumValueLabel: self.meta.maximumValueLabel
     )
   }
 
-  var valueBinding: Binding<Float> {
+  var bindedValue: Binding<Float> {
     Binding(
       get: { self.data.value },
       set: { (newValue) in

@@ -35,7 +35,11 @@ final class PlaybackSettingsEnvironment: ObservableObject {
   }
 
   func reset() {
+    self.settingSet = self.settingSet.mapValues { (value: $0.bounds.mean, bounds: $0.bounds) }
 
+    self.settingSet.forEach { (type, data) in
+      self.updatePlaybackControllerSetting(type, value: data.value)
+    }
   }
 
   private func updatePlaybackControllerSetting(_ settingType: PlaybackSettingType, value: Float) {

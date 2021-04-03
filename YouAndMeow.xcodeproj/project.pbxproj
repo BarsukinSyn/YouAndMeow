@@ -22,6 +22,7 @@
 		E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */; };
 		E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */; };
 		E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775033425B75FEB00D4E9FC /* RenderFunction.swift */; };
+		E7992B7A25C98CC9007F8A86 /* ClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7992B7925C98CC9007F8A86 /* ClosedRange.swift */; };
 		E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */; };
 		E7CAD2C525C3054D007761A9 /* PlaybackSettingPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */; };
 		E7CB413425BAF6940035E229 /* SimpleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB413325BAF6940035E229 /* SimpleSlider.swift */; };
@@ -108,6 +109,7 @@
 		E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderStructureModifiers.swift; sourceTree = "<group>"; };
 		E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderComponentModifier.swift; sourceTree = "<group>"; };
 		E775033425B75FEB00D4E9FC /* RenderFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderFunction.swift; sourceTree = "<group>"; };
+		E7992B7925C98CC9007F8A86 /* ClosedRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedRange.swift; sourceTree = "<group>"; };
 		E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingSlider.swift; sourceTree = "<group>"; };
 		E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingPanelViewModel.swift; sourceTree = "<group>"; };
 		E7CB413325BAF6940035E229 /* SimpleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSlider.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 			children = (
 				E7E8F46A25B5A8F000CEEB98 /* Array.swift */,
 				E7E8F46D25B5A8F000CEEB98 /* BinaryFloatingPoint.swift */,
+				E7992B7925C98CC9007F8A86 /* ClosedRange.swift */,
 				E7E8F46B25B5A8F000CEEB98 /* Comparable.swift */,
 				E7109B8D25C4AF4200A2862F /* Dictionary.swift */,
 				E7E8F46C25B5A8F000CEEB98 /* Timer.swift */,
@@ -715,6 +718,7 @@
 				E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */,
 				E7E8F47C25B5A8F000CEEB98 /* AudioByteBufferEngine.swift in Sources */,
 				E7109B8925C4A1ED00A2862F /* PlaybackControlButtons.swift in Sources */,
+				E7992B7A25C98CC9007F8A86 /* ClosedRange.swift in Sources */,
 				E7E8F48D25B5A8F000CEEB98 /* BinaryFloatingPoint.swift in Sources */,
 				E7E8F48325B5A8F000CEEB98 /* VoidFunction.swift in Sources */,
 				E7E8F48025B5A8F000CEEB98 /* AudioByteBufferPlayer.swift in Sources */,
