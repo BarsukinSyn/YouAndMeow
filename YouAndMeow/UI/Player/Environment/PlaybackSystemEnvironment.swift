@@ -11,11 +11,11 @@ final class PlaybackSystemEnvironment: ObservableObject {
   @Published var error: PlaybackSystemEnvironment.Error?
   @Published var isPlaying: Bool = false
 
-  private (set) var playbackController: CatSoundPlaybackController?
+  private (set) var playbackSystem: PlaybackSystem?
 
   init() {
     do {
-      self.playbackController = try CatSoundPlaybackController()
+      self.playbackSystem = try PlaybackSystem()
     } catch {
       self.error = .playbackCannotStart
     }
@@ -23,7 +23,7 @@ final class PlaybackSystemEnvironment: ObservableObject {
 
   func play() {
     do {
-      try self.playbackController?.play()
+      try self.playbackSystem?.play()
       self.isPlaying = true
     } catch {
       self.isPlaying = false
@@ -32,7 +32,7 @@ final class PlaybackSystemEnvironment: ObservableObject {
   }
 
   func stop() {
-    self.playbackController?.stop()
+    self.playbackSystem?.stop()
     self.isPlaying = false
   }
 }

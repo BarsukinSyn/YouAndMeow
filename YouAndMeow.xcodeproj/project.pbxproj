@@ -22,6 +22,7 @@
 		E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */; };
 		E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */; };
 		E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775033425B75FEB00D4E9FC /* RenderFunction.swift */; };
+		E77526E725C9C4E200BC481B /* PlaybackSystemSettingBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77526E625C9C4E200BC481B /* PlaybackSystemSettingBounds.swift */; };
 		E7992B7A25C98CC9007F8A86 /* ClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7992B7925C98CC9007F8A86 /* ClosedRange.swift */; };
 		E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */; };
 		E7CAD2C525C3054D007761A9 /* PlaybackSettingPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */; };
@@ -65,7 +66,7 @@
 		E7E8F49225B5A8F000CEEB98 /* SoundPlayerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F47425B5A8F000CEEB98 /* SoundPlayerCreator.swift */; };
 		E7E8F49325B5A8F000CEEB98 /* MeowingPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F47625B5A8F000CEEB98 /* MeowingPlaybackController.swift */; };
 		E7E8F49425B5A8F000CEEB98 /* BreathingPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F47725B5A8F000CEEB98 /* BreathingPlaybackController.swift */; };
-		E7E8F49525B5A8F000CEEB98 /* CatSoundPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F47825B5A8F000CEEB98 /* CatSoundPlaybackController.swift */; };
+		E7E8F49525B5A8F000CEEB98 /* PlaybackSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F47825B5A8F000CEEB98 /* PlaybackSystem.swift */; };
 		E7E8F49625B5A8F000CEEB98 /* BreathingPhases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F47A25B5A8F000CEEB98 /* BreathingPhases.swift */; };
 		E7E8F49725B5A8F000CEEB98 /* SoundFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F47B25B5A8F000CEEB98 /* SoundFragment.swift */; };
 		E7E8F4A225B5A94400CEEB98 /* MeowingIntervals.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F49D25B5A94400CEEB98 /* MeowingIntervals.plist */; };
@@ -109,6 +110,7 @@
 		E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderStructureModifiers.swift; sourceTree = "<group>"; };
 		E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderComponentModifier.swift; sourceTree = "<group>"; };
 		E775033425B75FEB00D4E9FC /* RenderFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderFunction.swift; sourceTree = "<group>"; };
+		E77526E625C9C4E200BC481B /* PlaybackSystemSettingBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSystemSettingBounds.swift; sourceTree = "<group>"; };
 		E7992B7925C98CC9007F8A86 /* ClosedRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedRange.swift; sourceTree = "<group>"; };
 		E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingSlider.swift; sourceTree = "<group>"; };
 		E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingPanelViewModel.swift; sourceTree = "<group>"; };
@@ -158,7 +160,7 @@
 		E7E8F47425B5A8F000CEEB98 /* SoundPlayerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayerCreator.swift; sourceTree = "<group>"; };
 		E7E8F47625B5A8F000CEEB98 /* MeowingPlaybackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeowingPlaybackController.swift; sourceTree = "<group>"; };
 		E7E8F47725B5A8F000CEEB98 /* BreathingPlaybackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingPlaybackController.swift; sourceTree = "<group>"; };
-		E7E8F47825B5A8F000CEEB98 /* CatSoundPlaybackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatSoundPlaybackController.swift; sourceTree = "<group>"; };
+		E7E8F47825B5A8F000CEEB98 /* PlaybackSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackSystem.swift; sourceTree = "<group>"; };
 		E7E8F47A25B5A8F000CEEB98 /* BreathingPhases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingPhases.swift; sourceTree = "<group>"; };
 		E7E8F47B25B5A8F000CEEB98 /* SoundFragment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundFragment.swift; sourceTree = "<group>"; };
 		E7E8F49D25B5A94400CEEB98 /* MeowingIntervals.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MeowingIntervals.plist; sourceTree = "<group>"; };
@@ -421,6 +423,8 @@
 				E7E8F46225B5A8F000CEEB98 /* Managers */,
 				E7E8F46F25B5A8F000CEEB98 /* Processors */,
 				E7E8F46525B5A8F000CEEB98 /* SoundPlayers */,
+				E7E8F47825B5A8F000CEEB98 /* PlaybackSystem.swift */,
+				E77526E625C9C4E200BC481B /* PlaybackSystemSettingBounds.swift */,
 			);
 			path = PlaybackSystem;
 			sourceTree = "<group>";
@@ -502,7 +506,6 @@
 			isa = PBXGroup;
 			children = (
 				E7E8F47725B5A8F000CEEB98 /* BreathingPlaybackController.swift */,
-				E7E8F47825B5A8F000CEEB98 /* CatSoundPlaybackController.swift */,
 				E7E8F47625B5A8F000CEEB98 /* MeowingPlaybackController.swift */,
 			);
 			path = Controllers;
@@ -680,6 +683,7 @@
 			files = (
 				E7239DF125C445F300FFBF5A /* PlaybackSettingData.swift in Sources */,
 				E7E8F48425B5A8F000CEEB98 /* RoundingAccuracy.swift in Sources */,
+				E77526E725C9C4E200BC481B /* PlaybackSystemSettingBounds.swift in Sources */,
 				E7E8F48B25B5A8F000CEEB98 /* Comparable.swift in Sources */,
 				E7E8F45225B5A8D700CEEB98 /* DataDecoder.swift in Sources */,
 				E7E8F49325B5A8F000CEEB98 /* MeowingPlaybackController.swift in Sources */,
@@ -701,7 +705,7 @@
 				E7E8F48825B5A8F000CEEB98 /* SoundPlayer.swift in Sources */,
 				E775032325B75FBD00D4E9FC /* SliderBuilder.swift in Sources */,
 				E7EE0D7A25BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift in Sources */,
-				E7E8F49525B5A8F000CEEB98 /* CatSoundPlaybackController.swift in Sources */,
+				E7E8F49525B5A8F000CEEB98 /* PlaybackSystem.swift in Sources */,
 				E7E8F48A25B5A8F000CEEB98 /* Array.swift in Sources */,
 				E7D9A82025BED63A00EE072A /* PlaybackSettingPanel.swift in Sources */,
 				E7109BA725C52B2200A2862F /* PlayerScreen.swift in Sources */,

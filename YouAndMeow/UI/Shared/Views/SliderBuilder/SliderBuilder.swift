@@ -25,7 +25,7 @@ struct SliderBuilder<V: View>: View {
 
     let thumbWidth = self.getThumbWidth(in: frame)
     let thumbSize = CGSize(width: thumbWidth, height: frame.height)
-    let thumbOffset = CGFloat(self.value.mappedBetweenRanges(initial: self.bounds, target: 0...trackLength))
+    let thumbOffset = CGFloat(self.value.mappedBetweenRanges(initial: self.bounds, target: 0 ... trackLength))
 
     let minimumTrackSize = CGSize(width: thumbOffset + thumbWidth / 2, height: frame.height)
     let maximumTrackSize = CGSize(width: frame.width - minimumTrackSize.width, height: frame.height)
@@ -64,8 +64,8 @@ struct SliderBuilder<V: View>: View {
     let thumbWidth = self.getThumbWidth(in: frame)
     let trackLength = Float(self.getTrackLength(in: frame))
     let dragLength = gesture.startLocation.x + gesture.translation.width
-    let thumbPosition = Float(dragLength - thumbWidth / 2).clamped(0...trackLength)
-    let value = thumbPosition.mappedBetweenRanges(initial: 0...trackLength, target: self.bounds)
+    let thumbPosition = Float(dragLength - thumbWidth / 2).clamped(0 ... trackLength)
+    let value = thumbPosition.mappedBetweenRanges(initial: 0 ... trackLength, target: self.bounds)
 
     self.value = value
   }

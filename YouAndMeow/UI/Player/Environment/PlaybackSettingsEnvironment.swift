@@ -9,17 +9,33 @@ import Foundation
 
 final class PlaybackSettingsEnvironment: ObservableObject {
   @Published private (set) var settingSet: [PlaybackSettingType: PlaybackSettingData] = <!>[
-    .breathingRate: (value: 60, bounds: 20 ... 100),
-    .distance: (value: 0.505, bounds: 0.01 ... 1),
-    .meowingRate: (value: 2, bounds: 0 ... 4),
-    .symmetry: (value: 0, bounds: -0.4 ... 0.4),
-    .variability: (value: 0.1, bounds: 0 ... 0.2)
+    .breathingRate: (
+      value: PlaybackSystemSettingBounds.breathingRate.mean,
+      bounds: PlaybackSystemSettingBounds.breathingRate
+    ),
+    .distance: (
+      value: PlaybackSystemSettingBounds.distance.mean,
+      bounds: PlaybackSystemSettingBounds.distance
+    ),
+    .meowingRate: (
+      value: PlaybackSystemSettingBounds.meowingRate.mean,
+      bounds: PlaybackSystemSettingBounds.meowingRate
+    ),
+    .symmetry: (
+      value: PlaybackSystemSettingBounds.symmetry.mean,
+      bounds: PlaybackSystemSettingBounds.symmetry
+    ),
+    .variability: (
+      value: PlaybackSystemSettingBounds.variability.mean,
+      bounds: PlaybackSystemSettingBounds.variability
+    )
   ]
 
-  private let playbackController: CatSoundPlaybackController?
+  private let playbackSystem: PlaybackSystem?
 
-  init(playbackController: CatSoundPlaybackController?) {
-    self.playbackController = playbackController
+  init(playbackSystem: PlaybackSystem?) {
+    self.playbackSystem = playbackSystem
+    self.reset()
   }
 
   func getData(of settingType: PlaybackSettingType) -> PlaybackSettingData {
@@ -45,15 +61,15 @@ final class PlaybackSettingsEnvironment: ObservableObject {
   private func updatePlaybackControllerSetting(_ settingType: PlaybackSettingType, value: Float) {
     switch settingType {
     case .breathingRate:
-      self.playbackController?.setBreathingRate(value)
+      self.playbackSystem?.setBreathingRate(value)
     case .distance:
-      self.playbackController?.setDistance(value)
+      self.playbackSystem?.setDistance(value)
     case .meowingRate:
-      self.playbackController?.setMeowingRate(value)
+      self.playbackSystem?.setMeowingRate(value)
     case .symmetry:
-      self.playbackController?.setSymmetry(value)
+      self.playbackSystem?.setSymmetry(value)
     case .variability:
-      self.playbackController?.setVariability(value)
+      self.playbackSystem?.setVariability(value)
     }
   }
 }

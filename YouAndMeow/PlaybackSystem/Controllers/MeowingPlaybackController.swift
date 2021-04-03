@@ -14,9 +14,9 @@ protocol MeowingPlaybackControllerDelegate: class {
 final class MeowingPlaybackController: SoundPlayerDelegate {
   weak var delegate: MeowingPlaybackControllerDelegate?
 
-  @LimitedValue(0.01 ... 1) private (set) var distance: Float = 0.505
-  @LimitedValue(0 ... 4) private (set) var rate: Float = 2
-  @LimitedValue(0 ... 1) private (set) var volume: Float = 1
+  @LimitedValue(PlaybackSystemSettingBounds.distance) private (set) var distance: Float = 0
+  @LimitedValue(PlaybackSystemSettingBounds.meowingRate) private (set) var rate: Float = 0
+  @LimitedValue(PlaybackSystemSettingBounds.volume) private (set) var volume: Float = 1
 
   private var playbackVolume: Float {
     self.volume - self.distance * 0.8

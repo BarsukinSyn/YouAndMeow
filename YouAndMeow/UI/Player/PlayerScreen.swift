@@ -12,11 +12,11 @@ struct PlayerScreen: View {
   let playbackSettingsEnvironment: PlaybackSettingsEnvironment
 
   init() {
-    let audioPlayerEnvironment = PlaybackSystemEnvironment()
-    let playbackController = audioPlayerEnvironment.playbackController
-    let playbackSettingsEnvironment = PlaybackSettingsEnvironment(playbackController: playbackController)
+    let playbackSystemEnvironment = PlaybackSystemEnvironment()
+    let playbackSystem = playbackSystemEnvironment.playbackSystem
+    let playbackSettingsEnvironment = PlaybackSettingsEnvironment(playbackSystem: playbackSystem)
 
-    self.playbackSystemEnvironment = audioPlayerEnvironment
+    self.playbackSystemEnvironment = playbackSystemEnvironment
     self.playbackSettingsEnvironment = playbackSettingsEnvironment
   }
 

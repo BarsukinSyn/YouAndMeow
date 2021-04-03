@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class CatSoundPlaybackController: BreathingPlaybackControllerDelegate, MeowingPlaybackControllerDelegate {
-  @LimitedValue(0 ... 1) private (set) var volume: Float = 1
+final class PlaybackSystem: BreathingPlaybackControllerDelegate, MeowingPlaybackControllerDelegate {
+  @LimitedValue(PlaybackSystemSettingBounds.volume) private (set) var volume: Float = 1
 
   private var muffledBreathingPlaybackVolume: Float {
     self.volume / 2
