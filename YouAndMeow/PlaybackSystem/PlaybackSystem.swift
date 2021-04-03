@@ -8,7 +8,7 @@
 import Foundation
 
 final class PlaybackSystem: BreathingPlaybackControllerDelegate, MeowingPlaybackControllerDelegate {
-  @LimitedValue(PlaybackSystemSettingBounds.volume) private (set) var volume: Float = 1
+  @LimitedValue(PlaybackSystemSettingsBounds.volume) private (set) var volume: Float
 
   private var muffledBreathingPlaybackVolume: Float {
     self.volume / 2
@@ -29,6 +29,8 @@ final class PlaybackSystem: BreathingPlaybackControllerDelegate, MeowingPlayback
 
     self.breathingPlaybackController.delegate = self
     self.meowingPlaybackController.delegate = self
+
+    self.setVolume(PlaybackSystemSettingsBounds.volume.upperBound)
   }
 
   func play() throws {

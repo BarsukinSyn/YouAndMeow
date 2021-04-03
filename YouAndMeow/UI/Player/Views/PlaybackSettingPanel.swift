@@ -20,7 +20,7 @@ struct PlaybackSettingPanel: View {
           type: settingType,
           data: self.playbackSettings.getData(of: settingType),
           meta: self.viewData.getMetadata(of: settingType),
-          changeHandler: self.sliderChangeHandler
+          action: self.sliderChangeHandler
         )
       }
     }

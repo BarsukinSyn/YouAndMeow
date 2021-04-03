@@ -14,11 +14,11 @@ protocol BreathingPlaybackControllerDelegate: class {
 final class BreathingPlaybackController: SoundPlayerDelegate {
   weak var delegate: BreathingPlaybackControllerDelegate?
 
-  @LimitedValue(PlaybackSystemSettingBounds.distance) private (set) var distance: Float = 0
-  @LimitedValue(PlaybackSystemSettingBounds.breathingRate) private (set) var rate: Float = 0
-  @LimitedValue(PlaybackSystemSettingBounds.symmetry) private (set) var symmetry: Float = 0
-  @LimitedValue(PlaybackSystemSettingBounds.variability) private (set) var variability: Float = 0
-  @LimitedValue(PlaybackSystemSettingBounds.volume) private (set) var volume: Float = 1
+  @LimitedValue(PlaybackSystemSettingsBounds.distance) private (set) var distance: Float
+  @LimitedValue(PlaybackSystemSettingsBounds.breathingRate) private (set) var rate: Float
+  @LimitedValue(PlaybackSystemSettingsBounds.symmetry) private (set) var symmetry: Float
+  @LimitedValue(PlaybackSystemSettingsBounds.variability) private (set) var variability: Float
+  @LimitedValue(PlaybackSystemSettingsBounds.volume) private (set) var volume: Float
 
   private var isPlaying: Bool = false
 

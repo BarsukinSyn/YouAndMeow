@@ -10,24 +10,24 @@ import Foundation
 final class PlaybackSettingsEnvironment: ObservableObject {
   @Published private (set) var settingSet: [PlaybackSettingType: PlaybackSettingData] = <!>[
     .breathingRate: (
-      value: PlaybackSystemSettingBounds.breathingRate.mean,
-      bounds: PlaybackSystemSettingBounds.breathingRate
+      value: PlaybackSystemSettingsBounds.breathingRate.mean,
+      bounds: PlaybackSystemSettingsBounds.breathingRate
     ),
     .distance: (
-      value: PlaybackSystemSettingBounds.distance.mean,
-      bounds: PlaybackSystemSettingBounds.distance
+      value: PlaybackSystemSettingsBounds.distance.mean,
+      bounds: PlaybackSystemSettingsBounds.distance
     ),
     .meowingRate: (
-      value: PlaybackSystemSettingBounds.meowingRate.mean,
-      bounds: PlaybackSystemSettingBounds.meowingRate
+      value: PlaybackSystemSettingsBounds.meowingRate.mean,
+      bounds: PlaybackSystemSettingsBounds.meowingRate
     ),
     .symmetry: (
-      value: PlaybackSystemSettingBounds.symmetry.mean,
-      bounds: PlaybackSystemSettingBounds.symmetry
+      value: PlaybackSystemSettingsBounds.symmetry.mean,
+      bounds: PlaybackSystemSettingsBounds.symmetry
     ),
     .variability: (
-      value: PlaybackSystemSettingBounds.variability.mean,
-      bounds: PlaybackSystemSettingBounds.variability
+      value: PlaybackSystemSettingsBounds.variability.mean,
+      bounds: PlaybackSystemSettingsBounds.variability
     )
   ]
 

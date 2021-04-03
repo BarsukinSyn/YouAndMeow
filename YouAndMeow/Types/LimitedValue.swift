@@ -26,4 +26,8 @@ struct LimitedValue<T: Comparable> {
   init(wrappedValue: T, _ bounds: ClosedRange<T>) {
     self.init(wrappedValue: wrappedValue, bounds: bounds)
   }
+
+  init(_ bounds: ClosedRange<T>) {
+    self.init(wrappedValue: bounds.lowerBound, bounds: bounds)
+  }
 }

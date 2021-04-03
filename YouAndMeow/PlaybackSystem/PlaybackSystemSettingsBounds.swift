@@ -1,5 +1,5 @@
 //
-//  PlaybackSystemSettingBounds.swift
+//  PlaybackSystemSettingsBounds.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 02.02.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PlaybackSystemSettingBounds {
+struct PlaybackSystemSettingsBounds {
   private init() {}
 
   static var breathingRate: ClosedRange<Float> = 20 ... 100
