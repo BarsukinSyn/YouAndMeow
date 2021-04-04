@@ -18,7 +18,7 @@ struct PlaybackSettingPanel: View {
       ForEach(self.viewData.settingTypeOrder, id: \.self) { (settingType) in
         PlaybackSettingSlider(
           type: settingType,
-          data: self.playbackSettings.getData(of: settingType),
+          setting: self.playbackSettings.get(settingType),
           meta: self.viewData.getMetadata(of: settingType),
           action: self.sliderChangeHandler
         )
@@ -27,6 +27,6 @@ struct PlaybackSettingPanel: View {
   }
 
   func sliderChangeHandler(settingType: PlaybackSettingType, value: Float) {
-    self.playbackSettings.setValue(value, settingType: settingType)
+    self.playbackSettings.set(value, settingType: settingType)
   }
 }

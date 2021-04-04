@@ -7,27 +7,22 @@
 
 import Foundation
 
-@propertyWrapper
-struct BoundedValue<T: Comparable> {
+struct BoundedValue<T: BinaryFloatingPoint> {
   let bounds: ClosedRange<T>
 
-  private (set) var currentValue: T!
+  private var currentValue: T!
 
-  var wrappedValue: T {
+  var value: T {
     get { self.currentValue }
     set { self.currentValue = newValue.clamped(self.bounds) }
   }
 
-  init(wrappedValue: T, bounds: ClosedRange<T>) {
+  var valueRatio: T {
+    (self.value - self.bounds.lowerBound) / (self.bounds.upperBound - self.bounds.lowerBound)
+  }
+
+  init(_ initialValue: T, bounds: ClosedRange<T>) {
     self.bounds = bounds
-    self.wrappedValue = wrappedValue
-  }
-
-  init(wrappedValue: T, _ bounds: ClosedRange<T>) {
-    self.init(wrappedValue: wrappedValue, bounds: bounds)
-  }
-
-  init(_ bounds: ClosedRange<T>) {
-    self.init(wrappedValue: bounds.lowerBound, bounds: bounds)
+    self.value = initialValue
   }
 }

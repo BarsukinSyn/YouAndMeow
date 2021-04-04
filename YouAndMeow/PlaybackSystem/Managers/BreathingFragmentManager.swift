@@ -9,17 +9,16 @@ import Foundation
 
 final class BreathingFragmentManager {
   private var intervals: [TimeInterval] = []
-  @BoundedValue(PlaybackSystemSettingsBounds.breathingRate) private var rate: Float
-  @BoundedValue(PlaybackSystemSettingsBounds.variability) private var variability: Float
+  @Bounded(PlaybackSystemSettingsBounds.breathingRate) private var rate: Float
+  @Bounded(PlaybackSystemSettingsBounds.variability) private var variability: Float
 
   private var defaultInterval: TimeInterval {
     self.rate > 0 ? TimeInterval(60 / self.rate / 2) : 0
   }
 
   private var defaultIntervalScale: Double {
-    let rateBounds = self._rate.bounds
-    let ratio = (self.rate - rateBounds.lowerBound) / (rateBounds.upperBound - rateBounds.lowerBound)
-    let scale = ratio.isWithin(0 ... 0.4) ? -0.25 : ratio.isWithin(0.8 ... 1) ? 0.75 : .random(in: 0 ... 0.35)
+    let valueRatio = self._rate.boundedValue.valueRatio
+    let scale = valueRatio.isWithin(0 ... 0.4) ? -0.25 : valueRatio.isWithin(0.8 ... 1) ? 0.75 : .random(in: 0 ... 0.35)
 
     return scale
   }

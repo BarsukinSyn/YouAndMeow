@@ -16,8 +16,14 @@
 		E7156BBE25C1822600B7F211 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BBD25C1822600B7F211 /* TextButton.swift */; };
 		E7156BC625C1828C00B7F211 /* TextButtonLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BC525C1828C00B7F211 /* TextButtonLabelModifier.swift */; };
 		E7156BD425C18A2D00B7F211 /* PlayerControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */; };
+		E71C390C25CC55B200535296 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C390B25CC55B200535296 /* Tooltip.swift */; };
+		E71C391125CC5F3C00535296 /* TooltipPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C391025CC5F3C00535296 /* TooltipPanel.swift */; };
+		E71C391925CC62D200535296 /* TooltipLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C391825CC62D200535296 /* TooltipLabelModifier.swift */; };
+		E71C392125CC69D900535296 /* TooltipPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C392025CC69D900535296 /* TooltipPanelViewModel.swift */; };
+		E71C392625CC6BD500535296 /* PlaybackSettingTooltipFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C392525CC6BD500535296 /* PlaybackSettingTooltipFormatter.swift */; };
+		E71C392F25CD7DD900535296 /* Bounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C392E25CD7DD900535296 /* Bounded.swift */; };
 		E7239DE025C4350500FFBF5A /* PlaybackSettingMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */; };
-		E7239DF125C445F300FFBF5A /* PlaybackSettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DF025C445F300FFBF5A /* PlaybackSettingData.swift */; };
+		E7239DF125C445F300FFBF5A /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */; };
 		E775032325B75FBD00D4E9FC /* SliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032225B75FBD00D4E9FC /* SliderBuilder.swift */; };
 		E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */; };
 		E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */; };
@@ -104,8 +110,14 @@
 		E7156BBD25C1822600B7F211 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		E7156BC525C1828C00B7F211 /* TextButtonLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonLabelModifier.swift; sourceTree = "<group>"; };
 		E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlPanel.swift; sourceTree = "<group>"; };
+		E71C390B25CC55B200535296 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
+		E71C391025CC5F3C00535296 /* TooltipPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipPanel.swift; sourceTree = "<group>"; };
+		E71C391825CC62D200535296 /* TooltipLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipLabelModifier.swift; sourceTree = "<group>"; };
+		E71C392025CC69D900535296 /* TooltipPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipPanelViewModel.swift; sourceTree = "<group>"; };
+		E71C392525CC6BD500535296 /* PlaybackSettingTooltipFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingTooltipFormatter.swift; sourceTree = "<group>"; };
+		E71C392E25CD7DD900535296 /* Bounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bounded.swift; sourceTree = "<group>"; };
 		E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingMetadata.swift; sourceTree = "<group>"; };
-		E7239DF025C445F300FFBF5A /* PlaybackSettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingData.swift; sourceTree = "<group>"; };
+		E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
 		E775032225B75FBD00D4E9FC /* SliderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBuilder.swift; sourceTree = "<group>"; };
 		E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderStructureModifiers.swift; sourceTree = "<group>"; };
 		E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderComponentModifier.swift; sourceTree = "<group>"; };
@@ -214,6 +226,23 @@
 			path = TextButton;
 			sourceTree = "<group>";
 		};
+		E71C390A25CC555C00535296 /* Tooltip */ = {
+			isa = PBXGroup;
+			children = (
+				E71C390B25CC55B200535296 /* Tooltip.swift */,
+				E71C391825CC62D200535296 /* TooltipLabelModifier.swift */,
+			);
+			path = Tooltip;
+			sourceTree = "<group>";
+		};
+		E71C392D25CD7DC900535296 /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				E71C392E25CD7DD900535296 /* Bounded.swift */,
+			);
+			path = PropertyWrappers;
+			sourceTree = "<group>";
+		};
 		E72F723425C00BAE000B8094 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,8 +262,9 @@
 		E766CE9C25BF434E00E9F0E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E7239DF025C445F300FFBF5A /* PlaybackSettingData.swift */,
+				E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */,
 				E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */,
+				E71C392525CC6BD500535296 /* PlaybackSettingTooltipFormatter.swift */,
 				E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */,
 			);
 			path = Models;
@@ -244,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */,
+				E71C392025CC69D900535296 /* TooltipPanelViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -274,6 +305,7 @@
 				E7CB414725BB03410035E229 /* SimpleSlider */,
 				E775032125B75FA900D4E9FC /* SliderBuilder */,
 				E7156BBC25C1820F00B7F211 /* TextButton */,
+				E71C390A25CC555C00535296 /* Tooltip */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +328,7 @@
 				E7D9A81F25BED63A00EE072A /* PlaybackSettingPanel.swift */,
 				E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */,
 				E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */,
+				E71C391025CC5F3C00535296 /* TooltipPanel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,6 +382,7 @@
 				E7E8F44825B5A8D600CEEB98 /* DataRepositories */,
 				E7E8F46925B5A8F000CEEB98 /* Extensions */,
 				E7E8F45625B5A8F000CEEB98 /* PlaybackSystem */,
+				E71C392D25CD7DC900535296 /* PropertyWrappers */,
 				E7E8F49B25B5A94400CEEB98 /* Static */,
 				E7E8F45E25B5A8F000CEEB98 /* Types */,
 				E775031F25B75F8700D4E9FC /* UI */,
@@ -681,21 +715,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7239DF125C445F300FFBF5A /* PlaybackSettingData.swift in Sources */,
+				E7239DF125C445F300FFBF5A /* PlaybackSetting.swift in Sources */,
 				E7E8F48425B5A8F000CEEB98 /* RoundingAccuracy.swift in Sources */,
+				E71C391925CC62D200535296 /* TooltipLabelModifier.swift in Sources */,
 				E77526E725C9C4E200BC481B /* PlaybackSystemSettingsBounds.swift in Sources */,
+				E71C390C25CC55B200535296 /* Tooltip.swift in Sources */,
 				E7E8F48B25B5A8F000CEEB98 /* Comparable.swift in Sources */,
 				E7E8F45225B5A8D700CEEB98 /* DataDecoder.swift in Sources */,
 				E7E8F49325B5A8F000CEEB98 /* MeowingPlaybackController.swift in Sources */,
 				E7CB415925BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift in Sources */,
 				E7CB414925BB03590035E229 /* SimpleSliderTrack.swift in Sources */,
 				E7E8F48625B5A8F000CEEB98 /* BreathingFragmentManager.swift in Sources */,
+				E71C392F25CD7DD900535296 /* Bounded.swift in Sources */,
 				E7109B8E25C4AF4200A2862F /* Dictionary.swift in Sources */,
 				E7E8F48925B5A8F000CEEB98 /* MeowingSoundPlayer.swift in Sources */,
 				E7109B9F25C5253600A2862F /* PlaybackSettingsEnvironment.swift in Sources */,
 				E7D9A82825BEE5F400EE072A /* PlaybackSettingType.swift in Sources */,
 				E7E8F47F25B5A8F000CEEB98 /* AudioPCMBufferPlayer.swift in Sources */,
 				E7156BC625C1828C00B7F211 /* TextButtonLabelModifier.swift in Sources */,
+				E71C391125CC5F3C00535296 /* TooltipPanel.swift in Sources */,
 				E7E8F49025B5A8F000CEEB98 /* FragmentManagerCreator.swift in Sources */,
 				E7E8F49725B5A8F000CEEB98 /* SoundFragment.swift in Sources */,
 				E7E8F41B25B5A85F00CEEB98 /* YouAndMeowApp.swift in Sources */,
@@ -707,6 +745,7 @@
 				E7EE0D7A25BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift in Sources */,
 				E7E8F49525B5A8F000CEEB98 /* PlaybackSystem.swift in Sources */,
 				E7E8F48A25B5A8F000CEEB98 /* Array.swift in Sources */,
+				E71C392125CC69D900535296 /* TooltipPanelViewModel.swift in Sources */,
 				E7D9A82025BED63A00EE072A /* PlaybackSettingPanel.swift in Sources */,
 				E7109BA725C52B2200A2862F /* PlayerScreen.swift in Sources */,
 				E7E8F48225B5A8F000CEEB98 /* BoundedValue.swift in Sources */,
@@ -736,6 +775,7 @@
 				E7E8F45025B5A8D700CEEB98 /* FileManager.swift in Sources */,
 				E7E8F48125B5A8F000CEEB98 /* AudioBufferPlayer.swift in Sources */,
 				E7E8F48C25B5A8F000CEEB98 /* Timer.swift in Sources */,
+				E71C392625CC6BD500535296 /* PlaybackSettingTooltipFormatter.swift in Sources */,
 				E7109B9725C522CE00A2862F /* PlaybackSystemEnvironment.swift in Sources */,
 				E7E8F48F25B5A8F000CEEB98 /* DistanceProcessor.swift in Sources */,
 				E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */,

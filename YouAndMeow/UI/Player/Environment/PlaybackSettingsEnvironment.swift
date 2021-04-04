@@ -8,57 +8,49 @@
 import Foundation
 
 final class PlaybackSettingsEnvironment: ObservableObject {
-  @Published private (set) var settingSet: [PlaybackSettingType: PlaybackSettingData] = <!>[
-    .breathingRate: (
-      value: PlaybackSystemSettingsBounds.breathingRate.mean,
-      bounds: PlaybackSystemSettingsBounds.breathingRate
-    ),
-    .distance: (
-      value: PlaybackSystemSettingsBounds.distance.mean,
-      bounds: PlaybackSystemSettingsBounds.distance
-    ),
-    .meowingRate: (
-      value: PlaybackSystemSettingsBounds.meowingRate.mean,
-      bounds: PlaybackSystemSettingsBounds.meowingRate
-    ),
-    .symmetry: (
-      value: PlaybackSystemSettingsBounds.symmetry.mean,
-      bounds: PlaybackSystemSettingsBounds.symmetry
-    ),
-    .variability: (
-      value: PlaybackSystemSettingsBounds.variability.mean,
-      bounds: PlaybackSystemSettingsBounds.variability
-    )
+  @Published private (set) var lastModified: PlaybackSettingType?
+  @Published private (set) var settingSet: [PlaybackSettingType: PlaybackSetting] = <!>[
+    .breathingRate: PlaybackSetting(SettingsBounds.breathingRate.mean, bounds: SettingsBounds.breathingRate),
+    .distance: PlaybackSetting(SettingsBounds.distance.mean, bounds: SettingsBounds.distance),
+    .meowingRate: PlaybackSetting(SettingsBounds.meowingRate.mean, bounds: SettingsBounds.meowingRate),
+    .symmetry: PlaybackSetting(SettingsBounds.symmetry.mean, bounds: SettingsBounds.symmetry),
+    .variability: PlaybackSetting(SettingsBounds.variability.mean, bounds: SettingsBounds.variability)
   ]
 
   private let playbackSystem: PlaybackSystem?
 
   init(playbackSystem: PlaybackSystem?) {
     self.playbackSystem = playbackSystem
-    self.reset()
+    self.syncPlaybackSystemSettings()
   }
 
-  func getData(of settingType: PlaybackSettingType) -> PlaybackSettingData {
+  func get(_ settingType: PlaybackSettingType) -> PlaybackSetting {
     return self.settingSet[settingType]!
   }
 
-  func setValue(_ value: Float, settingType: PlaybackSettingType) {
-    let data = self.getData(of: settingType)
-    let newValue = value.clamped(data.bounds)
+  func set(_ value: Float, settingType: PlaybackSettingType) {
+    let setting = self.get(settingType)
+    let newValue = value.clamped(setting.bounds)
 
     self.settingSet[settingType]!.value = newValue
-    self.updatePlaybackControllerSetting(settingType, value: newValue)
+    self.updatePlaybackSystemSetting(settingType, value: newValue)
+    self.lastModified = settingType
   }
 
   func reset() {
-    self.settingSet = self.settingSet.mapValues { (value: $0.bounds.mean, bounds: $0.bounds) }
+    let defaultSet = self.settingSet.mapValues { PlaybackSetting($0.bounds.mean, bounds: $0.bounds) }
 
-    self.settingSet.forEach { (type, data) in
-      self.updatePlaybackControllerSetting(type, value: data.value)
+    self.settingSet = defaultSet
+    self.syncPlaybackSystemSettings()
+  }
+
+  private func syncPlaybackSystemSettings() {
+    self.settingSet.forEach { (type, setting) in
+      self.updatePlaybackSystemSetting(type, value: setting.value)
     }
   }
 
-  private func updatePlaybackControllerSetting(_ settingType: PlaybackSettingType, value: Float) {
+  private func updatePlaybackSystemSetting(_ settingType: PlaybackSettingType, value: Float) {
     switch settingType {
     case .breathingRate:
       self.playbackSystem?.setBreathingRate(value)
@@ -72,4 +64,8 @@ final class PlaybackSettingsEnvironment: ObservableObject {
       self.playbackSystem?.setVariability(value)
     }
   }
+}
+
+extension PlaybackSettingsEnvironment {
+  typealias SettingsBounds = PlaybackSystemSettingsBounds
 }

@@ -12,6 +12,7 @@ struct PlayerControlPanel: View {
 
   var body: some View {
     VStack(spacing: self.verticalSpacing) {
+      TooltipPanel()
       PlaybackSettingPanel()
       ButtonPanel()
     }

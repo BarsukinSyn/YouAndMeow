@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PlayerScreen: View {
-  let playbackSystemEnvironment: PlaybackSystemEnvironment
-  let playbackSettingsEnvironment: PlaybackSettingsEnvironment
+  private let playbackSystemEnvironment: PlaybackSystemEnvironment
+  private let playbackSettingsEnvironment: PlaybackSettingsEnvironment
 
   init() {
     let playbackSystemEnvironment = PlaybackSystemEnvironment()

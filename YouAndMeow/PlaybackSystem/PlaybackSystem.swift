@@ -1,5 +1,5 @@
 //
-//  CatSoundPlaybackController.swift
+//  PlaybackSystem.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 26.06.2020.
@@ -8,7 +8,7 @@
 import Foundation
 
 final class PlaybackSystem: BreathingPlaybackControllerDelegate, MeowingPlaybackControllerDelegate {
-  @BoundedValue(PlaybackSystemSettingsBounds.volume) private (set) var volume: Float
+  @Bounded(PlaybackSystemSettingsBounds.volume) private (set) var volume: Float
 
   private var muffledBreathingPlaybackVolume: Float {
     self.volume / 2

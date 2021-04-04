@@ -9,25 +9,25 @@ import SwiftUI
 
 struct PlaybackSettingSlider: View {
   var type: PlaybackSettingType
-  var data: PlaybackSettingData
+  var setting: PlaybackSetting
   var meta: PlaybackSettingMetadata
   var action: (PlaybackSettingType, Float) -> Void
+
+  var bindedValue: Binding<Float> {
+    Binding(
+      get: { self.setting.value },
+      set: { (newValue) in
+        self.action(self.type, newValue)
+      }
+    )
+  }
 
   var body: some View {
     SimpleSlider(
       value: self.bindedValue,
-      bounds: self.data.bounds,
+      bounds: self.setting.bounds,
       minimumValueLabel: self.meta.minimumValueLabel,
       maximumValueLabel: self.meta.maximumValueLabel
-    )
-  }
-
-  var bindedValue: Binding<Float> {
-    Binding(
-      get: { self.data.value },
-      set: { (newValue) in
-        self.action(self.type, newValue)
-      }
     )
   }
 }
