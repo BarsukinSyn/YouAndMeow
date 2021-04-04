@@ -8,7 +8,7 @@
 import Foundation
 
 final class PlaybackSystem: BreathingPlaybackControllerDelegate, MeowingPlaybackControllerDelegate {
-  @LimitedValue(PlaybackSystemSettingsBounds.volume) private (set) var volume: Float
+  @BoundedValue(PlaybackSystemSettingsBounds.volume) private (set) var volume: Float
 
   private var muffledBreathingPlaybackVolume: Float {
     self.volume / 2

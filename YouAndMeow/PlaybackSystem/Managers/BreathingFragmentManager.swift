@@ -9,8 +9,8 @@ import Foundation
 
 final class BreathingFragmentManager {
   private var intervals: [TimeInterval] = []
-  @LimitedValue(0 ... 0) private var rate: Float = 0
-  @LimitedValue(0 ... 0) private var variability: Float = 0
+  @BoundedValue(PlaybackSystemSettingsBounds.breathingRate) private var rate: Float
+  @BoundedValue(PlaybackSystemSettingsBounds.variability) private var variability: Float
 
   private var defaultInterval: TimeInterval {
     self.rate > 0 ? TimeInterval(60 / self.rate / 2) : 0
@@ -24,13 +24,13 @@ final class BreathingFragmentManager {
     return scale
   }
 
-  func setRate(_ rate: LimitedValue<Float>) {
-    self._rate = rate
+  func setRate(_ rate: Float) {
+    self.rate = rate
     self.clearIntervals()
   }
 
-  func setVariability(_ variability: LimitedValue<Float>) {
-    self._variability = variability
+  func setVariability(_ variability: Float) {
+    self.variability = variability
     self.clearIntervals()
   }
 

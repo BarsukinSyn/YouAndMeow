@@ -1,5 +1,5 @@
 //
-//  LimitedValue.swift
+//  BoundedValue.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 06.07.2020.
@@ -8,7 +8,7 @@
 import Foundation
 
 @propertyWrapper
-struct LimitedValue<T: Comparable> {
+struct BoundedValue<T: Comparable> {
   let bounds: ClosedRange<T>
 
   private (set) var currentValue: T!

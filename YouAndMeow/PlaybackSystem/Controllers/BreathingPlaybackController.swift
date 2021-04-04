@@ -14,11 +14,11 @@ protocol BreathingPlaybackControllerDelegate: class {
 final class BreathingPlaybackController: SoundPlayerDelegate {
   weak var delegate: BreathingPlaybackControllerDelegate?
 
-  @LimitedValue(PlaybackSystemSettingsBounds.distance) private (set) var distance: Float
-  @LimitedValue(PlaybackSystemSettingsBounds.breathingRate) private (set) var rate: Float
-  @LimitedValue(PlaybackSystemSettingsBounds.symmetry) private (set) var symmetry: Float
-  @LimitedValue(PlaybackSystemSettingsBounds.variability) private (set) var variability: Float
-  @LimitedValue(PlaybackSystemSettingsBounds.volume) private (set) var volume: Float
+  @BoundedValue(PlaybackSystemSettingsBounds.distance) private (set) var distance: Float
+  @BoundedValue(PlaybackSystemSettingsBounds.breathingRate) private (set) var rate: Float
+  @BoundedValue(PlaybackSystemSettingsBounds.symmetry) private (set) var symmetry: Float
+  @BoundedValue(PlaybackSystemSettingsBounds.variability) private (set) var variability: Float
+  @BoundedValue(PlaybackSystemSettingsBounds.volume) private (set) var volume: Float
 
   private var isPlaying: Bool = false
 
@@ -38,8 +38,8 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
     self.fragmentManager = fragmentManager
     self.distanceProcessors = distanceProcessors
 
-    self.fragmentManager.setRate(self._rate)
-    self.fragmentManager.setVariability(self._variability)
+    self.fragmentManager.setRate(self.rate)
+    self.fragmentManager.setVariability(self.variability)
     self.soundPlayers.list.enumerated().forEach { (index, player) in
       player.delegate = self
       player.attach(equalizer: self.distanceProcessors[index].equalizer)
@@ -66,7 +66,7 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
 
   func setRate(_ rate: Float) {
     self.rate = rate
-    self.fragmentManager.setRate(self._rate)
+    self.fragmentManager.setRate(self.rate)
   }
 
   func setSymmetry(_ symmetry: Float) {
@@ -75,7 +75,7 @@ final class BreathingPlaybackController: SoundPlayerDelegate {
 
   func setVariability(_ variability: Float) {
     self.variability = variability
-    self.fragmentManager.setVariability(self._variability)
+    self.fragmentManager.setVariability(self.variability)
   }
 
   func setVolume(_ volume: Float) {
