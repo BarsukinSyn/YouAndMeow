@@ -40,6 +40,7 @@ final class PlaybackSettingsEnvironment: ObservableObject {
   func reset() {
     let defaultSet = self.settingSet.mapValues { PlaybackSetting($0.bounds.mean, bounds: $0.bounds) }
 
+    self.lastModified = nil
     self.settingSet = defaultSet
     self.syncPlaybackSystemSettings()
   }
