@@ -10,7 +10,8 @@ import SwiftUI
 struct TooltipPanel: View {
   @EnvironmentObject var playbackSettings: PlaybackSettingsEnvironment
 
-  @State var visible: Bool = false
+  @State private var visible: Bool = false
+  @State private var fadeOutTimer: Timer? = nil
 
   var viewData: TooltipPanelViewModel = TooltipPanelViewModel()
 
@@ -28,8 +29,18 @@ struct TooltipPanel: View {
 
   var body: some View {
     Tooltip(label: self.formattedText, isVisible: self.$visible)
-      .onChange(of: self.lastModified?.setting.value) { settingValue in
-        withAnimation { self.visible = true }
+      .onChange(of: self.lastModified?.setting.value) { (_) in
+        self.toggleVisibility()
       }
+  }
+
+  private func toggleVisibility() {
+    withAnimation {
+      self.visible = true
+      self.fadeOutTimer?.invalidate()
+      self.fadeOutTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (_) in
+        self.visible = false
+      }
+    }
   }
 }
