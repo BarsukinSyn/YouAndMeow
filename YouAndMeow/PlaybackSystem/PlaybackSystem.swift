@@ -21,7 +21,7 @@ final class PlaybackSystem: BreathingPlaybackControllerDelegate, MeowingPlayback
   init() throws {
     let breathingPlaybackController = try PlaybackControllerCreator.createBreathingPlaybackController()
     let meowingPlaybackController = try PlaybackControllerCreator.createMeowingPlaybackController()
-    let throttledMeowingPlaybackMethod = Timer.throttle(wait: 5, action: meowingPlaybackController.play)
+    let throttledMeowingPlaybackMethod = Timer.throttle(delay: 5, action: meowingPlaybackController.play)
 
     self.breathingPlaybackController = breathingPlaybackController
     self.meowingPlaybackController = meowingPlaybackController
