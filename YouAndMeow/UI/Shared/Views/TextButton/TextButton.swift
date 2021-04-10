@@ -18,8 +18,4 @@ struct TextButton: View {
       Text(self.label).modifier(self.labelModifier)
     })
   }
-
-  func disabled(_ disabled: Bool) -> some View {
-    self.body.disabled(disabled)
-  }
 }

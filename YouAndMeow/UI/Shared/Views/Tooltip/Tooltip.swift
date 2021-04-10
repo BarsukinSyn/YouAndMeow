@@ -19,7 +19,7 @@ struct Tooltip: View {
     Text(self.label)
       .modifier(self.labelModifier)
       .opacity(self.opacityLevel.value)
-      .onChange(of: self.isVisible) { isVisible in
+      .onChange(of: self.isVisible) { (isVisible) in
         withAnimation(.easeInOut(duration: 0.5)) {
           self.opacityLevel.value = isVisible ? 1 : 0
         }
