@@ -25,7 +25,7 @@
 		E7239DE025C4350500FFBF5A /* PlaybackSettingMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */; };
 		E7239DF125C445F300FFBF5A /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */; };
 		E775032325B75FBD00D4E9FC /* SliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032225B75FBD00D4E9FC /* SliderBuilder.swift */; };
-		E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */; };
+		E775032825B75FC800D4E9FC /* SliderTemplateModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032725B75FC800D4E9FC /* SliderTemplateModifiers.swift */; };
 		E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */; };
 		E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775033425B75FEB00D4E9FC /* RenderFunction.swift */; };
 		E77526E725C9C4E200BC481B /* PlaybackSystemSettingsBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77526E625C9C4E200BC481B /* PlaybackSystemSettingsBounds.swift */; };
@@ -119,7 +119,7 @@
 		E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingMetadata.swift; sourceTree = "<group>"; };
 		E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
 		E775032225B75FBD00D4E9FC /* SliderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBuilder.swift; sourceTree = "<group>"; };
-		E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderStructureModifiers.swift; sourceTree = "<group>"; };
+		E775032725B75FC800D4E9FC /* SliderTemplateModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTemplateModifiers.swift; sourceTree = "<group>"; };
 		E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderComponentModifier.swift; sourceTree = "<group>"; };
 		E775033425B75FEB00D4E9FC /* RenderFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderFunction.swift; sourceTree = "<group>"; };
 		E77526E625C9C4E200BC481B /* PlaybackSystemSettingsBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSystemSettingsBounds.swift; sourceTree = "<group>"; };
@@ -338,7 +338,7 @@
 			children = (
 				E775032225B75FBD00D4E9FC /* SliderBuilder.swift */,
 				E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */,
-				E775032725B75FC800D4E9FC /* SliderStructureModifiers.swift */,
+				E775032725B75FC800D4E9FC /* SliderTemplateModifiers.swift */,
 			);
 			path = SliderBuilder;
 			sourceTree = "<group>";
@@ -758,7 +758,7 @@
 				E7E8F47E25B5A8F000CEEB98 /* AudioPCMBufferEngine.swift in Sources */,
 				E7239DE025C4350500FFBF5A /* PlaybackSettingMetadata.swift in Sources */,
 				E7156BD425C18A2D00B7F211 /* PlayerControlPanel.swift in Sources */,
-				E775032825B75FC800D4E9FC /* SliderStructureModifiers.swift in Sources */,
+				E775032825B75FC800D4E9FC /* SliderTemplateModifiers.swift in Sources */,
 				E7E8F47C25B5A8F000CEEB98 /* AudioByteBufferEngine.swift in Sources */,
 				E7109B8925C4A1ED00A2862F /* PlaybackControlButtons.swift in Sources */,
 				E7992B7A25C98CC9007F8A86 /* ClosedRange.swift in Sources */,

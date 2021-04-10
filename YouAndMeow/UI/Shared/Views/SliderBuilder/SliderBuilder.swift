@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct SliderBuilder<V: View>: View {
+struct SliderBuilder<T: View>: View {
   @Binding var value: Float
 
   var bounds: ClosedRange<Float>
   var thumbWidth: CGFloat? = nil
-  var renderSliderTemplate: RenderFunction<SliderStructureModifiers, V>
+  var renderSliderTemplate: RenderFunction<SliderTemplateModifiers, T>
 
   var body: some View {
     GeometryReader { (geometry) in
@@ -21,7 +21,7 @@ struct SliderBuilder<V: View>: View {
   }
 
   private func buildSlider(in frame: CGRect) -> some View {
-    let trackLength = Float(self.getTrackLength(in: frame))
+    let trackLength = self.getTrackLength(in: frame)
 
     let thumbWidth = self.getThumbWidth(in: frame)
     let thumbSize = CGSize(width: thumbWidth, height: frame.height)
@@ -34,24 +34,24 @@ struct SliderBuilder<V: View>: View {
     let minimumTrackModifier = SliderComponentModifier(size: minimumTrackSize, offset: 0)
     let maximumTrackModifier = SliderComponentModifier(size: maximumTrackSize, offset: minimumTrackSize.width)
 
-    let sliderStructureModifiers = SliderStructureModifiers(
+    let sliderTemplateModifiers = SliderTemplateModifiers(
       thumb: thumbModifier,
       minimumTrack: minimumTrackModifier,
       maximumTrack: maximumTrackModifier
     )
 
-    let dragGesture = DragGesture(minimumDistance: 0).onChanged { (gesture) in
+    let dragGesture = DragGesture(minimumDistance: 1).onChanged { (gesture) in
       self.dragGestureHandler(gesture, in: frame)
     }
 
-    let sliderView = self.renderSliderTemplate(sliderStructureModifiers).gesture(dragGesture)
+    let sliderView = self.renderSliderTemplate(sliderTemplateModifiers).gesture(dragGesture)
 
     return sliderView
   }
 
-  private func getTrackLength(in frame: CGRect) -> CGFloat {
+  private func getTrackLength(in frame: CGRect) -> Float {
     let thumbWidth = self.getThumbWidth(in: frame)
-    let trackLength = frame.width - thumbWidth
+    let trackLength = Float(frame.width - thumbWidth)
 
     return trackLength
   }
@@ -62,7 +62,7 @@ struct SliderBuilder<V: View>: View {
 
   private func dragGestureHandler(_ gesture: DragGesture.Value, in frame: CGRect) {
     let thumbWidth = self.getThumbWidth(in: frame)
-    let trackLength = Float(self.getTrackLength(in: frame))
+    let trackLength = self.getTrackLength(in: frame)
     let dragLength = gesture.startLocation.x + gesture.translation.width
     let thumbPosition = Float(dragLength - thumbWidth / 2).clamped(0 ... trackLength)
     let value = thumbPosition.mappedBetweenRanges(initial: 0 ... trackLength, target: self.bounds)
