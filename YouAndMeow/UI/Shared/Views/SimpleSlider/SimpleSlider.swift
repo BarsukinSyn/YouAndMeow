@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SimpleSlider: View {
+  @Environment(\.isEnabled) var isEnabled: Bool
+
   @Binding var value: Float
 
   var bounds: ClosedRange<Float>
@@ -30,7 +32,7 @@ struct SimpleSlider: View {
       SliderBuilder(value: self.$value, bounds: self.bounds) { (modifiers) in
         ZStack {
           SimpleSliderTrack(
-            minimumTrackColor: self.minimumTrackColor,
+            minimumTrackColor: self.minimumTrackColor.opacity(self.isEnabled ? 1 : 0.5),
             maximumTrackColor: self.maximumTrackColor,
             minimumTrackModifier: modifiers.minimumTrack,
             maximumTrackModifier: modifiers.maximumTrack

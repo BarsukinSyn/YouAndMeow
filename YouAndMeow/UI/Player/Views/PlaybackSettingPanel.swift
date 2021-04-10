@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlaybackSettingPanel: View {
+  @EnvironmentObject var playbackSystem: PlaybackSystemEnvironment
   @EnvironmentObject var playbackSettings: PlaybackSettingsEnvironment
 
   var viewData: PlaybackSettingPanelViewModel = PlaybackSettingPanelViewModel()
@@ -23,7 +24,7 @@ struct PlaybackSettingPanel: View {
           action: self.sliderChangeHandler
         )
       }
-    }
+    }.disabled(!playbackSystem.isPlaying)
   }
 
   func sliderChangeHandler(settingType: PlaybackSettingType, value: Float) {
