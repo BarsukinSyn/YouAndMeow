@@ -10,10 +10,10 @@ import Foundation
 struct PlaybackSystemSettingsBounds {
   private init() {}
 
-  static var breathingRate: ClosedRange<Float> = 20 ... 100
-  static var distance: ClosedRange<Float> = 0.01 ... 1
-  static var meowingRate: ClosedRange<Float> = 0 ... 4
-  static var symmetry: ClosedRange<Float> = -0.4 ... 0.4
-  static var variability: ClosedRange<Float> = 0 ... 0.2
-  static var volume: ClosedRange<Float> = 0 ... 1
+  static let breathingRate: ClosedRange<Float> = 20 ... 100
+  static let distance: ClosedRange<Float> = 0.01 ... 1
+  static let meowingRate: ClosedRange<Float> = 0 ... 4
+  static let symmetry: ClosedRange<Float> = -0.4 ... 0.4
+  static let variability: ClosedRange<Float> = 0 ... 0.2
+  static let volume: ClosedRange<Float> = 0 ... 1
 }
