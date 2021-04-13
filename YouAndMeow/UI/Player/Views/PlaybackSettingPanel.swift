@@ -15,6 +15,10 @@ struct PlaybackSettingPanel: View {
   var verticalSpacing: CGFloat = 24
 
   var body: some View {
+    self.template.disabled(!playbackSystem.isPlaying)
+  }
+
+  var template: some View {
     VStack(spacing: self.verticalSpacing) {
       ForEach(self.viewData.settingTypeOrder, id: \.self) { (settingType) in
         PlaybackSettingSlider(
@@ -24,7 +28,7 @@ struct PlaybackSettingPanel: View {
           action: self.sliderChangeHandler
         )
       }
-    }.disabled(!playbackSystem.isPlaying)
+    }
   }
 
   func sliderChangeHandler(settingType: PlaybackSettingType, value: Float) {

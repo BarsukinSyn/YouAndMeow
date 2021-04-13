@@ -12,9 +12,13 @@ struct SimpleSliderThumb: View {
   var modifier: SliderComponentModifier
 
   var body: some View {
+    self.template.modifier(self.modifier)
+  }
+
+  var template: some View {
     ZStack {
       Circle().fill(self.color)
       Circle().stroke(Color.black, lineWidth: 1).opacity(0.1)
-    }.modifier(self.modifier)
+    }
   }
 }

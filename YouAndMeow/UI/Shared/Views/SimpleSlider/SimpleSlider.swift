@@ -29,18 +29,22 @@ struct SimpleSlider: View {
         SimpleSliderValueLabel(minimumValueLabel: minimumValueLabel, maximumValueLabel: maximumValueLabel)
       }
 
-      SliderBuilder(value: self.$value, bounds: self.bounds) { (modifiers) in
-        ZStack {
-          SimpleSliderTrack(
-            minimumTrackColor: self.minimumTrackColor.opacity(self.isEnabled ? 1 : 0.5),
-            maximumTrackColor: self.maximumTrackColor,
-            minimumTrackModifier: modifiers.minimumTrack,
-            maximumTrackModifier: modifiers.maximumTrack
-          )
+      self.slider.frame(height: self.sliderHeight)
+    }
+  }
 
-          SimpleSliderThumb(color: self.thumbColor, modifier: modifiers.thumb)
-        }
-      }.frame(height: self.sliderHeight)
+  var slider: some View {
+    SliderBuilder(value: self.$value, bounds: self.bounds) { (modifiers) in
+      ZStack {
+        SimpleSliderTrack(
+          minimumTrackColor: self.minimumTrackColor.opacity(self.isEnabled ? 1 : 0.5),
+          maximumTrackColor: self.maximumTrackColor,
+          minimumTrackModifier: modifiers.minimumTrack,
+          maximumTrackModifier: modifiers.maximumTrack
+        )
+
+        SimpleSliderThumb(color: self.thumbColor, modifier: modifiers.thumb)
+      }
     }
   }
 }
