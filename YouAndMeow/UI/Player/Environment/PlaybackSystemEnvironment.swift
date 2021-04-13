@@ -8,26 +8,35 @@
 import Foundation
 
 final class PlaybackSystemEnvironment: ObservableObject {
-  @Published var error: PlaybackSystemEnvironment.Error?
-  @Published var isPlaying: Bool = false
+  @Published private (set) var isPlaying: Bool = false
+  @Published private (set) var error: PlaybackSystemEnvironment.Exception?
 
   private (set) var playbackSystem: PlaybackSystem?
 
   init() {
+    self.prepareToPlay()
+  }
+
+  func prepareToPlay() {
+    if self.playbackSystem != nil { return }
+
     do {
+      self.error = nil
       self.playbackSystem = try PlaybackSystem()
     } catch {
-      self.error = .playbackCannotStart
+      self.error = .serviceUnavailable
     }
   }
 
   func play() {
     do {
-      try self.playbackSystem?.play()
+      guard let playbackSystem = self.playbackSystem else { throw Exception.serviceUnavailable }
+
+      try playbackSystem.play()
       self.isPlaying = true
     } catch {
       self.isPlaying = false
-      self.error = .playbackCannotStart
+      self.error = error is PlaybackSystemEnvironment.Exception ? .serviceUnavailable : .playbackCannotStart
     }
   }
 
@@ -38,7 +47,8 @@ final class PlaybackSystemEnvironment: ObservableObject {
 }
 
 extension PlaybackSystemEnvironment {
-  enum Error {
+  enum Exception: Error {
+    case serviceUnavailable
     case playbackCannotStart
   }
 }
