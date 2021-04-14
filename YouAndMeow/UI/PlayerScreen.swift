@@ -21,10 +21,9 @@ struct PlayerScreen: View {
   }
 
   var body: some View {
-    VStack {
-      PlayerControlPanel()
-        .environmentObject(self.playbackSystemEnvironment)
-        .environmentObject(self.playbackSettingsEnvironment)
-    }
+    PlayerView()
+      .fullScreen()
+      .environmentObject(self.playbackSystemEnvironment)
+      .environmentObject(self.playbackSettingsEnvironment)
   }
 }
