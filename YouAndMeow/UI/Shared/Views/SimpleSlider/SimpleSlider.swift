@@ -25,11 +25,16 @@ struct SimpleSlider: View {
 
   var body: some View {
     VStack(spacing: self.verticalSpacing) {
-      if let minimumValueLabel = self.minimumValueLabel, let maximumValueLabel = self.maximumValueLabel {
-        SimpleSliderValueLabel(minimumValueLabel: minimumValueLabel, maximumValueLabel: maximumValueLabel)
-      }
-
+      self.labels
       self.slider.frame(height: self.sliderHeight)
+    }
+  }
+
+  var labels: some View {
+    Group {
+      if let minimumValueLabel = self.minimumValueLabel, let maximumValueLabel = self.maximumValueLabel {
+        SimpleSliderValueLabels(minimumValueLabel: minimumValueLabel, maximumValueLabel: maximumValueLabel)
+      }
     }
   }
 

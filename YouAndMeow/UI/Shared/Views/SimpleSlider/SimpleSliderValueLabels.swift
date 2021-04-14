@@ -1,5 +1,5 @@
 //
-//  SimpleSliderValueLabel.swift
+//  SimpleSliderValueLabels.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 20.01.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SimpleSliderValueLabel: View {
+struct SimpleSliderValueLabels: View {
   var minimumValueLabel: String
   var maximumValueLabel: String
 

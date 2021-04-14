@@ -80,7 +80,7 @@
 		E7E8F4A425B5A94400CEEB98 /* Inhalation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F4A025B5A94400CEEB98 /* Inhalation.m4a */; };
 		E7E8F4A525B5A94400CEEB98 /* Meowing.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F4A125B5A94400CEEB98 /* Meowing.m4a */; };
 		E7EE0D7A25BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE0D7825BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift */; };
-		E7EE0D7B25BC0C2800638D2F /* SimpleSliderValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE0D7925BC0C2800638D2F /* SimpleSliderValueLabel.swift */; };
+		E7EE0D7B25BC0C2800638D2F /* SimpleSliderValueLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE0D7925BC0C2800638D2F /* SimpleSliderValueLabels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,7 +180,7 @@
 		E7E8F4A025B5A94400CEEB98 /* Inhalation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inhalation.m4a; sourceTree = "<group>"; };
 		E7E8F4A125B5A94400CEEB98 /* Meowing.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Meowing.m4a; sourceTree = "<group>"; };
 		E7EE0D7825BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSliderValueLabelTextModifier.swift; sourceTree = "<group>"; };
-		E7EE0D7925BC0C2800638D2F /* SimpleSliderValueLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSliderValueLabel.swift; sourceTree = "<group>"; };
+		E7EE0D7925BC0C2800638D2F /* SimpleSliderValueLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSliderValueLabels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,7 +350,7 @@
 				E7CB415025BB036A0035E229 /* SimpleSliderThumb.swift */,
 				E7CB414825BB03590035E229 /* SimpleSliderTrack.swift */,
 				E7CB415825BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift */,
-				E7EE0D7925BC0C2800638D2F /* SimpleSliderValueLabel.swift */,
+				E7EE0D7925BC0C2800638D2F /* SimpleSliderValueLabels.swift */,
 				E7EE0D7825BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift */,
 			);
 			path = SimpleSlider;
@@ -779,7 +779,7 @@
 				E7109B9725C522CE00A2862F /* PlaybackSystemEnvironment.swift in Sources */,
 				E7E8F48F25B5A8F000CEEB98 /* DistanceProcessor.swift in Sources */,
 				E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */,
-				E7EE0D7B25BC0C2800638D2F /* SimpleSliderValueLabel.swift in Sources */,
+				E7EE0D7B25BC0C2800638D2F /* SimpleSliderValueLabels.swift in Sources */,
 				E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
