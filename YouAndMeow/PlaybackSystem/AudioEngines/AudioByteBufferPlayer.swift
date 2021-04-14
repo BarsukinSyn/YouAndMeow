@@ -12,7 +12,7 @@ final class AudioByteBufferPlayer: AudioBufferPlayer {
   typealias Engine = AudioByteBufferEngine
 
   let engine: Engine
-  
+
   var isPlaying: Bool {
     self.engine.isActive
   }
