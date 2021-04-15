@@ -19,14 +19,12 @@ struct SimpleSlider: View {
   var minimumTrackColor: Color = .blue
   var maximumTrackColor: Color = Color.gray.opacity(0.15)
   var thumbColor: Color = .white
-
-  private let sliderHeight: CGFloat = 24
-  private let verticalSpacing: CGFloat = 8
+  var textColor: Color = .black
 
   var body: some View {
-    VStack(spacing: self.verticalSpacing) {
+    VStack(spacing: 10) {
       self.labels
-      self.slider.frame(height: self.sliderHeight)
+      self.slider.frame(height: 22)
     }
   }
 
@@ -34,6 +32,7 @@ struct SimpleSlider: View {
     Group {
       if let minimumValueLabel = self.minimumValueLabel, let maximumValueLabel = self.maximumValueLabel {
         SimpleSliderValueLabels(minimumValueLabel: minimumValueLabel, maximumValueLabel: maximumValueLabel)
+          .foregroundColor(self.textColor)
       }
     }
   }

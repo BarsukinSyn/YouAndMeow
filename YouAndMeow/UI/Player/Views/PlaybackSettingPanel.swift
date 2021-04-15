@@ -12,14 +12,13 @@ struct PlaybackSettingPanel: View {
   @EnvironmentObject var playbackSettings: PlaybackSettingsEnvironment
 
   var viewData: PlaybackSettingPanelViewModel = PlaybackSettingPanelViewModel()
-  var verticalSpacing: CGFloat = 24
 
   var body: some View {
     self.template.disabled(!playbackSystem.isPlaying)
   }
 
   var template: some View {
-    VStack(spacing: self.verticalSpacing) {
+    VStack(spacing: 20) {
       ForEach(self.viewData.settingTypeOrder, id: \.self) { (settingType) in
         PlaybackSettingSlider(
           type: settingType,

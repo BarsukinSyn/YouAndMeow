@@ -1,5 +1,5 @@
 //
-//  BackgroundImage.swift
+//  PlayerBackgroundImage.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 01.04.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BackgroundImage: View {
+struct PlayerBackgroundImage: View {
   var body: some View {
     ZStack {
       Color(hex: 0x233449)

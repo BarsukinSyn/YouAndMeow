@@ -27,7 +27,8 @@ struct PlaybackSettingSlider: View {
       value: self.bindedValue,
       bounds: self.setting.bounds,
       minimumValueLabel: self.meta.minimumValueLabel,
-      maximumValueLabel: self.meta.maximumValueLabel
+      maximumValueLabel: self.meta.maximumValueLabel,
+      textColor: .white
     )
   }
 }

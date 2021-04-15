@@ -10,11 +10,8 @@ import SwiftUI
 struct PlayerView: View {
   var body: some View {
     ZStack {
-      BackgroundImage().fullScreen()
-
-      VStack {
-        PlayerControlPanel()
-      }
+      PlayerBackgroundImage().cover()
+      PlayerControlPanel().cover(alignment: .bottom)
     }
   }
 }

@@ -9,6 +9,6 @@ import SwiftUI
 
 struct SimpleSliderValueLabelTextModifier: ViewModifier {
   func body(content: Content) -> some View {
-    content
+    content.font(.custom("Kurale-Regular", size: 18))
   }
 }

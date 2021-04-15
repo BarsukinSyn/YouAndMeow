@@ -10,9 +10,9 @@ import SwiftUI
 struct ButtonPanel: View {
   var body: some View {
     self.template
-      .frame(maxWidth: .infinity, maxHeight: 80)
+      .frame(maxWidth: .infinity, maxHeight: 88)
       .background(Color(hex: 0x2E445F))
-      .cornerRadius(50, corners: [.topLeft, .topRight])
+      .cornerRadius(44, corners: [.topLeft, .topRight])
   }
 
   var template: some View {

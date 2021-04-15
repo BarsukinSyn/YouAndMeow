@@ -22,7 +22,7 @@ struct PlayerScreen: View {
 
   var body: some View {
     PlayerView()
-      .fullScreen()
+      .fullscreen()
       .environmentObject(self.playbackSystemEnvironment)
       .environmentObject(self.playbackSettingsEnvironment)
   }
