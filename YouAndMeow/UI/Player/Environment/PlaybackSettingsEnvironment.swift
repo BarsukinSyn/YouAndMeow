@@ -8,7 +8,6 @@
 import Foundation
 
 final class PlaybackSettingsEnvironment: ObservableObject {
-  @Published private (set) var lastModified: PlaybackSettingType?
   @Published private (set) var settingSet: [PlaybackSettingType: PlaybackSetting] = <!>[
     .breathingRate: PlaybackSetting(SettingsBounds.breathingRate.mean, bounds: SettingsBounds.breathingRate),
     .distance: PlaybackSetting(SettingsBounds.distance.mean, bounds: SettingsBounds.distance),
@@ -34,13 +33,11 @@ final class PlaybackSettingsEnvironment: ObservableObject {
 
     self.settingSet[settingType]!.value = newValue
     self.updatePlaybackSystemSetting(settingType, value: newValue)
-    self.lastModified = settingType
   }
 
   func reset() {
     let defaultSet = self.settingSet.mapValues { PlaybackSetting($0.bounds.mean, bounds: $0.bounds) }
 
-    self.lastModified = nil
     self.settingSet = defaultSet
     self.syncPlaybackSystemSettings()
   }
