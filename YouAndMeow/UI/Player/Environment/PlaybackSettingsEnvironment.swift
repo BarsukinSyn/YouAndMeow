@@ -42,6 +42,13 @@ final class PlaybackSettingsEnvironment: ObservableObject {
     self.syncPlaybackSystemSettings()
   }
 
+  func shuffle() {
+    let randomSet = self.settingSet.mapValues { PlaybackSetting(Float.random(in: $0.bounds), bounds: $0.bounds) }
+
+    self.settingSet = randomSet
+    self.syncPlaybackSystemSettings()
+  }
+
   private func syncPlaybackSystemSettings() {
     self.settingSet.forEach { (type, setting) in
       self.updatePlaybackSystemSetting(type, value: setting.value)

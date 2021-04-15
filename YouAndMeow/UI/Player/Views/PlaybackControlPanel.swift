@@ -20,7 +20,7 @@ struct PlaybackControlPanel: View {
 
   var template: some View {
     HStack(spacing: 24) {
-      IconButton(icon: "shuffle", action: self.playbackSettings.reset)
+      IconButton(icon: "shuffle", action: self.playbackSettings.shuffle)
         .disabled(!self.playbackSystem.isPlaying)
 
       self.renderPlaybackControlButton(isPlaying: self.playbackSystem.isPlaying)
