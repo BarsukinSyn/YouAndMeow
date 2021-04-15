@@ -16,15 +16,15 @@ struct SimpleSlider: View {
 
   var minimumValueLabel: String?
   var maximumValueLabel: String?
-  var minimumTrackColor: Color = .blue
-  var maximumTrackColor: Color = Color.gray.opacity(0.15)
+  var minimumTrackColor: Color = Color(hex: 0xE8954B)
+  var maximumTrackColor: Color = Color(hex: 0xF9E3D8, opacity: 0.3)
   var thumbColor: Color = .white
   var textColor: Color = .black
 
   var body: some View {
     VStack(spacing: 10) {
       self.labels
-      self.slider.frame(height: 22)
+      self.slider.frame(height: 20)
     }
   }
 

@@ -16,8 +16,8 @@ struct PlayerControlPanel: View {
 
   var template: some View {
     VStack {
-      PlaybackSettingPanel().padding(EdgeInsets(top: 28, leading: 28, bottom: 44, trailing: 28))
-      ButtonPanel()
+      PlaybackSettingPanel().padding(EdgeInsets(top: 28, leading: 28, bottom: 40, trailing: 28))
+      PlaybackControlPanel()
     }
   }
 }
