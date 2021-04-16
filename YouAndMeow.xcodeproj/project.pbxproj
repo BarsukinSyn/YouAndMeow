@@ -239,6 +239,14 @@
 			path = Types;
 			sourceTree = "<group>";
 		};
+		E7596140261CA6180049CA95 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E773481C25BF401D004B6DF2 /* Player */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		E766CE9C25BF434E00E9F0E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,7 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				E78463A72615051B0097CDFB /* Extensions */,
-				E773481C25BF401D004B6DF2 /* Player */,
+				E7596140261CA6180049CA95 /* Screens */,
 				E773481D25BF4032004B6DF2 /* Shared */,
 				E72F723525C00BEC000B8094 /* Types */,
 			);
