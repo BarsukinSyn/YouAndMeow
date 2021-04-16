@@ -34,6 +34,6 @@ struct PlaybackControlPanel: View {
     let icon = isPlaying ? "pause.circle.fill" : "play.circle.fill"
     let action = isPlaying ? self.playbackSystem.stop : self.playbackSystem.play
 
-    return IconButton(icon: icon, action: action, size: 36)
+    return IconButton(icon: icon, action: action, size: 34)
   }
 }

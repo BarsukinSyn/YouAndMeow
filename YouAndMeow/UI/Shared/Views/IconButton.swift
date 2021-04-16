@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IconButton: View {
+  @Environment(\.isEnabled) var isEnabled: Bool
+
   var icon: String
   var action: VoidFunction
   var color: Color = .white
@@ -18,6 +20,7 @@ struct IconButton: View {
       Image(systemName: self.icon)
         .foregroundColor(self.color)
         .font(.system(size: self.size))
+        .opacity(self.isEnabled ? 1 : 0.3)
     }
   }
 }
