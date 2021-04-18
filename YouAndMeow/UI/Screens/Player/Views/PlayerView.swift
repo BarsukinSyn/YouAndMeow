@@ -11,7 +11,14 @@ struct PlayerView: View {
   var body: some View {
     ZStack {
       PlayerBackgroundImage().cover()
-      PlayerControlPanel().cover(alignment: .bottom)
+      self.playerControlPanel.cover(alignment: .bottom)
+    }
+  }
+
+  var playerControlPanel: some View {
+    VStack(spacing: 0) {
+      Logo().padding(.horizontal, 30).opacity(0.8)
+      PlayerControlPanel()
     }
   }
 }

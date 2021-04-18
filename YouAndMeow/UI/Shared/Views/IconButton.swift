@@ -13,7 +13,7 @@ struct IconButton: View {
   var icon: String
   var action: VoidFunction
   var color: Color = .white
-  var size: CGFloat = 18
+  var size: CGFloat = 20
 
   var body: some View {
     Button(action: self.action) {

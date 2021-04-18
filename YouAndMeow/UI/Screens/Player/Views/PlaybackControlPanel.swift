@@ -13,7 +13,7 @@ struct PlaybackControlPanel: View {
 
   var body: some View {
     self.template
-      .frame(maxWidth: .infinity, maxHeight: 84)
+      .frame(maxWidth: .infinity, minHeight: 84)
       .background(Color(hex: 0x2E445F))
       .cornerRadius(44, corners: [.topLeft, .topRight])
   }

@@ -12,6 +12,7 @@
 		E7109B9725C522CE00A2862F /* PlaybackSystemEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109B9625C522CE00A2862F /* PlaybackSystemEnvironment.swift */; };
 		E7109B9F25C5253600A2862F /* PlaybackSettingsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109B9E25C5253600A2862F /* PlaybackSettingsEnvironment.swift */; };
 		E7109BA725C52B2200A2862F /* PlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109BA625C52B2200A2862F /* PlayerScreen.swift */; };
+		E713E2B0261CD98700A29BB0 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713E2AF261CD98700A29BB0 /* Logo.swift */; };
 		E7156BBE25C1822600B7F211 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BBD25C1822600B7F211 /* IconButton.swift */; };
 		E7156BD425C18A2D00B7F211 /* PlayerControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */; };
 		E71C392F25CD7DD900535296 /* Bounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C392E25CD7DD900535296 /* Bounded.swift */; };
@@ -105,6 +106,7 @@
 		E7109B9625C522CE00A2862F /* PlaybackSystemEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSystemEnvironment.swift; sourceTree = "<group>"; };
 		E7109B9E25C5253600A2862F /* PlaybackSettingsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingsEnvironment.swift; sourceTree = "<group>"; };
 		E7109BA625C52B2200A2862F /* PlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreen.swift; sourceTree = "<group>"; };
+		E713E2AF261CD98700A29BB0 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		E7156BBD25C1822600B7F211 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlPanel.swift; sourceTree = "<group>"; };
 		E71C392E25CD7DD900535296 /* Bounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bounded.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				E7CB414725BB03410035E229 /* SimpleSlider */,
 				E775032125B75FA900D4E9FC /* SliderBuilder */,
 				E7156BBD25C1822600B7F211 /* IconButton.swift */,
+				E713E2AF261CD98700A29BB0 /* Logo.swift */,
 				E75AA7B52615FBB200740B7C /* RoundedCorner.swift */,
 			);
 			path = Views;
@@ -722,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7239DF125C445F300FFBF5A /* PlaybackSetting.swift in Sources */,
+				E713E2B0261CD98700A29BB0 /* Logo.swift in Sources */,
 				E7E8F48425B5A8F000CEEB98 /* RoundingAccuracy.swift in Sources */,
 				E77526E725C9C4E200BC481B /* PlaybackSystemSettingsBounds.swift in Sources */,
 				E7E8F48B25B5A8F000CEEB98 /* Comparable.swift in Sources */,
