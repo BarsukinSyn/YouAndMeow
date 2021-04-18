@@ -24,13 +24,13 @@ struct PlaybackSettingPanel: View {
           type: settingType,
           setting: self.playbackSettings.get(settingType),
           meta: self.viewData.getMetadata(of: settingType),
-          action: self.sliderChangeHandler
+          action: self.handleSliderChange
         )
       }
     }
   }
 
-  func sliderChangeHandler(settingType: PlaybackSettingType, value: Float) {
+  func handleSliderChange(settingType: PlaybackSettingType, value: Float) {
     self.playbackSettings.set(value, settingType: settingType)
   }
 }

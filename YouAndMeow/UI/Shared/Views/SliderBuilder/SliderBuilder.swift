@@ -41,7 +41,7 @@ struct SliderBuilder<T: View>: View {
     )
 
     let dragGesture = DragGesture(minimumDistance: 1).onChanged { (gesture) in
-      self.dragGestureHandler(gesture, in: frame)
+      self.handleDragGesture(gesture, in: frame)
     }
 
     let sliderView = self.renderSliderTemplate(sliderTemplateModifiers).gesture(dragGesture)
@@ -60,7 +60,7 @@ struct SliderBuilder<T: View>: View {
     return self.thumbWidth ?? frame.height
   }
 
-  private func dragGestureHandler(_ gesture: DragGesture.Value, in frame: CGRect) {
+  private func handleDragGesture(_ gesture: DragGesture.Value, in frame: CGRect) {
     let thumbWidth = self.getThumbWidth(in: frame)
     let trackLength = self.getTrackLength(in: frame)
     let dragLength = gesture.startLocation.x + gesture.translation.width

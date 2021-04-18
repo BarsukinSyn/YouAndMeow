@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PlaybackSystemEnvironment: ObservableObject {
+final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate {
   @Published private (set) var isPlaying: Bool = false
   @Published private (set) var error: PlaybackSystemEnvironment.Exception?
 
@@ -15,6 +15,11 @@ final class PlaybackSystemEnvironment: ObservableObject {
 
   init() {
     self.prepareToPlay()
+    AudioSession.sharedInstance.subscribe(self)
+  }
+
+  deinit {
+    AudioSession.sharedInstance.unsubscribe(self)
   }
 
   func prepareToPlay() {
@@ -43,6 +48,10 @@ final class PlaybackSystemEnvironment: ObservableObject {
   func stop() {
     self.playbackSystem?.stop()
     self.isPlaying = false
+  }
+
+  func audioSessionNotificationReceived(_ notification: Notification) {
+    self.stop()
   }
 }
 
