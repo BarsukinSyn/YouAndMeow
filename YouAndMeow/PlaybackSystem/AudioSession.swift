@@ -17,7 +17,7 @@ class AudioSession {
   private var delegates: [AudioSessionDelegate?] = []
   private let audioSession = AVAudioSession.sharedInstance()
   private let notificationCenter: NotificationCenter = NotificationCenter.default
-  private let handleableNotifications: [NSNotification.Name] = [
+  private let observableNotifications: [NSNotification.Name] = [
     AVAudioSession.routeChangeNotification,
     AVAudioSession.interruptionNotification
   ]
@@ -26,7 +26,7 @@ class AudioSession {
     try? self.audioSession.setCategory(.playback, mode: .default, options: [])
     try? self.audioSession.setActive(true)
 
-    self.handleableNotifications.forEach {
+    self.observableNotifications.forEach {
       self.notificationCenter.addObserver(self, selector: #selector(self.handleNotification), name: $0, object: nil)
     }
   }
