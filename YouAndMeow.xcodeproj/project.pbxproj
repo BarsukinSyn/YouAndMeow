@@ -42,8 +42,6 @@
 		E7E8F41B25B5A85F00CEEB98 /* YouAndMeowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */; };
 		E7E8F41F25B5A86000CEEB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F41E25B5A86000CEEB98 /* Assets.xcassets */; };
 		E7E8F42225B5A86000CEEB98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F42125B5A86000CEEB98 /* Preview Assets.xcassets */; };
-		E7E8F42D25B5A86000CEEB98 /* YouAndMeowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F42C25B5A86000CEEB98 /* YouAndMeowTests.swift */; };
-		E7E8F43825B5A86000CEEB98 /* YouAndMeowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F43725B5A86000CEEB98 /* YouAndMeowUITests.swift */; };
 		E7E8F44F25B5A8D700CEEB98 /* SoundRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F44925B5A8D600CEEB98 /* SoundRepository.swift */; };
 		E7E8F45025B5A8D700CEEB98 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F44B25B5A8D600CEEB98 /* FileManager.swift */; };
 		E7E8F45125B5A8D700CEEB98 /* IntervalsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F44C25B5A8D600CEEB98 /* IntervalsRepository.swift */; };
@@ -84,23 +82,6 @@
 		E7EE0D7B25BC0C2800638D2F /* SimpleSliderValueLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE0D7925BC0C2800638D2F /* SimpleSliderValueLabels.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E7E8F42925B5A86000CEEB98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E7E8F40F25B5A85F00CEEB98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E7E8F41625B5A85F00CEEB98;
-			remoteInfo = YouAndMeow;
-		};
-		E7E8F43425B5A86000CEEB98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E7E8F40F25B5A85F00CEEB98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E7E8F41625B5A85F00CEEB98;
-			remoteInfo = YouAndMeow;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		E7109B8825C4A1ED00A2862F /* PlaybackControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlPanel.swift; sourceTree = "<group>"; };
 		E7109B8D25C4AF4200A2862F /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -139,12 +120,6 @@
 		E7E8F41E25B5A86000CEEB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7E8F42125B5A86000CEEB98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7E8F42325B5A86000CEEB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7E8F42825B5A86000CEEB98 /* YouAndMeowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouAndMeowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7E8F42C25B5A86000CEEB98 /* YouAndMeowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouAndMeowTests.swift; sourceTree = "<group>"; };
-		E7E8F42E25B5A86000CEEB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7E8F43325B5A86000CEEB98 /* YouAndMeowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouAndMeowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7E8F43725B5A86000CEEB98 /* YouAndMeowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouAndMeowUITests.swift; sourceTree = "<group>"; };
-		E7E8F43925B5A86000CEEB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7E8F44925B5A8D600CEEB98 /* SoundRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundRepository.swift; sourceTree = "<group>"; };
 		E7E8F44B25B5A8D600CEEB98 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		E7E8F44C25B5A8D600CEEB98 /* IntervalsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalsRepository.swift; sourceTree = "<group>"; };
@@ -187,20 +162,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		E7E8F41425B5A85F00CEEB98 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7E8F42525B5A86000CEEB98 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7E8F43025B5A86000CEEB98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,8 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				E7E8F41925B5A85F00CEEB98 /* YouAndMeow */,
-				E7E8F42B25B5A86000CEEB98 /* YouAndMeowTests */,
-				E7E8F43625B5A86000CEEB98 /* YouAndMeowUITests */,
 				E7E8F41825B5A85F00CEEB98 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -379,8 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				E7E8F41725B5A85F00CEEB98 /* YouAndMeow.app */,
-				E7E8F42825B5A86000CEEB98 /* YouAndMeowTests.xctest */,
-				E7E8F43325B5A86000CEEB98 /* YouAndMeowUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -408,24 +365,6 @@
 				E7E8F42125B5A86000CEEB98 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E7E8F42B25B5A86000CEEB98 /* YouAndMeowTests */ = {
-			isa = PBXGroup;
-			children = (
-				E7E8F42C25B5A86000CEEB98 /* YouAndMeowTests.swift */,
-				E7E8F42E25B5A86000CEEB98 /* Info.plist */,
-			);
-			path = YouAndMeowTests;
-			sourceTree = "<group>";
-		};
-		E7E8F43625B5A86000CEEB98 /* YouAndMeowUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E7E8F43725B5A86000CEEB98 /* YouAndMeowUITests.swift */,
-				E7E8F43925B5A86000CEEB98 /* Info.plist */,
-			);
-			path = YouAndMeowUITests;
 			sourceTree = "<group>";
 		};
 		E7E8F44825B5A8D600CEEB98 /* DataRepositories */ = {
@@ -613,42 +552,6 @@
 			productReference = E7E8F41725B5A85F00CEEB98 /* YouAndMeow.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E7E8F42725B5A86000CEEB98 /* YouAndMeowTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7E8F43F25B5A86000CEEB98 /* Build configuration list for PBXNativeTarget "YouAndMeowTests" */;
-			buildPhases = (
-				E7E8F42425B5A86000CEEB98 /* Sources */,
-				E7E8F42525B5A86000CEEB98 /* Frameworks */,
-				E7E8F42625B5A86000CEEB98 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E7E8F42A25B5A86000CEEB98 /* PBXTargetDependency */,
-			);
-			name = YouAndMeowTests;
-			productName = YouAndMeowTests;
-			productReference = E7E8F42825B5A86000CEEB98 /* YouAndMeowTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		E7E8F43225B5A86000CEEB98 /* YouAndMeowUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7E8F44225B5A86000CEEB98 /* Build configuration list for PBXNativeTarget "YouAndMeowUITests" */;
-			buildPhases = (
-				E7E8F42F25B5A86000CEEB98 /* Sources */,
-				E7E8F43025B5A86000CEEB98 /* Frameworks */,
-				E7E8F43125B5A86000CEEB98 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E7E8F43525B5A86000CEEB98 /* PBXTargetDependency */,
-			);
-			name = YouAndMeowUITests;
-			productName = YouAndMeowUITests;
-			productReference = E7E8F43325B5A86000CEEB98 /* YouAndMeowUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -660,14 +563,6 @@
 				TargetAttributes = {
 					E7E8F41625B5A85F00CEEB98 = {
 						CreatedOnToolsVersion = 12.3;
-					};
-					E7E8F42725B5A86000CEEB98 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = E7E8F41625B5A85F00CEEB98;
-					};
-					E7E8F43225B5A86000CEEB98 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = E7E8F41625B5A85F00CEEB98;
 					};
 				};
 			};
@@ -685,8 +580,6 @@
 			projectRoot = "";
 			targets = (
 				E7E8F41625B5A85F00CEEB98 /* YouAndMeow */,
-				E7E8F42725B5A86000CEEB98 /* YouAndMeowTests */,
-				E7E8F43225B5A86000CEEB98 /* YouAndMeowUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -703,20 +596,6 @@
 				E7E8F4A225B5A94400CEEB98 /* MeowingIntervals.plist in Resources */,
 				E7E8F4A325B5A94400CEEB98 /* Exhalation.m4a in Resources */,
 				E78C6EAC261698C100B752D4 /* Kurale-Regular.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7E8F42625B5A86000CEEB98 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7E8F43125B5A86000CEEB98 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,36 +675,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7E8F42425B5A86000CEEB98 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7E8F42D25B5A86000CEEB98 /* YouAndMeowTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7E8F42F25B5A86000CEEB98 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7E8F43825B5A86000CEEB98 /* YouAndMeowUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E7E8F42A25B5A86000CEEB98 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E7E8F41625B5A85F00CEEB98 /* YouAndMeow */;
-			targetProxy = E7E8F42925B5A86000CEEB98 /* PBXContainerItemProxy */;
-		};
-		E7E8F43525B5A86000CEEB98 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E7E8F41625B5A85F00CEEB98 /* YouAndMeow */;
-			targetProxy = E7E8F43425B5A86000CEEB98 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E7E8F43A25B5A86000CEEB98 /* Debug */ = {
@@ -988,90 +838,6 @@
 			};
 			name = Release;
 		};
-		E7E8F44025B5A86000CEEB98 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R4VKC85W43;
-				INFOPLIST_FILE = YouAndMeowTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BarsukinSyn.YouAndMeowTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YouAndMeow.app/YouAndMeow";
-			};
-			name = Debug;
-		};
-		E7E8F44125B5A86000CEEB98 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R4VKC85W43;
-				INFOPLIST_FILE = YouAndMeowTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BarsukinSyn.YouAndMeowTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YouAndMeow.app/YouAndMeow";
-			};
-			name = Release;
-		};
-		E7E8F44325B5A86000CEEB98 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R4VKC85W43;
-				INFOPLIST_FILE = YouAndMeowUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BarsukinSyn.YouAndMeowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = YouAndMeow;
-			};
-			name = Debug;
-		};
-		E7E8F44425B5A86000CEEB98 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R4VKC85W43;
-				INFOPLIST_FILE = YouAndMeowUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BarsukinSyn.YouAndMeowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = YouAndMeow;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1089,24 +855,6 @@
 			buildConfigurations = (
 				E7E8F43D25B5A86000CEEB98 /* Debug */,
 				E7E8F43E25B5A86000CEEB98 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E7E8F43F25B5A86000CEEB98 /* Build configuration list for PBXNativeTarget "YouAndMeowTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7E8F44025B5A86000CEEB98 /* Debug */,
-				E7E8F44125B5A86000CEEB98 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E7E8F44225B5A86000CEEB98 /* Build configuration list for PBXNativeTarget "YouAndMeowUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7E8F44325B5A86000CEEB98 /* Debug */,
-				E7E8F44425B5A86000CEEB98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
