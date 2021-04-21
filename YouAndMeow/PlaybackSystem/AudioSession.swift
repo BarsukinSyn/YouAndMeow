@@ -12,7 +12,7 @@ protocol AudioSessionDelegate: class {
 }
 
 final class AudioSession {
-  static let sharedInstance = AudioSession()
+  static let shared = AudioSession()
 
   weak var delegate: AudioSessionDelegate?
   private (set) var isActive: Bool = false

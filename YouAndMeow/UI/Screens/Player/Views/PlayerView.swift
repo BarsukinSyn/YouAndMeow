@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PlayerView: View {
+  var basic: Bool = false
+
   var body: some View {
     ZStack {
       PlayerBackgroundImage().cover()
@@ -16,8 +18,11 @@ struct PlayerView: View {
   }
 
   var playerControlPanel: some View {
-    VStack(spacing: 0) {
-      Logo().padding(.horizontal, 30).opacity(0.8)
+    VStack(alignment: .trailing, spacing: 0) {
+      if !self.basic {
+        Logo().padding(EdgeInsets(top: 40, leading: 30, bottom: 0, trailing: 30)).opacity(0.8)
+      }
+
       PlayerControlPanel()
     }
   }

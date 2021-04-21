@@ -13,7 +13,7 @@ protocol RemoteCommandCenterDelegate: class {
 }
 
 final class RemoteCommandCenter {
-  static let sharedInstance = RemoteCommandCenter()
+  static let shared = RemoteCommandCenter()
 
   weak var delegate: RemoteCommandCenterDelegate?
 

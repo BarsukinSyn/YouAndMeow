@@ -11,6 +11,8 @@ struct PlayerScreen: View {
   private let playbackSystemEnvironment: PlaybackSystemEnvironment
   private let playbackSettingsEnvironment: PlaybackSettingsEnvironment
 
+  private let isSmallScreen: Bool = UIScreen.main.bounds.size.height <= 667
+
   init() {
     let playbackSystemEnvironment = PlaybackSystemEnvironment()
     let playbackSystem = playbackSystemEnvironment.playbackSystem
@@ -21,7 +23,7 @@ struct PlayerScreen: View {
   }
 
   var body: some View {
-    PlayerView()
+    PlayerView(basic: self.isSmallScreen)
       .fullscreen()
       .environmentObject(self.playbackSystemEnvironment)
       .environmentObject(self.playbackSettingsEnvironment)

@@ -15,8 +15,8 @@ final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate, R
 
   init() {
     self.prepareToPlay()
-    AudioSession.sharedInstance.delegate = self
-    RemoteCommandCenter.sharedInstance.delegate = self
+    AudioSession.shared.delegate = self
+    RemoteCommandCenter.shared.delegate = self
   }
 
   func prepareToPlay() {
@@ -25,7 +25,7 @@ final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate, R
     do {
       self.error = nil
       self.playbackSystem = try PlaybackSystem()
-      try AudioSession.sharedInstance.setCategory(.playback)
+      try AudioSession.shared.setCategory(.playback)
     } catch {
       self.error = .serviceUnavailable
     }
@@ -37,7 +37,7 @@ final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate, R
         throw PlaybackSystemEnvironment.Exception.playbackCannotStart
       }
 
-      try AudioSession.sharedInstance.setActive(true)
+      try AudioSession.shared.setActive(true)
       try playbackSystem.play()
       self.isPlaying = true
     } catch {
@@ -48,7 +48,7 @@ final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate, R
 
   func stop() {
     self.playbackSystem?.stop()
-    try? AudioSession.sharedInstance.setActive(false)
+    try? AudioSession.shared.setActive(false)
     self.isPlaying = false
   }
 
