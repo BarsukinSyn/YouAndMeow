@@ -20,6 +20,7 @@
 		E7239DF125C445F300FFBF5A /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */; };
 		E74A0FA1261E2C10003FBFD7 /* AudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74A0FA0261E2C10003FBFD7 /* AudioSession.swift */; };
 		E75AA7B62615FBB200740B7C /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75AA7B52615FBB200740B7C /* RoundedCorner.swift */; };
+		E766A4F3262339F4008D6E8E /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A4F2262339F4008D6E8E /* ImageRepository.swift */; };
 		E775032325B75FBD00D4E9FC /* SliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032225B75FBD00D4E9FC /* SliderBuilder.swift */; };
 		E775032825B75FC800D4E9FC /* SliderTemplateModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032725B75FC800D4E9FC /* SliderTemplateModifiers.swift */; };
 		E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */; };
@@ -97,6 +98,7 @@
 		E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
 		E74A0FA0261E2C10003FBFD7 /* AudioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSession.swift; sourceTree = "<group>"; };
 		E75AA7B52615FBB200740B7C /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		E766A4F2262339F4008D6E8E /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		E775032225B75FBD00D4E9FC /* SliderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBuilder.swift; sourceTree = "<group>"; };
 		E775032725B75FC800D4E9FC /* SliderTemplateModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTemplateModifiers.swift; sourceTree = "<group>"; };
 		E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderComponentModifier.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			children = (
 				E7E8F44D25B5A8D600CEEB98 /* Decoders */,
 				E7E8F44A25B5A8D600CEEB98 /* Managers */,
+				E766A4F2262339F4008D6E8E /* ImageRepository.swift */,
 				E7E8F44C25B5A8D600CEEB98 /* IntervalsRepository.swift */,
 				E7E8F44925B5A8D600CEEB98 /* SoundRepository.swift */,
 			);
@@ -620,6 +623,7 @@
 				E7CB414925BB03590035E229 /* SimpleSliderTrack.swift in Sources */,
 				E7E8F48625B5A8F000CEEB98 /* BreathingFragmentManager.swift in Sources */,
 				E71C392F25CD7DD900535296 /* Bounded.swift in Sources */,
+				E766A4F3262339F4008D6E8E /* ImageRepository.swift in Sources */,
 				E7109B8E25C4AF4200A2862F /* Dictionary.swift in Sources */,
 				E7E8F48925B5A8F000CEEB98 /* MeowingSoundPlayer.swift in Sources */,
 				E7109B9F25C5253600A2862F /* PlaybackSettingsEnvironment.swift in Sources */,

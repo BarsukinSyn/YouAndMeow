@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlayerView: View {
   var basic: Bool = false
+  var fullView: Bool { !self.basic }
 
   var body: some View {
     ZStack {
@@ -19,7 +20,7 @@ struct PlayerView: View {
 
   var playerControlPanel: some View {
     VStack(alignment: .trailing, spacing: 0) {
-      if !self.basic {
+      if self.fullView {
         Logo().padding(EdgeInsets(top: 40, leading: 30, bottom: 0, trailing: 30)).opacity(0.8)
       }
 
