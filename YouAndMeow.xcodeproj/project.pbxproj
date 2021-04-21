@@ -30,6 +30,7 @@
 		E78463B926150C9C0097CDFB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78463B826150C9C0097CDFB /* View.swift */; };
 		E78463BE26150DAC0097CDFB /* PlayerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78463BD26150DAC0097CDFB /* PlayerBackgroundImage.swift */; };
 		E78C6EAC261698C100B752D4 /* Kurale-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E78C6EAB261698C100B752D4 /* Kurale-Regular.ttf */; };
+		E78FEC5F2620C26F0079DAF7 /* RemoteCommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FEC5E2620C26F0079DAF7 /* RemoteCommandCenter.swift */; };
 		E7992B7A25C98CC9007F8A86 /* ClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7992B7925C98CC9007F8A86 /* ClosedRange.swift */; };
 		E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */; };
 		E7CAD2C525C3054D007761A9 /* PlaybackSettingPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */; };
@@ -106,6 +107,7 @@
 		E78463B826150C9C0097CDFB /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E78463BD26150DAC0097CDFB /* PlayerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBackgroundImage.swift; sourceTree = "<group>"; };
 		E78C6EAB261698C100B752D4 /* Kurale-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kurale-Regular.ttf"; sourceTree = "<group>"; };
+		E78FEC5E2620C26F0079DAF7 /* RemoteCommandCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommandCenter.swift; sourceTree = "<group>"; };
 		E7992B7925C98CC9007F8A86 /* ClosedRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedRange.swift; sourceTree = "<group>"; };
 		E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingSlider.swift; sourceTree = "<group>"; };
 		E7CAD2C425C3054D007761A9 /* PlaybackSettingPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingPanelViewModel.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				E74A0FA0261E2C10003FBFD7 /* AudioSession.swift */,
 				E7E8F47825B5A8F000CEEB98 /* PlaybackSystem.swift */,
 				E77526E625C9C4E200BC481B /* PlaybackSystemSettingsBounds.swift */,
+				E78FEC5E2620C26F0079DAF7 /* RemoteCommandCenter.swift */,
 			);
 			path = PlaybackSystem;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				E78463A9261505540097CDFB /* Color.swift in Sources */,
 				E7E8F41B25B5A85F00CEEB98 /* YouAndMeowApp.swift in Sources */,
 				E7E8F49125B5A8F000CEEB98 /* PlaybackControllerCreator.swift in Sources */,
+				E78FEC5F2620C26F0079DAF7 /* RemoteCommandCenter.swift in Sources */,
 				E7E8F48E25B5A8F000CEEB98 /* AVAudioEngine.swift in Sources */,
 				E7E8F44F25B5A8D700CEEB98 /* SoundRepository.swift in Sources */,
 				E7E8F48825B5A8F000CEEB98 /* SoundPlayer.swift in Sources */,

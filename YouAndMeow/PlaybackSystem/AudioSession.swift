@@ -11,11 +11,13 @@ protocol AudioSessionDelegate: class {
   func audioSessionNotificationReceived(_ notification: Notification)
 }
 
-class AudioSession {
+final class AudioSession {
   static let sharedInstance = AudioSession()
 
-  private var delegates: [AudioSessionDelegate?] = []
-  private let audioSession = AVAudioSession.sharedInstance()
+  weak var delegate: AudioSessionDelegate?
+  private (set) var isActive: Bool = false
+
+  private let deviceAudioSession: AVAudioSession = AVAudioSession.sharedInstance()
   private let notificationCenter: NotificationCenter = NotificationCenter.default
   private let observableNotifications: [NSNotification.Name] = [
     AVAudioSession.routeChangeNotification,
@@ -23,23 +25,38 @@ class AudioSession {
   ]
 
   private init() {
-    try? self.audioSession.setCategory(.playback, mode: .default, options: [])
-    try? self.audioSession.setActive(true)
-
     self.observableNotifications.forEach {
       self.notificationCenter.addObserver(self, selector: #selector(self.handleNotification), name: $0, object: nil)
     }
   }
 
-  func subscribe(_ delegate: AudioSessionDelegate) {
-    self.delegates.append(delegate)
+  func setCategory(_ category: AVAudioSession.Category) throws {
+    do {
+      try self.deviceAudioSession.setCategory(category)
+    } catch {
+      throw AudioSession.Exception.deviceError
+    }
   }
 
-  func unsubscribe(_ delegate: AudioSessionDelegate) {
-    self.delegates.removeAll { $0 === delegate || $0 === nil }
+  func setActive(_ active: Bool) throws {
+    do {
+      try self.deviceAudioSession.setActive(active)
+      self.isActive = active
+    } catch {
+      self.isActive = false
+      throw AudioSession.Exception.deviceError
+    }
   }
 
   @objc private func handleNotification(_ notification: Notification) {
-    self.delegates.forEach { $0?.audioSessionNotificationReceived(notification) }
+    guard self.isActive else { return }
+
+    self.delegate?.audioSessionNotificationReceived(notification)
+  }
+}
+
+extension AudioSession {
+  enum Exception: Error {
+    case deviceError
   }
 }

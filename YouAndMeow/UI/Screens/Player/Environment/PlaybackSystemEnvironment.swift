@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate {
+final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate, RemoteCommandCenterDelegate {
   @Published private (set) var isPlaying: Bool = false
   @Published private (set) var error: PlaybackSystemEnvironment.Exception?
 
@@ -15,11 +15,8 @@ final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate {
 
   init() {
     self.prepareToPlay()
-    AudioSession.sharedInstance.subscribe(self)
-  }
-
-  deinit {
-    AudioSession.sharedInstance.unsubscribe(self)
+    AudioSession.sharedInstance.delegate = self
+    RemoteCommandCenter.sharedInstance.delegate = self
   }
 
   func prepareToPlay() {
@@ -28,6 +25,7 @@ final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate {
     do {
       self.error = nil
       self.playbackSystem = try PlaybackSystem()
+      try AudioSession.sharedInstance.setCategory(.playback)
     } catch {
       self.error = .serviceUnavailable
     }
@@ -35,19 +33,31 @@ final class PlaybackSystemEnvironment: ObservableObject, AudioSessionDelegate {
 
   func play() {
     do {
-      guard let playbackSystem = self.playbackSystem else { throw Exception.serviceUnavailable }
+      guard let playbackSystem = self.playbackSystem else {
+        throw PlaybackSystemEnvironment.Exception.playbackCannotStart
+      }
 
+      try AudioSession.sharedInstance.setActive(true)
       try playbackSystem.play()
       self.isPlaying = true
     } catch {
       self.isPlaying = false
-      self.error = error is PlaybackSystemEnvironment.Exception ? .serviceUnavailable : .playbackCannotStart
+      self.error = .playbackCannotStart
     }
   }
 
   func stop() {
     self.playbackSystem?.stop()
+    try? AudioSession.sharedInstance.setActive(false)
     self.isPlaying = false
+  }
+
+  func playCommandReceived() {
+    self.play()
+  }
+
+  func pauseCommandReceived() {
+    self.stop()
   }
 
   func audioSessionNotificationReceived(_ notification: Notification) {
