@@ -17,7 +17,7 @@ final class RemoteCommandCenter {
 
   weak var delegate: RemoteCommandCenterDelegate?
 
-  private let title: String = "You & Meow"
+  private let infoCenterTitle: String = "You & Meow"
   private let deviceRemoteCommandCenter: MPRemoteCommandCenter = MPRemoteCommandCenter.shared()
   private let deviceNowPlayingInfoCenter: MPNowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
 
@@ -48,7 +48,7 @@ final class RemoteCommandCenter {
     }
 
     self.deviceNowPlayingInfoCenter.nowPlayingInfo = [
-      MPMediaItemPropertyTitle: self.title,
+      MPMediaItemPropertyTitle: self.infoCenterTitle,
       MPMediaItemPropertyArtwork: mediaItemArtwork
     ]
   }
