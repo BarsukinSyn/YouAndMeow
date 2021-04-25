@@ -21,7 +21,9 @@ struct PlayerView: View {
   var playerControlPanel: some View {
     VStack(alignment: .trailing, spacing: 0) {
       if self.fullView {
-        Logo().padding(EdgeInsets(top: 40, leading: 30, bottom: 0, trailing: 30)).opacity(0.8)
+        Logo()
+          .padding(EdgeInsets(top: 40, leading: 30, bottom: 0, trailing: 30))
+          .opacity(0.9)
       }
 
       PlayerControlPanel()
