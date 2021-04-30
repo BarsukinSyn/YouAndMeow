@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SoundPlayer: class {
+protocol SoundPlayer: AnyObject {
   var delegate: SoundPlayerDelegate? { get set }
 
   func prepareToPlay() throws
@@ -15,6 +15,6 @@ protocol SoundPlayer: class {
   func stop()
 }
 
-protocol SoundPlayerDelegate: class {
+protocol SoundPlayerDelegate: AnyObject {
   func playerJustFinishedPlaying(_ player: SoundPlayer)
 }

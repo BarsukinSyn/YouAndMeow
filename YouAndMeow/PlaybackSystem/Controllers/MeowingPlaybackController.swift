@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MeowingPlaybackControllerDelegate: class {
+protocol MeowingPlaybackControllerDelegate: AnyObject {
   func meowingPlaybackFinished()
 }
 

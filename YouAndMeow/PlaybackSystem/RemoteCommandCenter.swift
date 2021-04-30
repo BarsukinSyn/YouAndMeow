@@ -7,7 +7,7 @@
 
 import MediaPlayer
 
-protocol RemoteCommandCenterDelegate: class {
+protocol RemoteCommandCenterDelegate: AnyObject {
   func playCommandReceived()
   func pauseCommandReceived()
 }

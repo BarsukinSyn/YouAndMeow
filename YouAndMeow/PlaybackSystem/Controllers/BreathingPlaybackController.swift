@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol BreathingPlaybackControllerDelegate: class {
+protocol BreathingPlaybackControllerDelegate: AnyObject {
   func breathingPlaybackCycleBegins()
 }
 

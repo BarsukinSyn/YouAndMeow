@@ -7,7 +7,7 @@
 
 import AVFoundation
 
-protocol AudioSessionDelegate: class {
+protocol AudioSessionDelegate: AnyObject {
   func audioSessionNotificationReceived(_ notification: Notification)
 }
 
