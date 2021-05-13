@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SliderBuilder<T: View>: View {
-  @Binding var value: Float
+  @Binding private (set) var value: Float
 
   var bounds: ClosedRange<Float>
   var thumbWidth: CGFloat? = nil

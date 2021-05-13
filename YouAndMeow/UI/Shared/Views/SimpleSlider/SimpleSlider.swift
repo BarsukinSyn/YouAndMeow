@@ -10,7 +10,7 @@ import SwiftUI
 struct SimpleSlider: View {
   @Environment(\.isEnabled) var isEnabled: Bool
 
-  @Binding var value: Float
+  @Binding private (set) var value: Float
 
   var bounds: ClosedRange<Float>
 

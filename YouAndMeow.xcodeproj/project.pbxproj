@@ -31,6 +31,8 @@
 		E78463B926150C9C0097CDFB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78463B826150C9C0097CDFB /* View.swift */; };
 		E78463BE26150DAC0097CDFB /* PlayerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78463BD26150DAC0097CDFB /* PlayerBackgroundImage.swift */; };
 		E78C6EAC261698C100B752D4 /* Kurale-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E78C6EAB261698C100B752D4 /* Kurale-Regular.ttf */; };
+		E78E99E4264EA98600ABB4FD /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E99E3264EA98600ABB4FD /* WheelPicker.swift */; };
+		E78E99E6264EA99100ABB4FD /* WheelPickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E99E5264EA99100ABB4FD /* WheelPickerCoordinator.swift */; };
 		E78FEC5F2620C26F0079DAF7 /* RemoteCommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FEC5E2620C26F0079DAF7 /* RemoteCommandCenter.swift */; };
 		E7992B7A25C98CC9007F8A86 /* ClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7992B7925C98CC9007F8A86 /* ClosedRange.swift */; };
 		E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */; };
@@ -108,6 +110,8 @@
 		E78463B826150C9C0097CDFB /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E78463BD26150DAC0097CDFB /* PlayerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBackgroundImage.swift; sourceTree = "<group>"; };
 		E78C6EAB261698C100B752D4 /* Kurale-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kurale-Regular.ttf"; sourceTree = "<group>"; };
+		E78E99E3264EA98600ABB4FD /* WheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPicker.swift; sourceTree = "<group>"; };
+		E78E99E5264EA99100ABB4FD /* WheelPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPickerCoordinator.swift; sourceTree = "<group>"; };
 		E78FEC5E2620C26F0079DAF7 /* RemoteCommandCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommandCenter.swift; sourceTree = "<group>"; };
 		E7992B7925C98CC9007F8A86 /* ClosedRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedRange.swift; sourceTree = "<group>"; };
 		E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingSlider.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 			children = (
 				E7CB414725BB03410035E229 /* SimpleSlider */,
 				E775032125B75FA900D4E9FC /* SliderBuilder */,
+				E78E99E2264EA97400ABB4FD /* WheelPicker */,
 				E7156BBD25C1822600B7F211 /* IconButton.swift */,
 				E713E2AF261CD98700A29BB0 /* Logo.swift */,
 				E75AA7B52615FBB200740B7C /* RoundedCorner.swift */,
@@ -313,6 +318,15 @@
 				E78C6EAB261698C100B752D4 /* Kurale-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E78E99E2264EA97400ABB4FD /* WheelPicker */ = {
+			isa = PBXGroup;
+			children = (
+				E78E99E3264EA98600ABB4FD /* WheelPicker.swift */,
+				E78E99E5264EA99100ABB4FD /* WheelPickerCoordinator.swift */,
+			);
+			path = WheelPicker;
 			sourceTree = "<group>";
 		};
 		E7CB414725BB03410035E229 /* SimpleSlider */ = {
@@ -638,6 +652,7 @@
 				E7109BA725C52B2200A2862F /* PlayerScreen.swift in Sources */,
 				E7E8F48225B5A8F000CEEB98 /* BoundedValue.swift in Sources */,
 				E7E8F47D25B5A8F000CEEB98 /* AudioBufferEngine.swift in Sources */,
+				E78E99E6264EA99100ABB4FD /* WheelPickerCoordinator.swift in Sources */,
 				E7E8F49225B5A8F000CEEB98 /* SoundPlayerCreator.swift in Sources */,
 				E7CB415125BB036A0035E229 /* SimpleSliderThumb.swift in Sources */,
 				E7CB413425BAF6940035E229 /* SimpleSlider.swift in Sources */,
@@ -646,6 +661,7 @@
 				E7E8F47E25B5A8F000CEEB98 /* AudioPCMBufferEngine.swift in Sources */,
 				E7239DE025C4350500FFBF5A /* PlaybackSettingMetadata.swift in Sources */,
 				E7156BD425C18A2D00B7F211 /* PlayerControlPanel.swift in Sources */,
+				E78E99E4264EA98600ABB4FD /* WheelPicker.swift in Sources */,
 				E775032825B75FC800D4E9FC /* SliderTemplateModifiers.swift in Sources */,
 				E7E8F47C25B5A8F000CEEB98 /* AudioByteBufferEngine.swift in Sources */,
 				E7109B8925C4A1ED00A2862F /* PlaybackControlPanel.swift in Sources */,
