@@ -33,6 +33,8 @@
 		E78C6EAC261698C100B752D4 /* Kurale-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E78C6EAB261698C100B752D4 /* Kurale-Regular.ttf */; };
 		E78E99E4264EA98600ABB4FD /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E99E3264EA98600ABB4FD /* WheelPicker.swift */; };
 		E78E99E6264EA99100ABB4FD /* WheelPickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E99E5264EA99100ABB4FD /* WheelPickerCoordinator.swift */; };
+		E78E99E9264EBB4A00ABB4FD /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E99E8264EBB4A00ABB4FD /* TimePicker.swift */; };
+		E78E99EB264EBB5500ABB4FD /* TimePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E99EA264EBB5500ABB4FD /* TimePickerCoordinator.swift */; };
 		E78FEC5F2620C26F0079DAF7 /* RemoteCommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FEC5E2620C26F0079DAF7 /* RemoteCommandCenter.swift */; };
 		E7992B7A25C98CC9007F8A86 /* ClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7992B7925C98CC9007F8A86 /* ClosedRange.swift */; };
 		E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */; };
@@ -112,6 +114,8 @@
 		E78C6EAB261698C100B752D4 /* Kurale-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kurale-Regular.ttf"; sourceTree = "<group>"; };
 		E78E99E3264EA98600ABB4FD /* WheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPicker.swift; sourceTree = "<group>"; };
 		E78E99E5264EA99100ABB4FD /* WheelPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPickerCoordinator.swift; sourceTree = "<group>"; };
+		E78E99E8264EBB4A00ABB4FD /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		E78E99EA264EBB5500ABB4FD /* TimePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerCoordinator.swift; sourceTree = "<group>"; };
 		E78FEC5E2620C26F0079DAF7 /* RemoteCommandCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommandCenter.swift; sourceTree = "<group>"; };
 		E7992B7925C98CC9007F8A86 /* ClosedRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedRange.swift; sourceTree = "<group>"; };
 		E7BD81D125C1E4880083FE69 /* PlaybackSettingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingSlider.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 			children = (
 				E7CB414725BB03410035E229 /* SimpleSlider */,
 				E775032125B75FA900D4E9FC /* SliderBuilder */,
+				E78E99E7264EBB3800ABB4FD /* TimePicker */,
 				E78E99E2264EA97400ABB4FD /* WheelPicker */,
 				E7156BBD25C1822600B7F211 /* IconButton.swift */,
 				E713E2AF261CD98700A29BB0 /* Logo.swift */,
@@ -327,6 +332,15 @@
 				E78E99E5264EA99100ABB4FD /* WheelPickerCoordinator.swift */,
 			);
 			path = WheelPicker;
+			sourceTree = "<group>";
+		};
+		E78E99E7264EBB3800ABB4FD /* TimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E78E99E8264EBB4A00ABB4FD /* TimePicker.swift */,
+				E78E99EA264EBB5500ABB4FD /* TimePickerCoordinator.swift */,
+			);
+			path = TimePicker;
 			sourceTree = "<group>";
 		};
 		E7CB414725BB03410035E229 /* SimpleSlider */ = {
@@ -669,6 +683,7 @@
 				E7E8F48D25B5A8F000CEEB98 /* BinaryFloatingPoint.swift in Sources */,
 				E78463A3261504420097CDFB /* PlayerView.swift in Sources */,
 				E7E8F48325B5A8F000CEEB98 /* VoidFunction.swift in Sources */,
+				E78E99EB264EBB5500ABB4FD /* TimePickerCoordinator.swift in Sources */,
 				E7E8F48025B5A8F000CEEB98 /* AudioByteBufferPlayer.swift in Sources */,
 				E7E8F49425B5A8F000CEEB98 /* BreathingPlaybackController.swift in Sources */,
 				E7E8F48725B5A8F000CEEB98 /* BreathingSoundPlayer.swift in Sources */,
@@ -683,6 +698,7 @@
 				E7E8F48F25B5A8F000CEEB98 /* DistanceProcessor.swift in Sources */,
 				E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */,
 				E7EE0D7B25BC0C2800638D2F /* SimpleSliderValueLabels.swift in Sources */,
+				E78E99E9264EBB4A00ABB4FD /* TimePicker.swift in Sources */,
 				E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
