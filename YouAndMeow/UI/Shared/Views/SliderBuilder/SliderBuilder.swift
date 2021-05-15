@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct SliderBuilder<T: View>: View {
+struct SliderBuilder<Content: View>: View {
   @Binding private (set) var value: Float
 
   var bounds: ClosedRange<Float>
   var thumbWidth: CGFloat? = nil
-  var renderSliderTemplate: RenderFunction<SliderTemplateModifiers, T>
+  var content: (SliderTemplateModifiers) -> Content
 
   var body: some View {
     GeometryReader { (geometry) in
@@ -44,7 +44,7 @@ struct SliderBuilder<T: View>: View {
       self.handleDragGesture(gesture, in: frame)
     }
 
-    let sliderView = self.renderSliderTemplate(sliderTemplateModifiers).gesture(dragGesture)
+    let sliderView = self.content(sliderTemplateModifiers).gesture(dragGesture)
 
     return sliderView
   }

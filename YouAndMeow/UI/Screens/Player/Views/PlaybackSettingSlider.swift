@@ -13,12 +13,10 @@ struct PlaybackSettingSlider: View {
   var meta: PlaybackSettingMetadata
   var action: (PlaybackSettingType, Float) -> Void
 
-  var bindedValue: Binding<Float> {
+  private var bindedValue: Binding<Float> {
     Binding(
       get: { self.setting.value },
-      set: { (newValue) in
-        self.action(self.type, newValue)
-      }
+      set: { self.action(self.type, $0) }
     )
   }
 

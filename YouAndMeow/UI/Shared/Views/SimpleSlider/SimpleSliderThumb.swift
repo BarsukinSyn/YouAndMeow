@@ -15,7 +15,7 @@ struct SimpleSliderThumb: View {
     self.template.modifier(self.modifier)
   }
 
-  var template: some View {
+  private var template: some View {
     ZStack {
       Circle().fill(self.color)
       Circle().stroke(Color.black, lineWidth: 1).opacity(0.1)

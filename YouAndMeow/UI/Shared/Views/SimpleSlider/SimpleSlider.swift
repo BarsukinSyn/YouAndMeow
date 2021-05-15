@@ -28,7 +28,7 @@ struct SimpleSlider: View {
     }
   }
 
-  var labels: some View {
+  private var labels: some View {
     Group {
       if let minimumValueLabel = self.minimumValueLabel, let maximumValueLabel = self.maximumValueLabel {
         SimpleSliderValueLabels(minimumValueLabel: minimumValueLabel, maximumValueLabel: maximumValueLabel)
@@ -37,7 +37,7 @@ struct SimpleSlider: View {
     }
   }
 
-  var slider: some View {
+  private var slider: some View {
     SliderBuilder(value: self.$value, bounds: self.bounds) { (modifiers) in
       ZStack {
         SimpleSliderTrack(

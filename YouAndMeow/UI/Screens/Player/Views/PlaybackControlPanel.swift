@@ -18,7 +18,7 @@ struct PlaybackControlPanel: View {
       .cornerRadius(44, corners: [.topLeft, .topRight])
   }
 
-  var template: some View {
+  private var template: some View {
     HStack(spacing: 24) {
       IconButton(icon: "shuffle", action: self.playbackSettings.shuffle)
         .disabled(!self.playbackSystem.isPlaying)
@@ -30,7 +30,7 @@ struct PlaybackControlPanel: View {
     }
   }
 
-  func renderPlaybackControlButton(isPlaying: Bool) -> some View {
+  private func renderPlaybackControlButton(isPlaying: Bool) -> some View {
     let icon = isPlaying ? "pause.circle.fill" : "play.circle.fill"
     let action = isPlaying ? self.playbackSystem.stop : self.playbackSystem.play
 

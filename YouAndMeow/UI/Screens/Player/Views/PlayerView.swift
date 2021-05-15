@@ -18,7 +18,7 @@ struct PlayerView: View {
     }
   }
 
-  var playerControlPanel: some View {
+  private var playerControlPanel: some View {
     VStack(alignment: .trailing, spacing: 0) {
       if self.fullView {
         Logo()

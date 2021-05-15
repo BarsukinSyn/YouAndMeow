@@ -14,9 +14,11 @@ struct PlayerControlPanel: View {
       .cornerRadius(44, corners: [.topLeft, .topRight])
   }
 
-  var template: some View {
+  private var template: some View {
     VStack {
-      PlaybackSettingPanel().padding(EdgeInsets(top: 28, leading: 28, bottom: 40, trailing: 28))
+      PlaybackSettingPanel()
+        .padding(EdgeInsets(top: 28, leading: 28, bottom: 40, trailing: 28))
+
       PlaybackControlPanel()
     }
   }

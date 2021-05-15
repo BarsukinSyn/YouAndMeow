@@ -8,7 +8,7 @@
 import Foundation
 
 @propertyWrapper
-struct Bounded<T: BinaryFloatingPoint> {
+struct Bounded<T: Numeric & Comparable> {
   private (set) var boundedValue: BoundedValue<T>
 
   var wrappedValue: T {
