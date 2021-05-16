@@ -16,6 +16,7 @@
 		E7156BBE25C1822600B7F211 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BBD25C1822600B7F211 /* IconButton.swift */; };
 		E7156BD425C18A2D00B7F211 /* PlayerControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */; };
 		E71C392F25CD7DD900535296 /* Bounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C392E25CD7DD900535296 /* Bounded.swift */; };
+		E720DF8B264EE1E10058A6F7 /* TimePickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E720DF8A264EE1E10058A6F7 /* TimePickerData.swift */; };
 		E7239DE025C4350500FFBF5A /* PlaybackSettingMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */; };
 		E7239DF125C445F300FFBF5A /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */; };
 		E74A0FA1261E2C10003FBFD7 /* AudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74A0FA0261E2C10003FBFD7 /* AudioSession.swift */; };
@@ -24,7 +25,6 @@
 		E775032325B75FBD00D4E9FC /* SliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032225B75FBD00D4E9FC /* SliderBuilder.swift */; };
 		E775032825B75FC800D4E9FC /* SliderTemplateModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032725B75FC800D4E9FC /* SliderTemplateModifiers.swift */; };
 		E775032D25B75FCE00D4E9FC /* SliderComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */; };
-		E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775033425B75FEB00D4E9FC /* RenderFunction.swift */; };
 		E77526E725C9C4E200BC481B /* PlaybackSystemSettingsBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77526E625C9C4E200BC481B /* PlaybackSystemSettingsBounds.swift */; };
 		E78463A3261504420097CDFB /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78463A2261504420097CDFB /* PlayerView.swift */; };
 		E78463A9261505540097CDFB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78463A8261505540097CDFB /* Color.swift */; };
@@ -97,6 +97,7 @@
 		E7156BBD25C1822600B7F211 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		E7156BD325C18A2D00B7F211 /* PlayerControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlPanel.swift; sourceTree = "<group>"; };
 		E71C392E25CD7DD900535296 /* Bounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bounded.swift; sourceTree = "<group>"; };
+		E720DF8A264EE1E10058A6F7 /* TimePickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerData.swift; sourceTree = "<group>"; };
 		E7239DDF25C4350500FFBF5A /* PlaybackSettingMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingMetadata.swift; sourceTree = "<group>"; };
 		E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
 		E74A0FA0261E2C10003FBFD7 /* AudioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSession.swift; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		E775032225B75FBD00D4E9FC /* SliderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBuilder.swift; sourceTree = "<group>"; };
 		E775032725B75FC800D4E9FC /* SliderTemplateModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTemplateModifiers.swift; sourceTree = "<group>"; };
 		E775032C25B75FCE00D4E9FC /* SliderComponentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderComponentModifier.swift; sourceTree = "<group>"; };
-		E775033425B75FEB00D4E9FC /* RenderFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderFunction.swift; sourceTree = "<group>"; };
 		E77526E625C9C4E200BC481B /* PlaybackSystemSettingsBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSystemSettingsBounds.swift; sourceTree = "<group>"; };
 		E78463A2261504420097CDFB /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		E78463A8261505540097CDFB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -206,14 +206,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E72F723525C00BEC000B8094 /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				E775033425B75FEB00D4E9FC /* RenderFunction.swift */,
-			);
-			path = Types;
-			sourceTree = "<group>";
-		};
 		E7596140261CA6180049CA95 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,7 +272,6 @@
 				E78463A72615051B0097CDFB /* Extensions */,
 				E7596140261CA6180049CA95 /* Screens */,
 				E773481D25BF4032004B6DF2 /* Shared */,
-				E72F723525C00BEC000B8094 /* Types */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -339,6 +330,7 @@
 			children = (
 				E78E99E8264EBB4A00ABB4FD /* TimePicker.swift */,
 				E78E99EA264EBB5500ABB4FD /* TimePickerCoordinator.swift */,
+				E720DF8A264EE1E10058A6F7 /* TimePickerData.swift */,
 			);
 			path = TimePicker;
 			sourceTree = "<group>";
@@ -655,6 +647,7 @@
 				E7E8F44F25B5A8D700CEEB98 /* SoundRepository.swift in Sources */,
 				E7E8F48825B5A8F000CEEB98 /* SoundPlayer.swift in Sources */,
 				E775032325B75FBD00D4E9FC /* SliderBuilder.swift in Sources */,
+				E720DF8B264EE1E10058A6F7 /* TimePickerData.swift in Sources */,
 				E75AA7B62615FBB200740B7C /* RoundedCorner.swift in Sources */,
 				E7EE0D7A25BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift in Sources */,
 				E7E8F49525B5A8F000CEEB98 /* PlaybackSystem.swift in Sources */,
@@ -696,7 +689,6 @@
 				E7E8F48C25B5A8F000CEEB98 /* Timer.swift in Sources */,
 				E7109B9725C522CE00A2862F /* PlaybackSystemEnvironment.swift in Sources */,
 				E7E8F48F25B5A8F000CEEB98 /* DistanceProcessor.swift in Sources */,
-				E775033525B75FEB00D4E9FC /* RenderFunction.swift in Sources */,
 				E7EE0D7B25BC0C2800638D2F /* SimpleSliderValueLabels.swift in Sources */,
 				E78E99E9264EBB4A00ABB4FD /* TimePicker.swift in Sources */,
 				E7BD81D225C1E4880083FE69 /* PlaybackSettingSlider.swift in Sources */,

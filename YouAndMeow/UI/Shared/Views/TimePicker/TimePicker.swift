@@ -8,22 +8,33 @@
 import SwiftUI
 
 struct TimePicker: View {
-  @Binding private (set) var selection: WheelPicker.Selection
+  @Binding private (set) var selection: TimePickerData<Int>
 
-  var timeLimits: [Int] = [13, 60]
-  var timeLabels: [String] = ["h", "m"]
+  var limits: TimePickerData<Int> = TimePickerData(hours: 12, minutes: 59)
+  var labels: TimePickerData<String> = TimePickerData(hours: "h", minutes: "m")
 
-  var pickerData: WheelPicker.Data {
-    self.timeLimits.map { (limit) in
-      Array(repeating: "", count: limit).enumerated().map { (index, _) in "\(index)" }
+  private var pickerData: WheelPicker.Data {
+    [self.limits.hours, self.limits.minutes].map { (limit) in
+      Array(repeating: "", count: limit + 1).enumerated().map { (index, _) in "\(index)" }
     }
+  }
+
+  private var bindedPickerSelection: Binding<WheelPicker.Selection> {
+    Binding(
+      get: { [self.selection.hours, self.selection.minutes] },
+      set: { (pickerSelection) in
+        if let hours = pickerSelection.first, let minutes = pickerSelection.last {
+          self.selection = TimePickerData(hours: hours, minutes: minutes)
+        }
+      }
+    )
   }
 
   var body: some View {
     self.template.fixedSize(horizontal: true, vertical: false)
   }
 
-  var template: some View {
+  private var template: some View {
     ZStack {
       self.wheelPicker
 
@@ -33,17 +44,17 @@ struct TimePicker: View {
     }
   }
 
-  var wheelPicker: some View {
+  private var wheelPicker: some View {
     WheelPicker(
       data: self.pickerData,
-      selection: self.$selection,
+      selection: self.bindedPickerSelection,
       coordinatorType: TimePickerCoordinator.self
     )
   }
 
-  var wheelLabels: some View {
+  private var wheelLabels: some View {
     HStack(spacing: 34) {
-      ForEach(self.timeLabels, id: \.self) {
+      ForEach([self.labels.hours, self.labels.minutes], id: \.self) {
         Text($0)
           .frame(maxWidth: .infinity, alignment: .trailing)
           .padding(.horizontal, 34)
