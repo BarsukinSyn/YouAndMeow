@@ -11,8 +11,9 @@ final class FileManager {
   private init() {}
 
   static func getURL(forResource name: String, withExtension ext: String) throws -> URL {
-    guard let url = Bundle.main.url(forResource: name, withExtension: ext)
-      else { throw FileManager.Exception.fileNotFound }
+    guard let url = Bundle.main.url(forResource: name, withExtension: ext) else {
+      throw FileManager.Exception.fileNotFound
+    }
 
     return url
   }
@@ -35,8 +36,9 @@ final class FileManager {
     do {
       let data = try AVAudioFile(forReading: url)
 
-      guard let buffer = AVAudioPCMBuffer(pcmFormat: data.processingFormat, frameCapacity: UInt32(data.length))
-        else { throw FileManager.Exception.fileCannotBeRead }
+      guard let buffer = AVAudioPCMBuffer(pcmFormat: data.processingFormat, frameCapacity: UInt32(data.length)) else {
+        throw FileManager.Exception.fileCannotBeRead
+      }
 
       try data.read(into: buffer)
 
