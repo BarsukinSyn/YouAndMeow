@@ -16,7 +16,7 @@ final class PlaybackSettingsEnvironment: ObservableObject {
     .variability: PlaybackSetting(SettingsBounds.variability.mean, bounds: SettingsBounds.variability)
   ]
 
-  private let playbackSystem: PlaybackSystem?
+  private weak var playbackSystem: PlaybackSystem?
 
   init(playbackSystem: PlaybackSystem?) {
     self.playbackSystem = playbackSystem
@@ -39,13 +39,6 @@ final class PlaybackSettingsEnvironment: ObservableObject {
     let defaultSet = self.settingSet.mapValues { PlaybackSetting($0.bounds.mean, bounds: $0.bounds) }
 
     self.settingSet = defaultSet
-    self.syncPlaybackSystemSettings()
-  }
-
-  func shuffle() {
-    let randomSet = self.settingSet.mapValues { PlaybackSetting(Float.random(in: $0.bounds), bounds: $0.bounds) }
-
-    self.settingSet = randomSet
     self.syncPlaybackSystemSettings()
   }
 

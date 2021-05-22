@@ -1,5 +1,5 @@
 //
-//  Comparable.swift
+//  Numeric.swift
 //  YouAndMeow
 //
 //  Created by Vladimir on 06.07.2020.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Comparable {
+extension Numeric where Self: Comparable {
   func clamped(_ range: ClosedRange<Self>) -> Self {
     return self < range.lowerBound ? range.lowerBound : self > range.upperBound ? range.upperBound : self
   }

@@ -10,11 +10,11 @@ import SwiftUI
 struct TimePicker: View {
   @Binding private (set) var selection: TimePickerData<Int>
 
-  var limits: TimePickerData<Int> = TimePickerData(hours: 12, minutes: 59)
+  var options: TimePickerData<Int> = TimePickerData(hours: 23, minutes: 59)
   var labels: TimePickerData<String> = TimePickerData(hours: "h", minutes: "m")
 
   private var pickerData: WheelPicker.Data {
-    [self.limits.hours, self.limits.minutes].map { (limit) in
+    [self.options.hours, self.options.minutes].map { (limit) in
       Array(repeating: "", count: limit + 1).enumerated().map { (index, _) in "\(index)" }
     }
   }

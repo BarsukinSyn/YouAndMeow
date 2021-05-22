@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PlayerView: View {
+  @EnvironmentObject var shutdownTimer: ShutdownTimerEnvironment
+
   var basic: Bool = false
   var fullView: Bool { !self.basic }
 
@@ -15,6 +17,10 @@ struct PlayerView: View {
     ZStack {
       PlayerBackgroundImage().cover()
       self.playerControlPanel.cover(alignment: .bottom)
+
+      if self.shutdownTimer.status == .preparation {
+        ShutdownTimePicker().cover()
+      }
     }
   }
 

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlaybackControlPanel: View {
+  @EnvironmentObject var shutdownTimer: ShutdownTimerEnvironment
   @EnvironmentObject var playbackSystem: PlaybackSystemEnvironment
   @EnvironmentObject var playbackSettings: PlaybackSettingsEnvironment
 
@@ -20,7 +21,7 @@ struct PlaybackControlPanel: View {
 
   private var template: some View {
     HStack(spacing: 24) {
-      IconButton(icon: "shuffle", action: self.playbackSettings.shuffle)
+      IconButton(icon: "timer", action: self.shutdownTimer.prepare)
         .disabled(!self.playbackSystem.isPlaying)
 
       self.renderPlaybackControlButton(isPlaying: self.playbackSystem.isPlaying)
