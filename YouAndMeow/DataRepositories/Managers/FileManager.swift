@@ -2,8 +2,6 @@
 //  FileManager.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 19.06.2020.
-//
 
 import AVFoundation
 

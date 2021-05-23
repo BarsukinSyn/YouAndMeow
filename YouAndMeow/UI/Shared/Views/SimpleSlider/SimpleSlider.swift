@@ -2,8 +2,6 @@
 //  SimpleSlider.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 22.01.2021.
-//
 
 import SwiftUI
 

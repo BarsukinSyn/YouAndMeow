@@ -2,8 +2,6 @@
 //  AudioSession.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 07.04.2021.
-//
 
 import AVFoundation
 

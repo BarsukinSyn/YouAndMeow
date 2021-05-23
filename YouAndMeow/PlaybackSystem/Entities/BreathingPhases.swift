@@ -2,8 +2,6 @@
 //  BreathingPhases.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 18.07.2020.
-//
 
 import Foundation
 

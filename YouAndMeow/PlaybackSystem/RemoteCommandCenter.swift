@@ -2,8 +2,6 @@
 //  RemoteCommandCenter.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 09.04.2021.
-//
 
 import MediaPlayer
 

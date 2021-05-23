@@ -2,8 +2,6 @@
 //  BoundedValue.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 06.07.2020.
-//
 
 import Foundation
 

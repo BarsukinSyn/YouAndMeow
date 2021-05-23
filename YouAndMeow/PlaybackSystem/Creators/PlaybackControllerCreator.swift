@@ -2,8 +2,6 @@
 //  PlaybackControllerCreator.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 16.07.2020.
-//
 
 import Foundation
 

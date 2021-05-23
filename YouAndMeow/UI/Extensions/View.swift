@@ -2,8 +2,6 @@
 //  View.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 01.04.2021.
-//
 
 import SwiftUI
 

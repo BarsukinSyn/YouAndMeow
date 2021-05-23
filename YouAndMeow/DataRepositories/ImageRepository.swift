@@ -2,8 +2,6 @@
 //  ImageRepository.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 11.04.2021.
-//
 
 import UIKit
 

@@ -2,8 +2,6 @@
 //  AVAudioEngine.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 20.06.2020.
-//
 
 import AVFoundation
 

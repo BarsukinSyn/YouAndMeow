@@ -2,8 +2,6 @@
 //  SoundPlayer.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 22.06.2020.
-//
 
 import Foundation
 

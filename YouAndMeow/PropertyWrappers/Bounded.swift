@@ -2,13 +2,10 @@
 //  Bounded.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 06.07.2020.
-//
 
 import Foundation
 
-@propertyWrapper
-struct Bounded<T: Numeric & Comparable> {
+@propertyWrapper struct Bounded<T: Numeric & Comparable> {
   private (set) var boundedValue: BoundedValue<T>
 
   var wrappedValue: T {

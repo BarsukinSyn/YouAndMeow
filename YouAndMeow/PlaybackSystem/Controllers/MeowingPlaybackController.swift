@@ -2,8 +2,6 @@
 //  MeowingPlaybackController.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 02.07.2020.
-//
 
 import Foundation
 

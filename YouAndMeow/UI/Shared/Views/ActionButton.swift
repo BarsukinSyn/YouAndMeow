@@ -2,8 +2,6 @@
 //  ActionButton.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 18.05.2021.
-//
 
 import SwiftUI
 

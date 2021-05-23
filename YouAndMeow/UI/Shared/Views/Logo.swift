@@ -2,8 +2,6 @@
 //  Logo.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 06.04.2021.
-//
 
 import SwiftUI
 

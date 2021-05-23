@@ -2,8 +2,6 @@
 //  SoundRepository.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 23.06.2020.
-//
 
 import AVFoundation
 

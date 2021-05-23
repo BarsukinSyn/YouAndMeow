@@ -2,8 +2,6 @@
 //  DataDecoder.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 24.06.2020.
-//
 
 import Foundation
 

@@ -2,8 +2,6 @@
 //  TimePickerCoordinator.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 14.05.2021.
-//
 
 import SwiftUI
 

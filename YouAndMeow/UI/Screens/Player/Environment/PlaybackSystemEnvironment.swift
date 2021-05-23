@@ -2,8 +2,6 @@
 //  PlaybackSystemEnvironment.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 30.01.2021.
-//
 
 import Foundation
 

@@ -2,8 +2,6 @@
 //  RoundingAccuracy.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 13.07.2020.
-//
 
 import Foundation
 

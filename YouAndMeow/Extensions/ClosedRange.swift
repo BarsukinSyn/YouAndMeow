@@ -2,8 +2,6 @@
 //  ClosedRange.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 02.02.2021.
-//
 
 import Foundation
 

@@ -2,8 +2,6 @@
 //  BreathingFragmentManager.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 08.07.2020.
-//
 
 import Foundation
 

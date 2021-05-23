@@ -2,8 +2,6 @@
 //  TimePickerData.swift
 //  YouAndMeow
 //
-//  Created by Vladimir on 16.05.2021.
-//
 
 import Foundation
 
