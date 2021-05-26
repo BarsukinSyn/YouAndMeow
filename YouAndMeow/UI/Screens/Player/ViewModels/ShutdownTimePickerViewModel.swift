@@ -12,7 +12,7 @@ final class ShutdownTimePickerViewModel: ObservableObject {
     TimeInterval(self.selectedTime.hours * 60 * 60 + self.selectedTime.minutes * 60)
   }
 
-  let timePickerOptions: TimeOptions = TimeOptions(hours: 12, minutes: 59)
+  let timePickerOptions: TimePickerOptions = TimePickerOptions(hours: 12, minutes: 59)
 
   func limitTimeSelection(_ time: TimeSelection) {
     if time.hours == 0, time.minutes == 0 { self.selectedTime.minutes = 1 }
