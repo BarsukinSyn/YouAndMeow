@@ -16,6 +16,10 @@ final class ShutdownTimerEnvironment: ObservableObject {
     self.playbackSystemEnvironment = playbackSystemEnvironment
   }
 
+  deinit {
+    self.cancel()
+  }
+
   func prepare() {
     guard self.timer == nil else { return }
 
@@ -30,9 +34,11 @@ final class ShutdownTimerEnvironment: ObservableObject {
           interval > 0
     else { return }
 
+    let timer = Timer.registeredToCommonLoopMode(withTimeInterval: 1, repeats: true, block: self.tick)
+
+    self.timer = timer
     self.status = .active
     self.timeLeft = interval
-    self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: self.tick)
   }
 
   func cancel() {

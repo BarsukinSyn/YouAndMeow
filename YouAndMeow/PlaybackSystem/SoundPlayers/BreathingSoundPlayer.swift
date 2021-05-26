@@ -33,11 +33,12 @@ final class BreathingSoundPlayer: SoundPlayer {
   func play(fragment: SoundFragment, atVolume volume: Float) {
     if !self.audioPlayer.isPlaying || self.isPlaying { return }
 
-    let fadeDuration = fragment.duration / 3
+    let fragmentDuration = fragment.duration.rounded(to: .hundredth)
+    let fadeDuration = fragmentDuration / 3
 
     self.isPlaying = true
     self.fadeVolume(volume, duration: fadeDuration)
-    self.playbackTimer = Timer.scheduledTimer(withTimeInterval: fragment.duration, repeats: false) { (_) in
+    self.playbackTimer = Timer.registeredToCommonLoopMode(withTimeInterval: fragmentDuration, repeats: false) { (_) in
       self.fadeVolume(0, duration: fadeDuration) {
         self.isPlaying = false
         self.delegate?.playerJustFinishedPlaying(self)
@@ -55,7 +56,7 @@ final class BreathingSoundPlayer: SoundPlayer {
     var remainingTimeInCentiseconds = max(1, duration * 100)
     let volumeStep = (volume - self.audioPlayer.volume) / Float(remainingTimeInCentiseconds)
 
-    Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
+    Timer.registeredToCommonLoopMode(withTimeInterval: 0.01, repeats: true) { (timer) in
       if remainingTimeInCentiseconds < 1 || !self.audioPlayer.isPlaying {
         self.audioPlayer.volume = volume
 

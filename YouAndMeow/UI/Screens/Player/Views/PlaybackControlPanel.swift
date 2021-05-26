@@ -31,8 +31,18 @@ struct PlaybackControlPanel: View {
 
   private func renderPlaybackControlButton(isPlaying: Bool) -> some View {
     let icon = isPlaying ? "pause.circle.fill" : "play.circle.fill"
-    let action = isPlaying ? self.playbackSystem.stop : self.playbackSystem.play
+    let action = isPlaying ? self.stopPlaying : self.startPlaying
 
     return IconButton(icon: icon, action: action, size: 34)
+  }
+
+  private func startPlaying() {
+    self.playbackSystem.play()
+    self.shutdownTimer.cancel()
+  }
+
+  private func stopPlaying() {
+    self.playbackSystem.stop()
+    self.shutdownTimer.cancel()
   }
 }

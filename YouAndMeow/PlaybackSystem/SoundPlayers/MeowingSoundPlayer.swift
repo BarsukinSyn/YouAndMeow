@@ -23,11 +23,13 @@ final class MeowingSoundPlayer: SoundPlayer {
   func play(fragment: SoundFragment, atVolume volume: Float) {
     if self.audioPlayer.isPlaying { return }
 
+    let fragmentDuration = fragment.duration.rounded(to: .hundredth)
+
     self.audioPlayer.volume = volume
     self.audioPlayer.currentTime = fragment.start
     self.audioPlayer.play()
 
-    Timer.scheduledTimer(withTimeInterval: fragment.duration.rounded(to: .hundredth), repeats: false) { (_) in
+    Timer.registeredToCommonLoopMode(withTimeInterval: fragmentDuration, repeats: false) { (_) in
       self.pause()
       self.delegate?.playerJustFinishedPlaying(self)
     }
