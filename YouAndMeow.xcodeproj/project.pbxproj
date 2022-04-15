@@ -21,6 +21,7 @@
 		E7239DF125C445F300FFBF5A /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */; };
 		E7298F53265FB3AF000FB2E3 /* ShutdownTimePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7298F52265FB3AF000FB2E3 /* ShutdownTimePickerViewModel.swift */; };
 		E72E1E1A26600A9200894D73 /* TimePickerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72E1E1926600A9200894D73 /* TimePickerOptions.swift */; };
+		E74181FA2809A05A0090945B /* StaticClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74181F92809A05A0090945B /* StaticClass.swift */; };
 		E74A0FA1261E2C10003FBFD7 /* AudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74A0FA0261E2C10003FBFD7 /* AudioSession.swift */; };
 		E75AA7B62615FBB200740B7C /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75AA7B52615FBB200740B7C /* RoundedCorner.swift */; };
 		E766A4F3262339F4008D6E8E /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A4F2262339F4008D6E8E /* ImageRepository.swift */; };
@@ -108,6 +109,7 @@
 		E7239DF025C445F300FFBF5A /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
 		E7298F52265FB3AF000FB2E3 /* ShutdownTimePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutdownTimePickerViewModel.swift; sourceTree = "<group>"; };
 		E72E1E1926600A9200894D73 /* TimePickerOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerOptions.swift; sourceTree = "<group>"; };
+		E74181F92809A05A0090945B /* StaticClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticClass.swift; sourceTree = "<group>"; };
 		E74A0FA0261E2C10003FBFD7 /* AudioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSession.swift; sourceTree = "<group>"; };
 		E75AA7B52615FBB200740B7C /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		E766A4F2262339F4008D6E8E /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 			children = (
 				E7E8F45F25B5A8F000CEEB98 /* BoundedValue.swift */,
 				E7E8F46125B5A8F000CEEB98 /* RoundingAccuracy.swift */,
+				E74181F92809A05A0090945B /* StaticClass.swift */,
 				E7E8F46025B5A8F000CEEB98 /* VoidFunction.swift */,
 			);
 			path = Types;
@@ -697,6 +700,7 @@
 				E7109B8925C4A1ED00A2862F /* PlaybackControlPanel.swift in Sources */,
 				E7992B7A25C98CC9007F8A86 /* ClosedRange.swift in Sources */,
 				E7E8F48D25B5A8F000CEEB98 /* BinaryFloatingPoint.swift in Sources */,
+				E74181FA2809A05A0090945B /* StaticClass.swift in Sources */,
 				E78463A3261504420097CDFB /* PlayerView.swift in Sources */,
 				E7E8F48325B5A8F000CEEB98 /* VoidFunction.swift in Sources */,
 				E7F9846E26541266002CDE6A /* ShutdownTimerEnvironment.swift in Sources */,

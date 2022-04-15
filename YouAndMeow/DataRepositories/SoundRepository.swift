@@ -5,9 +5,7 @@
 
 import AVFoundation
 
-final class SoundRepository {
-  private init() {}
-
+final class SoundRepository: StaticClass {
   static func getInhalationSoundPCMBuffer() throws -> AVAudioPCMBuffer {
     return try FileManager.readIntoPCMBuffer(resource: "Inhalation", withExtension: "m4a")
   }

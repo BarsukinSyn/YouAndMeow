@@ -5,9 +5,7 @@
 
 import Foundation
 
-final class SoundPlayerCreator {
-  private init() {}
-
+final class SoundPlayerCreator: StaticClass {
   static func createInhalationSoundPlayer() throws -> BreathingSoundPlayer {
     let inhalationSoundBuffer = try SoundRepository.getInhalationSoundPCMBuffer()
     let inhalationSoundPlayer = BreathingSoundPlayer(withInput: inhalationSoundBuffer)

@@ -5,9 +5,7 @@
 
 import Foundation
 
-struct PlaybackSystemSettingsBounds {
-  private init() {}
-
+final class PlaybackSystemSettingsBounds: StaticClass {
   static let breathingRate: ClosedRange<Float> = 20 ... 100
   static let distance: ClosedRange<Float> = 0.01 ... 1
   static let meowingRate: ClosedRange<Float> = 0 ... 4

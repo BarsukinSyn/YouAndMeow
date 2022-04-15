@@ -5,9 +5,7 @@
 
 import UIKit
 
-final class ImageRepository {
-  private init() {}
-
+final class ImageRepository: StaticClass {
   static func getInfoCenterArtwork() -> UIImage {
     return UIImage(named: "InfoCenterArtwork") ?? UIImage()
   }

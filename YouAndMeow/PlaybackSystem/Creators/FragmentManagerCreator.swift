@@ -5,9 +5,7 @@
 
 import Foundation
 
-final class FragmentManagerCreator {
-  private init() {}
-
+final class FragmentManagerCreator: StaticClass {
   static func createBreathingFragmentManager() -> BreathingFragmentManager {
     return BreathingFragmentManager()
   }

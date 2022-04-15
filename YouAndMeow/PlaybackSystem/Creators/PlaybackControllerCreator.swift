@@ -5,9 +5,7 @@
 
 import Foundation
 
-final class PlaybackControllerCreator {
-  private init() {}
-
+final class PlaybackControllerCreator: StaticClass {
   static func createBreathingPlaybackController() throws -> BreathingPlaybackController {
     let inhalationSoundPlayer = try SoundPlayerCreator.createInhalationSoundPlayer()
     let exhalationSoundPlayer = try SoundPlayerCreator.createExhalationSoundPlayer()
