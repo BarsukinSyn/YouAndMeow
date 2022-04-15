@@ -49,6 +49,7 @@
 		E7D9A82025BED63A00EE072A /* PlaybackSettingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A81F25BED63A00EE072A /* PlaybackSettingPanel.swift */; };
 		E7D9A82825BEE5F400EE072A /* PlaybackSettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */; };
 		E7DDF71D2809AA0D00EB4C97 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDF71C2809AA0D00EB4C97 /* Bundle.swift */; };
+		E7DDF71F2809B41000EB4C97 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDF71E2809B41000EB4C97 /* UIScreen.swift */; };
 		E7E8F41B25B5A85F00CEEB98 /* YouAndMeowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */; };
 		E7E8F41F25B5A86000CEEB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F41E25B5A86000CEEB98 /* Assets.xcassets */; };
 		E7E8F44F25B5A8D700CEEB98 /* SoundRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F44925B5A8D600CEEB98 /* SoundRepository.swift */; };
@@ -138,6 +139,7 @@
 		E7D9A81F25BED63A00EE072A /* PlaybackSettingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingPanel.swift; sourceTree = "<group>"; };
 		E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingType.swift; sourceTree = "<group>"; };
 		E7DDF71C2809AA0D00EB4C97 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		E7DDF71E2809B41000EB4C97 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		E7E8F41725B5A85F00CEEB98 /* YouAndMeow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouAndMeow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouAndMeowApp.swift; sourceTree = "<group>"; };
 		E7E8F41E25B5A86000CEEB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				E78463A8261505540097CDFB /* Color.swift */,
+				E7DDF71E2809B41000EB4C97 /* UIScreen.swift */,
 				E78463B826150C9C0097CDFB /* View.swift */,
 			);
 			path = Extensions;
@@ -711,6 +714,7 @@
 				E78E99EB264EBB5500ABB4FD /* TimePickerCoordinator.swift in Sources */,
 				E7E8F48025B5A8F000CEEB98 /* AudioByteBufferPlayer.swift in Sources */,
 				E7E8F49425B5A8F000CEEB98 /* BreathingPlaybackController.swift in Sources */,
+				E7DDF71F2809B41000EB4C97 /* UIScreen.swift in Sources */,
 				E7E8F48725B5A8F000CEEB98 /* BreathingSoundPlayer.swift in Sources */,
 				E7E8F49625B5A8F000CEEB98 /* BreathingPhases.swift in Sources */,
 				E7CAD2C525C3054D007761A9 /* PlaybackSettingPanelViewModel.swift in Sources */,

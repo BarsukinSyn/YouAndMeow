@@ -10,7 +10,7 @@ struct PlayerScreen: View {
   private let playbackSystemEnvironment: PlaybackSystemEnvironment
   private let playbackSettingsEnvironment: PlaybackSettingsEnvironment
 
-  private let isSmallScreen: Bool = UIScreen.main.bounds.size.height < 736
+  private let isSmallScreen: Bool = UIScreen.main.isSmallScreen
 
   init() {
     let playbackSystemEnvironment = PlaybackSystemEnvironment()
