@@ -45,7 +45,7 @@ final class BreathingFragmentManager {
 
   private func getInterval() -> TimeInterval {
     if self.shouldUpdateIntervals(threshold: .random(in: 0 ... 1)) {
-      self.updateIntervals(scaleEachIn: 0.85 ... 1)
+      self.updateIntervals(scaleEachByRandomWithin: 0.85 ... 1)
     }
 
     return self.intervals.popLast() ?? self.defaultInterval
@@ -59,9 +59,9 @@ final class BreathingFragmentManager {
     return intervalsIsEmpty && variabilityIsPositive && thresholdIsExceeded
   }
 
-  private func updateIntervals(scaleEachIn range: ClosedRange<Float>) {
+  private func updateIntervals(scaleEachByRandomWithin range: ClosedRange<Float>) {
     let intervals = self.generateIntervals(count: .random(in: 3 ... 8), scaleShift: .random(in: 0.85 ... 1))
-    let scaledIntervals = intervals.scaledEach(in: range)
+    let scaledIntervals = intervals.scaledEach(byRandomWithin: range)
 
     self.intervals = scaledIntervals
   }

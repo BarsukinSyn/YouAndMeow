@@ -6,19 +6,6 @@
 import Foundation
 
 extension Timer {
-  static func debounce(delay: TimeInterval, action: @escaping VoidFunction) -> VoidFunction {
-    var timer: Timer?
-
-    let debouncedAction = {
-      timer?.invalidate()
-      timer = Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { (_) in
-        action()
-      }
-    }
-
-    return debouncedAction
-  }
-
   static func throttle(delay: TimeInterval, action: @escaping VoidFunction) -> VoidFunction {
     var pending = false
 
