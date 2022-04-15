@@ -48,6 +48,7 @@
 		E7CB415925BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB415825BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift */; };
 		E7D9A82025BED63A00EE072A /* PlaybackSettingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A81F25BED63A00EE072A /* PlaybackSettingPanel.swift */; };
 		E7D9A82825BEE5F400EE072A /* PlaybackSettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */; };
+		E7DDF71D2809AA0D00EB4C97 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDF71C2809AA0D00EB4C97 /* Bundle.swift */; };
 		E7E8F41B25B5A85F00CEEB98 /* YouAndMeowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */; };
 		E7E8F41F25B5A86000CEEB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E8F41E25B5A86000CEEB98 /* Assets.xcassets */; };
 		E7E8F44F25B5A8D700CEEB98 /* SoundRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8F44925B5A8D600CEEB98 /* SoundRepository.swift */; };
@@ -136,6 +137,7 @@
 		E7CB415825BB052F0035E229 /* SimpleSliderTrackShapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSliderTrackShapeModifier.swift; sourceTree = "<group>"; };
 		E7D9A81F25BED63A00EE072A /* PlaybackSettingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingPanel.swift; sourceTree = "<group>"; };
 		E7D9A82725BEE5F400EE072A /* PlaybackSettingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingType.swift; sourceTree = "<group>"; };
+		E7DDF71C2809AA0D00EB4C97 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		E7E8F41725B5A85F00CEEB98 /* YouAndMeow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouAndMeow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E8F41A25B5A85F00CEEB98 /* YouAndMeowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouAndMeowApp.swift; sourceTree = "<group>"; };
 		E7E8F41E25B5A86000CEEB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 			children = (
 				E7E8F46A25B5A8F000CEEB98 /* Array.swift */,
 				E7E8F46D25B5A8F000CEEB98 /* BinaryFloatingPoint.swift */,
+				E7DDF71C2809AA0D00EB4C97 /* Bundle.swift */,
 				E7992B7925C98CC9007F8A86 /* ClosedRange.swift */,
 				E7109B8D25C4AF4200A2862F /* Dictionary.swift */,
 				E7E8F46B25B5A8F000CEEB98 /* Numeric.swift */,
@@ -674,6 +677,7 @@
 				E720DF8B264EE1E10058A6F7 /* TimePickerData.swift in Sources */,
 				E75AA7B62615FBB200740B7C /* RoundedCorner.swift in Sources */,
 				E7EE0D7A25BC0C2800638D2F /* SimpleSliderValueLabelTextModifier.swift in Sources */,
+				E7DDF71D2809AA0D00EB4C97 /* Bundle.swift in Sources */,
 				E7E8F49525B5A8F000CEEB98 /* PlaybackSystem.swift in Sources */,
 				E7E8F48A25B5A8F000CEEB98 /* Array.swift in Sources */,
 				E7F9846C265406FD002CDE6A /* ActionButton.swift in Sources */,

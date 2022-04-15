@@ -15,7 +15,7 @@ final class RemoteCommandCenter {
 
   weak var delegate: RemoteCommandCenterDelegate?
 
-  private let infoCenterTitle: String = "You & Meow"
+  private let infoCenterTitle: String = Bundle.main.displayName
   private let deviceRemoteCommandCenter: MPRemoteCommandCenter = MPRemoteCommandCenter.shared()
   private let deviceNowPlayingInfoCenter: MPNowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
 
